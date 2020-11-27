@@ -9,23 +9,31 @@
 /* Begin PBXBuildFile section */
 		BCFC76FD257163930016D7F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFC76FC257163930016D7F7 /* AppDelegate.swift */; };
 		BCFC76FF257163930016D7F7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFC76FE257163930016D7F7 /* SceneDelegate.swift */; };
-		BCFC7701257163930016D7F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFC7700257163930016D7F7 /* ViewController.swift */; };
+		BCFC7701257163930016D7F7 /* VocabTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFC7700257163930016D7F7 /* VocabTableViewController.swift */; };
 		BCFC7704257163930016D7F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCFC7702257163930016D7F7 /* Main.storyboard */; };
 		BCFC7707257163940016D7F7 /* CPSC_315_Final_Project.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BCFC7705257163940016D7F7 /* CPSC_315_Final_Project.xcdatamodeld */; };
 		BCFC7709257163950016D7F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCFC7708257163950016D7F7 /* Assets.xcassets */; };
 		BCFC770C257163950016D7F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCFC770A257163950016D7F7 /* LaunchScreen.storyboard */; };
+		BCFC7715257166920016D7F7 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFC7714257166920016D7F7 /* Word.swift */; };
+		BCFC77182571678E0016D7F7 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFC77172571678E0016D7F7 /* Language.swift */; };
+		BCFC771B2571688F0016D7F7 /* Verb.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFC771A2571688F0016D7F7 /* Verb.swift */; };
+		BCFC771F25716E2E0016D7F7 /* VocabTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFC771E25716E2E0016D7F7 /* VocabTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BCFC76F9257163930016D7F7 /* CPSC_315_Final_Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CPSC_315_Final_Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCFC76FC257163930016D7F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCFC76FE257163930016D7F7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BCFC7700257163930016D7F7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BCFC7700257163930016D7F7 /* VocabTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabTableViewController.swift; sourceTree = "<group>"; };
 		BCFC7703257163930016D7F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BCFC7706257163940016D7F7 /* CPSC_315_Final_Project.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CPSC_315_Final_Project.xcdatamodel; sourceTree = "<group>"; };
 		BCFC7708257163950016D7F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BCFC770B257163950016D7F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BCFC770D257163950016D7F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCFC7714257166920016D7F7 /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
+		BCFC77172571678E0016D7F7 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
+		BCFC771A2571688F0016D7F7 /* Verb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verb.swift; sourceTree = "<group>"; };
+		BCFC771E25716E2E0016D7F7 /* VocabTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,12 +68,16 @@
 			children = (
 				BCFC76FC257163930016D7F7 /* AppDelegate.swift */,
 				BCFC76FE257163930016D7F7 /* SceneDelegate.swift */,
-				BCFC7700257163930016D7F7 /* ViewController.swift */,
 				BCFC7702257163930016D7F7 /* Main.storyboard */,
 				BCFC7708257163950016D7F7 /* Assets.xcassets */,
 				BCFC770A257163950016D7F7 /* LaunchScreen.storyboard */,
 				BCFC770D257163950016D7F7 /* Info.plist */,
 				BCFC7705257163940016D7F7 /* CPSC_315_Final_Project.xcdatamodeld */,
+				BCFC7700257163930016D7F7 /* VocabTableViewController.swift */,
+				BCFC77172571678E0016D7F7 /* Language.swift */,
+				BCFC7714257166920016D7F7 /* Word.swift */,
+				BCFC771A2571688F0016D7F7 /* Verb.swift */,
+				BCFC771E25716E2E0016D7F7 /* VocabTableViewCell.swift */,
 			);
 			path = CPSC_315_Final_Project;
 			sourceTree = "<group>";
@@ -140,8 +152,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BCFC7701257163930016D7F7 /* ViewController.swift in Sources */,
+				BCFC771B2571688F0016D7F7 /* Verb.swift in Sources */,
+				BCFC771F25716E2E0016D7F7 /* VocabTableViewCell.swift in Sources */,
+				BCFC7701257163930016D7F7 /* VocabTableViewController.swift in Sources */,
 				BCFC76FD257163930016D7F7 /* AppDelegate.swift in Sources */,
+				BCFC7715257166920016D7F7 /* Word.swift in Sources */,
+				BCFC77182571678E0016D7F7 /* Language.swift in Sources */,
 				BCFC76FF257163930016D7F7 /* SceneDelegate.swift in Sources */,
 				BCFC7707257163940016D7F7 /* CPSC_315_Final_Project.xcdatamodeld in Sources */,
 			);
