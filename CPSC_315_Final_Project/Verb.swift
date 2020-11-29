@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+/*
 // This class should the conjugations of a verb for different tenses
 class Verb: Word {
     
@@ -23,3 +23,4 @@ class Verb: Word {
     
     
 }
+ */

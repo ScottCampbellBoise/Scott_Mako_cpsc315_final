@@ -13,9 +13,9 @@ class Word: CustomStringConvertible {
     var language: String // The langauage the foriegn word is in?
     
     var markedForReview: Bool = false // User wants to spend extra time
-    var mnemonic: String = "" // A key phrase to help remember the word
-    var timesMissed: Int = 0
-    var timesCorrect: Int = 0
+    var mnemonic: String? = nil // A key phrase to help remember the word
+    var timesMissed: Int? = nil
+    var timesCorrect: Int? = nil
     
     var description: String {
         return "\(englishWord) - \(foriegnWord) (\(language))"

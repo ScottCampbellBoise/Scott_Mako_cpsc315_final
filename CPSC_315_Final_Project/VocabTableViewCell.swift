@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class VocabTableViewCell: UITableViewCell {
 
@@ -14,6 +15,11 @@ class VocabTableViewCell: UITableViewCell {
     @IBOutlet var mneumonicLabel: UILabel!
     @IBOutlet var statisticsLabel: UILabel!
     @IBOutlet var markedReviewButton: UIButton!
+    
+    var word: Word? = nil
+    
+    // We need a reference to the context
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,6 +30,46 @@ class VocabTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    @IBAction func markedForReviewPressed(_ sender: UIButton) {
+        if markedReviewButton.titleLabel?.text == "☆" { markedReviewButton.setTitle("★", for: .normal)
+            word?.markedForReview = true
+        } else {
+            markedReviewButton.setTitle("☆", for: .normal)
+            word?.markedForReview = false
+        }
+        
+        // Save the changes to the context
+        do {
+            try context.save()
+        } catch {
+            print("Error saving the changes in Words: \(error)")
+        }
+    }
+    
+    func update(with word: Word) {
+        self.word = word
+        
+        englishLabel.text = word.englishWord
+        foriegnLabel.text = word.foriegnWord
+        // See if the word is marked for review
+        if word.markedForReview { markedReviewButton.setTitle("★", for: .normal) }
+        else { markedReviewButton.setTitle("☆", for: .normal) }
+        // Determine the statistics for the word
+        if word.timesCorrect == 0 && word.timesMissed == 0 {
+            statisticsLabel.text = "No statistics yet"
+        } else if word.timesMissed == 0 {
+            statisticsLabel.text = "100% Right"
+        } else {
+            statisticsLabel.text = "\(100*word.timesCorrect/word.timesMissed)% Right"
+        }
+        // Now try to unwrap additional information
+        if let mneumonic = word.mnemonic {
+            mneumonicLabel.text = mneumonic
+        } else {
+            mneumonicLabel.text = ""
+        }
     }
 
 }

@@ -10,7 +10,7 @@ import Foundation
 // This class stores all the information about a language that is to be presented
 class Language {
     
-    var vocab = [Word]()
-    var verbs = [Verb]()
+    //var vocab = [Word]()
+    //var verbs = [Verb]()
     
 }
