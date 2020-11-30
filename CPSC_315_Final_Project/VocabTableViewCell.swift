@@ -16,7 +16,7 @@ class VocabTableViewCell: UITableViewCell {
     @IBOutlet var statisticsLabel: UILabel!
     @IBOutlet var markedReviewButton: UIButton!
     
-    var word: Word? = nil
+    var wordOptional: Word? = nil
     
     // We need a reference to the context
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -32,12 +32,18 @@ class VocabTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    @IBAction func speakerButtonPressed(_ sender: UIButton) {
+        if let word = wordOptional {
+            SpeechSynthesizer.speak(phrase: word.foriegnWord)
+        }
+    }
+    
     @IBAction func markedForReviewPressed(_ sender: UIButton) {
         if markedReviewButton.titleLabel?.text == "☆" { markedReviewButton.setTitle("★", for: .normal)
-            word?.markedForReview = true
+            wordOptional?.markedForReview = true
         } else {
             markedReviewButton.setTitle("☆", for: .normal)
-            word?.markedForReview = false
+            wordOptional?.markedForReview = false
         }
         
         // Save the changes to the context
@@ -49,7 +55,7 @@ class VocabTableViewCell: UITableViewCell {
     }
     
     func update(with word: Word) {
-        self.word = word
+        self.wordOptional = word
         
         englishLabel.text = word.englishWord
         foriegnLabel.text = word.foriegnWord

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		236CF4572574B947009FEA97 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236CF4562574B947009FEA97 /* QuizViewController.swift */; };
+		BCE9A1EC2575888D00646286 /* SpeechSynthesizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE9A1EB2575888D00646286 /* SpeechSynthesizer.swift */; };
 		BCFC76FD257163930016D7F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFC76FC257163930016D7F7 /* AppDelegate.swift */; };
 		BCFC76FF257163930016D7F7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFC76FE257163930016D7F7 /* SceneDelegate.swift */; };
 		BCFC7701257163930016D7F7 /* VocabTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFC7700257163930016D7F7 /* VocabTableViewController.swift */; };
@@ -15,7 +16,6 @@
 		BCFC7707257163940016D7F7 /* CPSC_315_Final_Project.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BCFC7705257163940016D7F7 /* CPSC_315_Final_Project.xcdatamodeld */; };
 		BCFC7709257163950016D7F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCFC7708257163950016D7F7 /* Assets.xcassets */; };
 		BCFC770C257163950016D7F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCFC770A257163950016D7F7 /* LaunchScreen.storyboard */; };
-		BCFC77182571678E0016D7F7 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFC77172571678E0016D7F7 /* Language.swift */; };
 		BCFC771B2571688F0016D7F7 /* Verb.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFC771A2571688F0016D7F7 /* Verb.swift */; };
 		BCFC771F25716E2E0016D7F7 /* VocabTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFC771E25716E2E0016D7F7 /* VocabTableViewCell.swift */; };
 		BCFC7725257367140016D7F7 /* Word+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFC7723257367140016D7F7 /* Word+CoreDataClass.swift */; };
@@ -25,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		236CF4562574B947009FEA97 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
+		BCE9A1EB2575888D00646286 /* SpeechSynthesizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechSynthesizer.swift; sourceTree = "<group>"; };
 		BCFC76F9257163930016D7F7 /* CPSC_315_Final_Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CPSC_315_Final_Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCFC76FC257163930016D7F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCFC76FE257163930016D7F7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -34,7 +35,6 @@
 		BCFC7708257163950016D7F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BCFC770B257163950016D7F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BCFC770D257163950016D7F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BCFC77172571678E0016D7F7 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		BCFC771A2571688F0016D7F7 /* Verb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verb.swift; sourceTree = "<group>"; };
 		BCFC771E25716E2E0016D7F7 /* VocabTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabTableViewCell.swift; sourceTree = "<group>"; };
 		BCFC7723257367140016D7F7 /* Word+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Word+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
@@ -80,13 +80,13 @@
 				BCFC7708257163950016D7F7 /* Assets.xcassets */,
 				BCFC770A257163950016D7F7 /* LaunchScreen.storyboard */,
 				BCFC770D257163950016D7F7 /* Info.plist */,
-				236CF4562574B947009FEA97 /* QuizViewController.swift */,
 				BCFC7705257163940016D7F7 /* CPSC_315_Final_Project.xcdatamodeld */,
 				BCFC7700257163930016D7F7 /* VocabTableViewController.swift */,
 				BCFC771E25716E2E0016D7F7 /* VocabTableViewCell.swift */,
 				BCFC772A2573759D0016D7F7 /* FlashcardViewController.swift */,
-				BCFC77172571678E0016D7F7 /* Language.swift */,
+				236CF4562574B947009FEA97 /* QuizViewController.swift */,
 				BCFC771A2571688F0016D7F7 /* Verb.swift */,
+				BCE9A1EB2575888D00646286 /* SpeechSynthesizer.swift */,
 			);
 			path = CPSC_315_Final_Project;
 			sourceTree = "<group>";
@@ -163,11 +163,11 @@
 			files = (
 				BCFC771B2571688F0016D7F7 /* Verb.swift in Sources */,
 				BCFC771F25716E2E0016D7F7 /* VocabTableViewCell.swift in Sources */,
+				BCE9A1EC2575888D00646286 /* SpeechSynthesizer.swift in Sources */,
 				BCFC7701257163930016D7F7 /* VocabTableViewController.swift in Sources */,
 				BCFC7726257367140016D7F7 /* Word+CoreDataProperties.swift in Sources */,
 				BCFC76FD257163930016D7F7 /* AppDelegate.swift in Sources */,
 				BCFC7725257367140016D7F7 /* Word+CoreDataClass.swift in Sources */,
-				BCFC77182571678E0016D7F7 /* Language.swift in Sources */,
 				236CF4572574B947009FEA97 /* QuizViewController.swift in Sources */,
 				BCFC772B2573759D0016D7F7 /* FlashcardViewController.swift in Sources */,
 				BCFC76FF257163930016D7F7 /* SceneDelegate.swift in Sources */,

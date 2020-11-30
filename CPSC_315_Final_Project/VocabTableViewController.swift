@@ -19,7 +19,7 @@ class VocabTableViewController: UIViewController, UITableViewDataSource, UITable
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     
-    // MARK: - Methods
+    // MARK: - Lifecycle Methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +28,16 @@ class VocabTableViewController: UIViewController, UITableViewDataSource, UITable
         
         // Do any additional setup after loading the view.
         loadWords()
+        
+        print("MOVE THE SPEECH SYNTH CODE TO EVENTUAL HOME SCREEN!")
+        SpeechSynthesizer.languageCode = LanguageCode.germanDE
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        print("Vocab Table View Controller will appear")
+        
+        loadWords()
+        tableView.reloadData()
     }
     
     func loadTestWords() {

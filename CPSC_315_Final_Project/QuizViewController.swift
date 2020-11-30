@@ -16,7 +16,7 @@ class QuizViewController: UIViewController {
     
     var numHints = 3
     var hint: String?
-    
+        
     @IBOutlet var foreignWordLabel: UILabel!
     @IBOutlet var englishTextField: UITextField!
     @IBOutlet var hintButtonLabel: UIButton!
@@ -24,13 +24,13 @@ class QuizViewController: UIViewController {
 
     // TODO: Figure out how to randomly select words from database and onto quiz view...
     //      Might have to add another attribute like a unique id for each word...
-    var word: Word? = nil
+    var wordOptional: Word? = nil
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     var foreignWord = "" {
         didSet {
-            if let foreignWord = word?.foriegnWord {
+            if let foreignWord = wordOptional?.foriegnWord {
                 foreignWordLabel.text = "\(foreignWord)"
             }
         }
@@ -43,15 +43,23 @@ class QuizViewController: UIViewController {
         
         updateHintLabel()
         updateCorrectLabel()
+        
+        print("MOVE THE SPEECH SYNTH CODE TO EVENTUAL HOME SCREEN!")
+        SpeechSynthesizer.languageCode = LanguageCode.germanDE
     }
     
+    @IBAction func speakerButtonPressed(_ sender: UIButton) {
+        if let word = wordOptional {
+            SpeechSynthesizer.speak(phrase: word.foriegnWord)
+        }
+    }
     
     @IBAction func checkAnswer(_ sender: UIButton) {
         if let userInputOp = englishTextField.text {
             let userInput = userInputOp.uppercased()
-            if let answer = word?.englishWord {
+            if let answer = wordOptional?.englishWord {
                 if answer.uppercased() == userInput {
-                    word?.timesCorrect += 1
+                    wordOptional?.timesCorrect += 1
                     
                     let correctMessage = "Correct! Keep it up!"
                     let alertController = UIAlertController(title: "Correct", message: correctMessage, preferredStyle: .alert)
@@ -66,7 +74,7 @@ class QuizViewController: UIViewController {
                         print("Presented Correct alert")
                     })
                 } else {
-                    word?.timesMissed -= 1
+                    wordOptional?.timesMissed += 1
                     
                     let incorrectMessage = "Your answer is incorrect. Try pressing the Hint or Reveal Answer button."
                     let alertController = UIAlertController(title: "Incorrect", message: incorrectMessage, preferredStyle: .alert)
@@ -119,7 +127,7 @@ class QuizViewController: UIViewController {
     
     
     @IBAction func revealAnswerButtonPressed(_ sender: UIButton) {
-        if let answer = word?.englishWord {
+        if let answer = wordOptional?.englishWord {
             let answerMessage = "Answer is \(answer).\nCorrect percentage will drop."
             let alertController = UIAlertController(title: "Answer", message: answerMessage, preferredStyle: .alert)
         
@@ -134,11 +142,10 @@ class QuizViewController: UIViewController {
                 print("Presented Answer alert")
             })
             
-            word?.timesMissed -= 1
+            wordOptional?.timesMissed += 1
             saveWord()
         }
     }
-    
     
     func changeNumHints(reset: Bool) {
         if reset == true {
@@ -148,7 +155,6 @@ class QuizViewController: UIViewController {
             numHints -= 1
         }
     }
-    
     
     // TODO: Fix this...
     func provideHint() -> String {
@@ -174,7 +180,7 @@ class QuizViewController: UIViewController {
     
     
     func updateCorrectLabel() {
-        if let correct = word?.timesCorrect, let wrong = word?.timesMissed {
+        if let correct = wordOptional?.timesCorrect, let wrong = wordOptional?.timesMissed {
             if correct == 0 && wrong == 0 {
                 correctLabel.text = "Correct: %"
             }
