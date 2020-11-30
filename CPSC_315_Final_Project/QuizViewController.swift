@@ -7,6 +7,11 @@
 
 import UIKit
 
+// For now: Displays foreign word, user has to match its english word via a textfield
+//          Diplays the percentage of the user getting the word right
+//          by using values from timesCorrect and timesMissed
+//          Provides hints (max 3) and a reveal answer button
+
 class QuizViewController: UIViewController {
     
     var numHints = 3
@@ -18,6 +23,7 @@ class QuizViewController: UIViewController {
     @IBOutlet var correctLabel: UILabel!
 
     // TODO: Figure out how to randomly select words from database and onto quiz view...
+    //      Might have to add another attribute like a unique id for each word...
     var word: Word? = nil
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -97,7 +103,8 @@ class QuizViewController: UIViewController {
             })
         } else {
             let hint = provideHint()
-            let hintMessage = "\(hint)\nNumber of hints remaining: \(numHints)."
+            
+            let hintMessage = "\(hint)\nNumber of hints remaining: \(numHints - 1)."
             let alertController = UIAlertController(title: "Hint", message: hintMessage, preferredStyle: .alert)
             
             alertController.addAction(UIAlertAction(title: "Okay", style: .default, handler: { (action) -> Void in
