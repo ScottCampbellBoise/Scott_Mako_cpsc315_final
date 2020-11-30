@@ -36,6 +36,7 @@ class QuizViewController: UIViewController {
         }
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print("Loaded Quiz View")
@@ -58,6 +59,7 @@ class QuizViewController: UIViewController {
                     alertController.addAction(UIAlertAction(title: "Okay", style: .default, handler: { (action) -> Void in
                         print("User pressed okay")
                         self.changeNumHints(reset: true)
+                        // TODO: Add method to move onto next word
                             
                     }))
                     present(alertController, animated: true, completion: { () -> Void in
@@ -78,11 +80,7 @@ class QuizViewController: UIViewController {
                     })
                 }
                 
-                do {
-                    try context.save()
-                } catch {
-                    print("Error saving the changes in Words: \(error)")
-                }
+                saveWord()
             }
         }
         invalidInputAlert()
@@ -119,6 +117,7 @@ class QuizViewController: UIViewController {
         }
     }
     
+    
     @IBAction func revealAnswerButtonPressed(_ sender: UIButton) {
         if let answer = word?.englishWord {
             let answerMessage = "Answer is \(answer).\nCorrect percentage will drop."
@@ -126,8 +125,9 @@ class QuizViewController: UIViewController {
         
             alertController.addAction(UIAlertAction(title: "Okay", style: .default, handler: { (action) -> Void in
                 print("User pressed okay")
-                self.numHints = 0
-                self.updateHintLabel()
+                // self.numHints = 0
+                // self.updateHintLabel()
+                // TODO: Add method to move onto next word
                 
             }))
             present(alertController, animated: true, completion: { () -> Void in
@@ -135,13 +135,10 @@ class QuizViewController: UIViewController {
             })
             
             word?.timesMissed -= 1
-            do {
-                try context.save()
-            } catch {
-                print("Error saving the changes in Words: \(error)")
-            }
+            saveWord()
         }
     }
+    
     
     func changeNumHints(reset: Bool) {
         if reset == true {
@@ -188,6 +185,7 @@ class QuizViewController: UIViewController {
         }
     }
     
+    
     func invalidInputAlert() {
         let invalidMessage = "Invalid input. Please type english word/guess in the provided text field."
         let alertController = UIAlertController(title: "Invalid Input", message: invalidMessage, preferredStyle: .alert)
@@ -198,6 +196,16 @@ class QuizViewController: UIViewController {
         present(alertController, animated: true, completion: { () -> Void in
             print("Presented Invalid alert")
         })
+    }
+    
+    
+    func saveWord() {
+        do {
+            try context.save()
+        }
+        catch {
+            print("Error saving the changes in Words: \(error)")
+        }
     }
 }
 
