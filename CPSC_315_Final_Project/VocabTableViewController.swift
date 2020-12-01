@@ -8,7 +8,7 @@
 import UIKit
 import CoreData
 
-class VocabTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class VocabTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
 
     @IBOutlet var tableView: UITableView!
     
@@ -28,7 +28,7 @@ class VocabTableViewController: UIViewController, UITableViewDataSource, UITable
         
         // Do any additional setup after loading the view.
         loadWords()
-        
+                
         print("MOVE THE SPEECH SYNTH CODE TO EVENTUAL HOME SCREEN!")
         SpeechSynthesizer.languageCode = LanguageCode.germanDE
     }
@@ -41,9 +41,9 @@ class VocabTableViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     func loadTestWords() {
-        let word1 = Word(context: self.context)
-        word1.englishWord = "Good Bye"
-        word1.foriegnWord = "Tschuss"
+        var word1 = Word(context: self.context)
+        word1.englishWord = "Good Morning"
+        word1.foriegnWord = "Guten Morgen"
         word1.markedForReview = false
         word1.mnemonic = nil
         word1.timesMissed = 0
@@ -51,7 +51,6 @@ class VocabTableViewController: UIViewController, UITableViewDataSource, UITable
         
         self.words.append(word1)
         self.saveWords()
-        
     }
     
     // MARK: TableView Delegate Methods
@@ -100,15 +99,24 @@ class VocabTableViewController: UIViewController, UITableViewDataSource, UITable
          
     }
     
-    // MARK: - Search Bar Delegate Method(s)
+    // MARK: - Search Bar Methods
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-     
+        if searchText != "" {
+            performSearch(searchBar: searchBar)
+        } else {
+            // Search bar is empty
+            searchBar.resignFirstResponder()
+            loadWords()
+        }
     }
     
     func performSearch(searchBar: UISearchBar) {
-        if let input = searchBar.text {
-            
+        if let text = searchBar.text {
+            // we need a predicate to filter items by text
+            let predicate = NSPredicate(format: "englishWord CONTAINS[cd] %@ OR foriegnWord CONTAINS[cd] %@", text, text)
+    
+            loadWords(withPredicate: predicate)
         }
     }
     
@@ -125,10 +133,20 @@ class VocabTableViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     // READ of CRUD
-    func loadWords() {
+    func loadWords(withPredicate predicate: NSPredicate? = nil) {
         // we need to "request" the categories from the database (using the persistent container's context
         let request: NSFetchRequest<Word> = Word.fetchRequest()
-  
+        // Add some sort descriptors
+        
+        let englishSortDescriptor = NSSortDescriptor(keyPath: \Word.englishWord, ascending: true)
+        let foriegnSortDescriptor = NSSortDescriptor(keyPath: \Word.foriegnWord, ascending: true)
+        request.sortDescriptors = [foriegnSortDescriptor, englishSortDescriptor]
+ 
+        if let pred = predicate {
+            // need to make a compound predicate
+            request.predicate = pred
+        }
+        
         do {
             words = try context.fetch(request)
         }

@@ -24,6 +24,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                     <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="BYZ-38-t0r" id="WXN-uP-ce7"/>
+                                    </connections>
                                 </searchBar>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="VocabCell" rowHeight="58" id="xW7-Ub-h0D" customClass="VocabTableViewCell" customModule="CPSC_315_Final_Project" customModuleProvider="target">
@@ -122,8 +125,8 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="bLk-Fp-Na9"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="4kC-FB-8lL"/>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="mIs-Vj-bTp"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Bau-66-5Yn"/>
                                 </connections>
                             </tableView>
                         </subviews>
