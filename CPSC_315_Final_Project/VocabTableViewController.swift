@@ -28,9 +28,14 @@ class VocabTableViewController: UIViewController, UITableViewDataSource, UITable
         
         // Do any additional setup after loading the view.
         loadWords()
-                
+        
+        //testCoreDataRelations()
+        
         print("MOVE THE SPEECH SYNTH CODE TO EVENTUAL HOME SCREEN!")
         SpeechSynthesizer.languageCode = LanguageCode.germanDE
+        
+        let documentsDirectoryURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        print(documentsDirectoryURL)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -41,6 +46,14 @@ class VocabTableViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     func loadTestWords() {
+        // Define the master studyset
+        let masterSet = getMasterStudySet()
+        
+        if masterSet == nil {
+            print("Could not find master set!!!")
+            return
+        }
+        
         var word1 = Word(context: self.context)
         word1.englishWord = "Good Morning"
         word1.foriegnWord = "Guten Morgen"
@@ -48,8 +61,39 @@ class VocabTableViewController: UIViewController, UITableViewDataSource, UITable
         word1.mnemonic = nil
         word1.timesMissed = 0
         word1.timesCorrect = 0
-        
+        word1.addWordToStudySet(studyset: masterSet!)
         self.words.append(word1)
+        
+        word1 = Word(context: self.context)
+        word1.englishWord = "Good Afternoon"
+        word1.foriegnWord = "Guten Tag"
+        word1.markedForReview = false
+        word1.mnemonic = nil
+        word1.timesMissed = 0
+        word1.timesCorrect = 0
+        word1.addWordToStudySet(studyset: masterSet!)
+        self.words.append(word1)
+        
+        word1 = Word(context: self.context)
+        word1.englishWord = "Good Evening"
+        word1.foriegnWord = "Guten Abend"
+        word1.markedForReview = false
+        word1.mnemonic = nil
+        word1.timesMissed = 0
+        word1.timesCorrect = 0
+        word1.addWordToStudySet(studyset: masterSet!)
+        self.words.append(word1)
+        
+        word1 = Word(context: self.context)
+        word1.englishWord = "Good Night"
+        word1.foriegnWord = "Gute Nacht"
+        word1.markedForReview = false
+        word1.mnemonic = nil
+        word1.timesMissed = 0
+        word1.timesCorrect = 0
+        word1.addWordToStudySet(studyset: masterSet!)
+        self.words.append(word1)
+        
         self.saveWords()
     }
     
@@ -121,6 +165,37 @@ class VocabTableViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     // MARK: Core Data Methods
+    
+    func testCoreDataRelations() {
+        let request: NSFetchRequest<Word> = Word.fetchRequest()
+        let studysetPredicate = NSPredicate(format: "studysets.name MATCHES %@", "Master") // %@ is a placeholder for a value of any type
+        request.predicate = studysetPredicate
+        
+        do {
+            let results: [Word] = try context.fetch(request)
+            print("Found Results!")
+        }
+        catch {
+            print("Relational Test Failed! \(error)")
+           
+        }
+    }
+    
+    func getMasterStudySet() -> StudySet? {
+        let request: NSFetchRequest<StudySet> = StudySet.fetchRequest()
+        let predicate = NSPredicate(format: "name CONTAINS[cd] %@", "Master")
+        request.predicate = predicate
+        
+        do {
+            let masterSets: [StudySet] = try context.fetch(request)
+            return masterSets[0]
+        }
+        catch {
+            print("Error loading words \(error)")
+            return nil
+        }
+    }
+    
     
     func saveWords() {
         // We need to save the context

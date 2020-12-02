@@ -8,7 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		236CF4572574B947009FEA97 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236CF4562574B947009FEA97 /* QuizViewController.swift */; };
-		BC6BCCDD257741BB00C412DA /* StudySet+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6BCCDC257741BB00C412DA /* StudySet+CoreDataProperties.swift */; };
+		BC6BCCE42577483E00C412DA /* StudySet+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6BCCE12577483E00C412DA /* StudySet+CoreDataProperties.swift */; };
+		BC6BCCE52577483E00C412DA /* Word+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6BCCE22577483E00C412DA /* Word+CoreDataClass.swift */; };
+		BC6BCCE62577483E00C412DA /* Word+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6BCCE32577483E00C412DA /* Word+CoreDataProperties.swift */; };
+		BC6BCCE9257748C200C412DA /* StudySet+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6BCCE8257748C200C412DA /* StudySet+CoreDataClass.swift */; };
+		BC6BCCEE2577493300C412DA /* FlashcardSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6BCCED2577493300C412DA /* FlashcardSetupViewController.swift */; };
+		BC6BCCF225774B5500C412DA /* StudySetTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6BCCF125774B5500C412DA /* StudySetTableViewController.swift */; };
 		BCE9A1EC2575888D00646286 /* SpeechSynthesizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE9A1EB2575888D00646286 /* SpeechSynthesizer.swift */; };
 		BCFC76FD257163930016D7F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFC76FC257163930016D7F7 /* AppDelegate.swift */; };
 		BCFC76FF257163930016D7F7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFC76FE257163930016D7F7 /* SceneDelegate.swift */; };
@@ -19,14 +24,17 @@
 		BCFC770C257163950016D7F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCFC770A257163950016D7F7 /* LaunchScreen.storyboard */; };
 		BCFC771B2571688F0016D7F7 /* Verb.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFC771A2571688F0016D7F7 /* Verb.swift */; };
 		BCFC771F25716E2E0016D7F7 /* VocabTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFC771E25716E2E0016D7F7 /* VocabTableViewCell.swift */; };
-		BCFC7725257367140016D7F7 /* Word+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFC7723257367140016D7F7 /* Word+CoreDataClass.swift */; };
-		BCFC7726257367140016D7F7 /* Word+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFC7724257367140016D7F7 /* Word+CoreDataProperties.swift */; };
 		BCFC772B2573759D0016D7F7 /* FlashcardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFC772A2573759D0016D7F7 /* FlashcardViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		236CF4562574B947009FEA97 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
-		BC6BCCDC257741BB00C412DA /* StudySet+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StudySet+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		BC6BCCE12577483E00C412DA /* StudySet+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StudySet+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		BC6BCCE22577483E00C412DA /* Word+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Word+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		BC6BCCE32577483E00C412DA /* Word+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Word+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		BC6BCCE8257748C200C412DA /* StudySet+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StudySet+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BC6BCCED2577493300C412DA /* FlashcardSetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardSetupViewController.swift; sourceTree = "<group>"; };
+		BC6BCCF125774B5500C412DA /* StudySetTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudySetTableViewController.swift; sourceTree = "<group>"; };
 		BCE9A1EB2575888D00646286 /* SpeechSynthesizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechSynthesizer.swift; sourceTree = "<group>"; };
 		BCFC76F9257163930016D7F7 /* CPSC_315_Final_Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CPSC_315_Final_Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCFC76FC257163930016D7F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -39,8 +47,6 @@
 		BCFC770D257163950016D7F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCFC771A2571688F0016D7F7 /* Verb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verb.swift; sourceTree = "<group>"; };
 		BCFC771E25716E2E0016D7F7 /* VocabTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabTableViewCell.swift; sourceTree = "<group>"; };
-		BCFC7723257367140016D7F7 /* Word+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Word+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		BCFC7724257367140016D7F7 /* Word+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Word+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		BCFC772A2573759D0016D7F7 /* FlashcardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,9 +80,10 @@
 		BCFC76FB257163930016D7F7 /* CPSC_315_Final_Project */ = {
 			isa = PBXGroup;
 			children = (
-				BC6BCCDC257741BB00C412DA /* StudySet+CoreDataProperties.swift */,
-				BCFC7723257367140016D7F7 /* Word+CoreDataClass.swift */,
-				BCFC7724257367140016D7F7 /* Word+CoreDataProperties.swift */,
+				BC6BCCE8257748C200C412DA /* StudySet+CoreDataClass.swift */,
+				BC6BCCE12577483E00C412DA /* StudySet+CoreDataProperties.swift */,
+				BC6BCCE22577483E00C412DA /* Word+CoreDataClass.swift */,
+				BC6BCCE32577483E00C412DA /* Word+CoreDataProperties.swift */,
 				BCFC76FC257163930016D7F7 /* AppDelegate.swift */,
 				BCFC76FE257163930016D7F7 /* SceneDelegate.swift */,
 				BCFC7702257163930016D7F7 /* Main.storyboard */,
@@ -86,8 +93,10 @@
 				BCFC7705257163940016D7F7 /* CPSC_315_Final_Project.xcdatamodeld */,
 				BCFC7700257163930016D7F7 /* VocabTableViewController.swift */,
 				BCFC771E25716E2E0016D7F7 /* VocabTableViewCell.swift */,
+				BC6BCCED2577493300C412DA /* FlashcardSetupViewController.swift */,
 				BCFC772A2573759D0016D7F7 /* FlashcardViewController.swift */,
 				236CF4562574B947009FEA97 /* QuizViewController.swift */,
+				BC6BCCF125774B5500C412DA /* StudySetTableViewController.swift */,
 				BCFC771A2571688F0016D7F7 /* Verb.swift */,
 				BCE9A1EB2575888D00646286 /* SpeechSynthesizer.swift */,
 			);
@@ -164,18 +173,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC6BCCDD257741BB00C412DA /* StudySet+CoreDataProperties.swift in Sources */,
 				BCFC771B2571688F0016D7F7 /* Verb.swift in Sources */,
 				BCFC771F25716E2E0016D7F7 /* VocabTableViewCell.swift in Sources */,
+				BC6BCCE9257748C200C412DA /* StudySet+CoreDataClass.swift in Sources */,
 				BCE9A1EC2575888D00646286 /* SpeechSynthesizer.swift in Sources */,
+				BC6BCCE52577483E00C412DA /* Word+CoreDataClass.swift in Sources */,
+				BC6BCCF225774B5500C412DA /* StudySetTableViewController.swift in Sources */,
+				BC6BCCEE2577493300C412DA /* FlashcardSetupViewController.swift in Sources */,
 				BCFC7701257163930016D7F7 /* VocabTableViewController.swift in Sources */,
-				BCFC7726257367140016D7F7 /* Word+CoreDataProperties.swift in Sources */,
 				BCFC76FD257163930016D7F7 /* AppDelegate.swift in Sources */,
-				BCFC7725257367140016D7F7 /* Word+CoreDataClass.swift in Sources */,
 				236CF4572574B947009FEA97 /* QuizViewController.swift in Sources */,
 				BCFC772B2573759D0016D7F7 /* FlashcardViewController.swift in Sources */,
 				BCFC76FF257163930016D7F7 /* SceneDelegate.swift in Sources */,
+				BC6BCCE42577483E00C412DA /* StudySet+CoreDataProperties.swift in Sources */,
 				BCFC7707257163940016D7F7 /* CPSC_315_Final_Project.xcdatamodeld in Sources */,
+				BC6BCCE62577483E00C412DA /* Word+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

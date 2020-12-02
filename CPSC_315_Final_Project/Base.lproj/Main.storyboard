@@ -9,6 +9,73 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Study Sets-->
+        <scene sceneID="uBf-SS-MXF">
+            <objects>
+                <viewController id="AGz-fU-yp1" customClass="StudySetTableViewController" customModule="CPSC_315_Final_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6im-JM-VhE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Eah-aV-lB3">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StudySetCell" textLabel="jRf-05-tTj" detailTextLabel="rQQ-C2-uEg" style="IBUITableViewCellStyleSubtitle" id="C3p-9D-pfY">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="C3p-9D-pfY" id="ynu-wZ-gW3">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="55.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jRf-05-tTj">
+                                                    <rect key="frame" x="20" y="10" width="33" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rQQ-C2-uEg">
+                                                    <rect key="frame" x="20" y="31.5" width="44" height="14.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="AGz-fU-yp1" id="nJU-Bl-Sz8"/>
+                                    <outlet property="delegate" destination="AGz-fU-yp1" id="sxi-bR-pal"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vO7-Nd-U11"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Eah-aV-lB3" firstAttribute="top" secondItem="6im-JM-VhE" secondAttribute="top" id="7h5-c2-IAh"/>
+                            <constraint firstAttribute="trailing" secondItem="Eah-aV-lB3" secondAttribute="trailing" id="Mw8-Mh-O8p"/>
+                            <constraint firstItem="vO7-Nd-U11" firstAttribute="bottom" secondItem="Eah-aV-lB3" secondAttribute="bottom" id="fPQ-HE-42r"/>
+                            <constraint firstItem="Eah-aV-lB3" firstAttribute="leading" secondItem="vO7-Nd-U11" secondAttribute="leading" id="n4E-xb-G85"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Study Sets" id="CZR-8N-tJp">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="WrH-qW-fhS">
+                            <connections>
+                                <action selector="addBarButtonPressed:" destination="AGz-fU-yp1" id="mFg-Td-CLY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="Eah-aV-lB3" id="agD-GT-Uaz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eVq-PG-Njq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1616" y="-1291"/>
+        </scene>
         <!--Vocab-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -162,16 +229,17 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="70J-Ld-TvN"/>
                         <segue destination="GsN-TI-51B" kind="relationship" relationship="viewControllers" id="fmb-sW-LGK"/>
                         <segue destination="W56-Fg-FgL" kind="relationship" relationship="viewControllers" id="wJO-le-qvy"/>
+                        <segue destination="bFs-V9-vsX" kind="relationship" relationship="viewControllers" id="JG0-fi-cee"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IPD-p9-5F1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-71" y="88"/>
+            <point key="canvasLocation" x="-97" y="-269"/>
         </scene>
         <!--Select Study Set-->
         <scene sceneID="8Mo-pK-gF6">
             <objects>
-                <viewController id="pIe-g7-gxk" sceneMemberID="viewController">
+                <viewController id="pIe-g7-gxk" customClass="FlashcardSetupViewController" customModule="CPSC_315_Final_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xBQ-8J-UI9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -189,7 +257,7 @@
                                         <rect key="frame" x="144" y="59" width="94" height="30"/>
                                         <state key="normal" title="Use all Words"/>
                                         <connections>
-                                            <segue destination="fCm-8J-1IP" kind="show" id="iWu-Lq-zzy"/>
+                                            <segue destination="fCm-8J-1IP" kind="show" identifier="FlashcardSegue" id="iWu-Lq-zzy"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Custom Set Implementation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IWm-YR-Dd7">
@@ -568,12 +636,33 @@
             </objects>
             <point key="canvasLocation" x="793" y="818"/>
         </scene>
+        <!--Study Sets-->
+        <scene sceneID="lbO-4J-ZKe">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bFs-V9-vsX" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Study Sets" image="paperclip" catalog="system" id="PZd-i8-UBD"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="loA-6K-4xo">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="AGz-fU-yp1" kind="relationship" relationship="rootViewController" id="SDD-Ks-UB4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ofv-vm-hW7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="792.75362318840587" y="-1291.0714285714284"/>
+        </scene>
     </scenes>
     <resources>
         <image name="arrow.left" catalog="system" width="128" height="98"/>
         <image name="arrow.right" catalog="system" width="128" height="98"/>
         <image name="greetingcard" catalog="system" width="107" height="128"/>
+        <image name="paperclip" catalog="system" width="121" height="128"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <image name="speaker.wave.3" catalog="system" width="128" height="86"/>
         <image name="studentdesk" catalog="system" width="124" height="128"/>
         <systemColor name="labelColor">

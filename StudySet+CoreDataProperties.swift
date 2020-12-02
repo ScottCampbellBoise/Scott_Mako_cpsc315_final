@@ -17,24 +17,24 @@ extension StudySet {
     }
 
     @NSManaged public var name: String?
-    @NSManaged public var newRelationship: NSSet?
+    @NSManaged public var words: NSSet?
 
 }
 
-// MARK: Generated accessors for newRelationship
+// MARK: Generated accessors for words
 extension StudySet {
 
-    @objc(addNewRelationshipObject:)
-    @NSManaged public func addToNewRelationship(_ value: Word)
+    @objc(addWordsObject:)
+    @NSManaged public func addToWords(_ value: Word)
 
-    @objc(removeNewRelationshipObject:)
-    @NSManaged public func removeFromNewRelationship(_ value: Word)
+    @objc(removeWordsObject:)
+    @NSManaged public func removeFromWords(_ value: Word)
 
-    @objc(addNewRelationship:)
-    @NSManaged public func addToNewRelationship(_ values: NSSet)
+    @objc(addWords:)
+    @NSManaged public func addToWords(_ values: NSSet)
 
-    @objc(removeNewRelationship:)
-    @NSManaged public func removeFromNewRelationship(_ values: NSSet)
+    @objc(removeWords:)
+    @NSManaged public func removeFromWords(_ values: NSSet)
 
 }
 
