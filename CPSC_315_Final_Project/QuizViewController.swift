@@ -22,8 +22,12 @@ class QuizViewController: UIViewController {
     @IBOutlet var hintButtonLabel: UIButton!
     @IBOutlet var correctLabel: UILabel!
 
+    // TODO: Implement the connection for allowing the user to choose a study set
     // TODO: Figure out how to randomly select words from database and onto quiz view...
     //      Might have to add another attribute like a unique id for each word...
+    var flashcardSetOptional: [Word]? = nil
+    var currentIndexOptional: Int? = nil
+    
     var wordOptional: Word? = nil
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext

@@ -14,6 +14,8 @@ class FlashcardViewController: UIViewController {
     @IBOutlet var markedReviewButton: UIButton!
     @IBOutlet var flashcardButton: UIButton!
     @IBOutlet var revealMnemonicButton: UIButton!
+    @IBOutlet var prevButton: UIButton!
+    @IBOutlet var nextButton: UIButton!
         
     var flashcardSetOptional: [Word]? = nil
     var currentIndexOptional: Int? = nil
@@ -32,9 +34,11 @@ class FlashcardViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         // Load in the words from core data and set the current index
+        
+        // TO DO: Add a class that acts as the intermediary and sends in a specified array of words from the users selected study set
         flashcardSetOptional = loadWords()
         if let flashcardSet = flashcardSetOptional {
-            currentIndexOptional = 0 // Set the starting index if there are words available
+            currentIndexOptional = -1 // Set the starting index if there are words available
         } else {
             currentIndexOptional = nil
         }
@@ -88,6 +92,26 @@ class FlashcardViewController: UIViewController {
     }
     
     // MARK: IBAction Methods
+    
+    @IBAction func prevButtonPressed(_ sender: UIButton) {
+        if let currentIndex = currentIndexOptional, let flashcardSet = flashcardSetOptional {
+            currentIndexOptional = (currentIndex - 1) % flashcardSet.count // Make sure that the index wraps
+            self.wordOptional = flashcardSet[currentIndexOptional!]
+        } else {
+            self.wordOptional = nil
+        }
+        updateFlashcard(with: self.wordOptional)
+    }
+    
+    @IBAction func nextButtonPressed(_ sender: UIButton) {
+        if let currentIndex = currentIndexOptional, let flashcardSet = flashcardSetOptional {
+            currentIndexOptional = (currentIndex + 1) % flashcardSet.count // Make sure that the index wraps
+            self.wordOptional = flashcardSet[currentIndexOptional!]
+        } else {
+            self.wordOptional = nil
+        }
+        updateFlashcard(with: self.wordOptional)
+    }
     
     @IBAction func flashcardButtonPressed(_ sender: UIButton) {
         if flashcardButton.title(for: .normal) == wordOptional?.foriegnWord {

@@ -160,13 +160,60 @@
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="70J-Ld-TvN"/>
-                        <segue destination="fCm-8J-1IP" kind="relationship" relationship="viewControllers" id="oKd-8f-TeK"/>
-                        <segue destination="ZF5-Bs-cae" kind="relationship" relationship="viewControllers" id="CyF-Ey-IZR"/>
+                        <segue destination="GsN-TI-51B" kind="relationship" relationship="viewControllers" id="fmb-sW-LGK"/>
+                        <segue destination="W56-Fg-FgL" kind="relationship" relationship="viewControllers" id="wJO-le-qvy"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IPD-p9-5F1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-71" y="88"/>
+        </scene>
+        <!--Select Study Set-->
+        <scene sceneID="8Mo-pK-gF6">
+            <objects>
+                <viewController id="pIe-g7-gxk" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xBQ-8J-UI9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="iQB-Aj-KhL">
+                                <rect key="frame" x="16" y="104" width="382" height="138.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a Study Set" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BMA-vO-BQO">
+                                        <rect key="frame" x="77" y="0.0" width="228" height="30"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ss4-gx-5Rh">
+                                        <rect key="frame" x="144" y="59" width="94" height="30"/>
+                                        <state key="normal" title="Use all Words"/>
+                                        <connections>
+                                            <segue destination="fCm-8J-1IP" kind="show" id="iWu-Lq-zzy"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Custom Set Implementation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IWm-YR-Dd7">
+                                        <rect key="frame" x="68" y="118" width="246.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NAS-Qn-k9L"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="iQB-Aj-KhL" firstAttribute="top" secondItem="NAS-Qn-k9L" secondAttribute="top" constant="16" id="NIl-Pf-So5"/>
+                            <constraint firstItem="iQB-Aj-KhL" firstAttribute="leading" secondItem="NAS-Qn-k9L" secondAttribute="leading" constant="16" id="r53-u6-HVZ"/>
+                            <constraint firstAttribute="trailing" secondItem="iQB-Aj-KhL" secondAttribute="trailing" constant="16" id="tOd-kk-jce"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Select Study Set" id="w0Z-fN-D8s"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jth-rP-iry" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1594" y="88"/>
         </scene>
         <!--Flashcards-->
         <scene sceneID="Ljo-ef-gSs">
@@ -176,8 +223,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="sIz-Jp-ldB">
-                                <rect key="frame" x="32" y="60" width="350" height="745"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="sIz-Jp-ldB">
+                                <rect key="frame" x="32" y="104" width="350" height="701"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="300" verticalHuggingPriority="300" horizontalCompressionResistancePriority="700" verticalCompressionResistancePriority="700" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Z60-xT-GPb">
                                         <rect key="frame" x="0.0" y="0.0" width="350" height="41"/>
@@ -207,7 +254,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="100" verticalHuggingPriority="1" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="cPz-QD-Ycb">
-                                        <rect key="frame" x="0.0" y="49" width="350" height="656"/>
+                                        <rect key="frame" x="0.0" y="57" width="350" height="558"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <state key="normal" title="Flashcard Button">
                                             <color key="titleColor" systemColor="labelColor"/>
@@ -228,7 +275,7 @@
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="500" verticalHuggingPriority="500" horizontalCompressionResistancePriority="650" verticalCompressionResistancePriority="650" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="3sU-hZ-B5N">
-                                        <rect key="frame" x="0.0" y="713" width="350" height="32"/>
+                                        <rect key="frame" x="0.0" y="631" width="350" height="32"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="300" verticalHuggingPriority="300" horizontalCompressionResistancePriority="700" verticalCompressionResistancePriority="700" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D7w-Hg-Ibd">
                                                 <rect key="frame" x="0.0" y="0.0" width="312" height="32"/>
@@ -248,8 +295,55 @@
                                             </button>
                                         </subviews>
                                     </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lHw-gJ-WiI">
+                                        <rect key="frame" x="0.0" y="679" width="350" height="22"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZgS-Ve-7g9">
+                                                <rect key="frame" x="0.0" y="0.0" width="171" height="22"/>
+                                                <state key="normal">
+                                                    <imageReference key="image" image="arrow.left" catalog="system" symbolScale="large"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" systemColor="systemGray4Color"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="prevButtonPressed:" destination="fCm-8J-1IP" eventType="primaryActionTriggered" id="sTi-wC-A9G"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qeI-i0-T5G">
+                                                <rect key="frame" x="179" y="0.0" width="171" height="22"/>
+                                                <state key="normal">
+                                                    <imageReference key="image" image="arrow.right" catalog="system" symbolScale="large"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" systemColor="systemGray5Color"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="nextButtonPressed:" destination="fCm-8J-1IP" eventType="primaryActionTriggered" id="lZK-Xf-ieZ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="lHw-gJ-WiI" secondAttribute="trailing" id="AaL-KC-Yjb"/>
+                                    <constraint firstItem="lHw-gJ-WiI" firstAttribute="leading" secondItem="sIz-Jp-ldB" secondAttribute="leading" id="Jnr-0Y-aHU"/>
                                     <constraint firstItem="Z60-xT-GPb" firstAttribute="leading" secondItem="sIz-Jp-ldB" secondAttribute="leading" id="WdE-vN-myX"/>
                                     <constraint firstAttribute="trailing" secondItem="3sU-hZ-B5N" secondAttribute="trailing" id="nvX-zf-Jyg"/>
                                     <constraint firstItem="3sU-hZ-B5N" firstAttribute="leading" secondItem="sIz-Jp-ldB" secondAttribute="leading" id="riL-yT-FeC"/>
@@ -267,16 +361,66 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Flashcards" image="greetingcard" catalog="system" id="g6G-Vr-cZK"/>
+                    <navigationItem key="navigationItem" id="c89-45-6DV"/>
                     <connections>
                         <outlet property="flashcardButton" destination="cPz-QD-Ycb" id="2iM-Pt-tcV"/>
                         <outlet property="markedReviewButton" destination="0Eb-L6-2l2" id="XNz-f2-R2Z"/>
+                        <outlet property="nextButton" destination="qeI-i0-T5G" id="R8N-qA-kFo"/>
+                        <outlet property="prevButton" destination="ZgS-Ve-7g9" id="xKg-Mn-aiz"/>
                         <outlet property="revealMnemonicButton" destination="D7w-Hg-Ibd" id="14Q-G8-kp4"/>
                         <outlet property="statisticsLabel" destination="da9-MT-RKn" id="h5R-hn-F7d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WUk-Au-u0A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="792.75362318840587" y="87.723214285714278"/>
+            <point key="canvasLocation" x="2381" y="88"/>
+        </scene>
+        <!--Select a Study Set-->
+        <scene sceneID="jnV-4j-6Kz">
+            <objects>
+                <viewController id="1Ak-mz-Ibd" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LFX-Zx-riy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="QMu-aB-Is1">
+                                <rect key="frame" x="16" y="104" width="382" height="138.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a Study Set" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pN0-R4-ljt">
+                                        <rect key="frame" x="77" y="0.0" width="228" height="30"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9NR-US-PFA">
+                                        <rect key="frame" x="144" y="59" width="94" height="30"/>
+                                        <state key="normal" title="Use all Words"/>
+                                        <connections>
+                                            <segue destination="ZF5-Bs-cae" kind="show" id="Sj2-ce-S5m"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Custom Set Implementation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="84v-KU-sYf">
+                                        <rect key="frame" x="68" y="118" width="246.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5dg-bB-hjH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5dg-bB-hjH" firstAttribute="trailing" secondItem="QMu-aB-Is1" secondAttribute="trailing" constant="16" id="24D-vA-rdv"/>
+                            <constraint firstItem="QMu-aB-Is1" firstAttribute="leading" secondItem="5dg-bB-hjH" secondAttribute="leading" constant="16" id="XCk-tE-Juu"/>
+                            <constraint firstItem="QMu-aB-Is1" firstAttribute="top" secondItem="5dg-bB-hjH" secondAttribute="top" constant="16" id="rQn-IB-wjY"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Select a Study Set" id="tEt-GV-0Gs"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lbf-jw-D94" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1593" y="818"/>
         </scene>
         <!--Quiz-->
         <scene sceneID="05L-ys-YWr">
@@ -374,6 +518,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Quiz" image="studentdesk" catalog="system" id="nYs-l4-BgA"/>
+                    <navigationItem key="navigationItem" id="h8C-az-7oZ"/>
                     <connections>
                         <outlet property="correctLabel" destination="dK9-wS-2Hh" id="Ych-hW-Tjf"/>
                         <outlet property="englishTextField" destination="NRO-lu-UHC" id="dSL-ee-i09"/>
@@ -383,10 +528,50 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QHX-fj-hRG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="792.75362318840587" y="815.625"/>
+            <point key="canvasLocation" x="2380" y="818"/>
+        </scene>
+        <!--Flashcards-->
+        <scene sceneID="aCZ-7V-Eq3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GsN-TI-51B" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Flashcards" image="greetingcard" catalog="system" id="XPI-VX-idz"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YMA-UO-ri2">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="pIe-g7-gxk" kind="relationship" relationship="rootViewController" id="UvR-Me-H1P"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ALl-zV-Jev" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="793" y="88"/>
+        </scene>
+        <!--Quiz-->
+        <scene sceneID="n6E-sM-pRc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="W56-Fg-FgL" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Quiz" image="studentdesk" catalog="system" id="xxl-qX-qdS"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LzS-s5-j6d">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="1Ak-mz-Ibd" kind="relationship" relationship="rootViewController" id="uMw-h5-Lwz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pPX-4s-Aoh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="793" y="818"/>
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.left" catalog="system" width="128" height="98"/>
+        <image name="arrow.right" catalog="system" width="128" height="98"/>
         <image name="greetingcard" catalog="system" width="107" height="128"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="speaker.wave.3" catalog="system" width="128" height="86"/>
@@ -399,6 +584,9 @@
         </systemColor>
         <systemColor name="systemGray4Color">
             <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -9,6 +9,6 @@
         <attribute name="timesMissed" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
     <elements>
-        <element name="Word" positionX="-45" positionY="0" width="128" height="133"/>
+        <element name="Word" positionX="-2340.05859375" positionY="-2800.015625" width="128" height="133"/>
     </elements>
 </model>
