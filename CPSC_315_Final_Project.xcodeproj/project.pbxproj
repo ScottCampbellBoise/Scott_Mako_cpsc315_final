@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		236CF4572574B947009FEA97 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236CF4562574B947009FEA97 /* QuizViewController.swift */; };
+		BC6BCCDD257741BB00C412DA /* StudySet+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6BCCDC257741BB00C412DA /* StudySet+CoreDataProperties.swift */; };
 		BCE9A1EC2575888D00646286 /* SpeechSynthesizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE9A1EB2575888D00646286 /* SpeechSynthesizer.swift */; };
 		BCFC76FD257163930016D7F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFC76FC257163930016D7F7 /* AppDelegate.swift */; };
 		BCFC76FF257163930016D7F7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFC76FE257163930016D7F7 /* SceneDelegate.swift */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		236CF4562574B947009FEA97 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
+		BC6BCCDC257741BB00C412DA /* StudySet+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StudySet+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		BCE9A1EB2575888D00646286 /* SpeechSynthesizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechSynthesizer.swift; sourceTree = "<group>"; };
 		BCFC76F9257163930016D7F7 /* CPSC_315_Final_Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CPSC_315_Final_Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCFC76FC257163930016D7F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 		BCFC76FB257163930016D7F7 /* CPSC_315_Final_Project */ = {
 			isa = PBXGroup;
 			children = (
+				BC6BCCDC257741BB00C412DA /* StudySet+CoreDataProperties.swift */,
 				BCFC7723257367140016D7F7 /* Word+CoreDataClass.swift */,
 				BCFC7724257367140016D7F7 /* Word+CoreDataProperties.swift */,
 				BCFC76FC257163930016D7F7 /* AppDelegate.swift */,
@@ -161,6 +164,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC6BCCDD257741BB00C412DA /* StudySet+CoreDataProperties.swift in Sources */,
 				BCFC771B2571688F0016D7F7 /* Verb.swift in Sources */,
 				BCFC771F25716E2E0016D7F7 /* VocabTableViewCell.swift in Sources */,
 				BCE9A1EC2575888D00646286 /* SpeechSynthesizer.swift in Sources */,

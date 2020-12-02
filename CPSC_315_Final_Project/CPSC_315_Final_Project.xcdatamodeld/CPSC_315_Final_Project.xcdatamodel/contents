@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17192" systemVersion="19H2" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="StudySet" representedClassName="StudySet" syncable="YES" codeGenerationType="class">
+        <attribute name="name" attributeType="String"/>
+        <relationship name="newRelationship" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Word" inverseName="newRelationship" inverseEntity="Word"/>
+    </entity>
     <entity name="Word" representedClassName="Word" syncable="YES">
         <attribute name="englishWord" attributeType="String"/>
         <attribute name="foriegnWord" attributeType="String"/>
@@ -7,8 +11,10 @@
         <attribute name="mnemonic" optional="YES" attributeType="String"/>
         <attribute name="timesCorrect" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="timesMissed" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="newRelationship" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="StudySet" inverseName="newRelationship" inverseEntity="StudySet"/>
     </entity>
     <elements>
-        <element name="Word" positionX="-2340.05859375" positionY="-2800.015625" width="128" height="133"/>
+        <element name="Word" positionX="-2340.05859375" positionY="-2800.015625" width="128" height="148"/>
+        <element name="StudySet" positionX="-2687.96484375" positionY="-2724.43359375" width="128" height="73"/>
     </elements>
 </model>
