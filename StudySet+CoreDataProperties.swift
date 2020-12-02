@@ -16,7 +16,7 @@ extension StudySet {
         return NSFetchRequest<StudySet>(entityName: "StudySet")
     }
 
-    @NSManaged public var name: String?
+    @NSManaged public var name: String
     @NSManaged public var words: NSSet?
 
 }

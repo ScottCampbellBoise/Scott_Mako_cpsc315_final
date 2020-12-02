@@ -46,7 +46,9 @@ extension Word {
 extension Word : Identifiable {
     
     func addWordToStudySet(studyset: StudySet) {
-        var set = self.mutableSetValue(forKey: "studysets")
+        let set = self.mutableSetValue(forKey: "studysets")
         set.add(studyset)
+        studysets = set
     }
+    
 }

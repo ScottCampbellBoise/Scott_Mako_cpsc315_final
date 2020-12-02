@@ -29,7 +29,9 @@ class VocabTableViewController: UIViewController, UITableViewDataSource, UITable
         // Do any additional setup after loading the view.
         loadWords()
         
-        //testCoreDataRelations()
+        loadTestWords()
+        
+        testCoreDataRelations()
         
         print("MOVE THE SPEECH SYNTH CODE TO EVENTUAL HOME SCREEN!")
         SpeechSynthesizer.languageCode = LanguageCode.germanDE
@@ -167,13 +169,17 @@ class VocabTableViewController: UIViewController, UITableViewDataSource, UITable
     // MARK: Core Data Methods
     
     func testCoreDataRelations() {
+        print("Testing Core Data Relations")
         let request: NSFetchRequest<Word> = Word.fetchRequest()
-        let studysetPredicate = NSPredicate(format: "studysets.name MATCHES %@", "Master") // %@ is a placeholder for a value of any type
+        let studysetPredicate = NSPredicate(format: "ANY studysets.name =[cd] %@", "Master")
         request.predicate = studysetPredicate
         
         do {
             let results: [Word] = try context.fetch(request)
-            print("Found Results!")
+            print("Found \(results.count) Results!")
+            for word in results {
+                print("    \(word.foriegnWord) - \(word.englishWord)")
+            }
         }
         catch {
             print("Relational Test Failed! \(error)")
