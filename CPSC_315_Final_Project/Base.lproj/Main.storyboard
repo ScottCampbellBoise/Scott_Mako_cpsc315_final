@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="F5D-oE-lJ6">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -552,7 +552,7 @@
                                                         <rect key="frame" x="0.0" y="38" width="382" height="30"/>
                                                         <state key="normal" title="Check"/>
                                                         <connections>
-                                                            <action selector="checkAnswer:" destination="ZF5-Bs-cae" eventType="primaryActionTriggered" id="e2y-A9-1DV"/>
+                                                            <action selector="checkAnswerButtonPressed:" destination="ZF5-Bs-cae" eventType="primaryActionTriggered" id="e2y-A9-1DV"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -579,11 +579,15 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9yt-e4-Xc7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="9yt-e4-Xc7" firstAttribute="trailing" secondItem="DMR-ha-Qax" secondAttribute="trailing" constant="16" id="7zD-lQ-6wv"/>
                             <constraint firstItem="DMR-ha-Qax" firstAttribute="leading" secondItem="9yt-e4-Xc7" secondAttribute="leading" constant="16" id="O4P-d5-vye"/>
                             <constraint firstItem="DMR-ha-Qax" firstAttribute="centerY" secondItem="f1N-Jt-B7d" secondAttribute="centerY" id="Vjk-IM-uq6"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="vOb-7Y-fRP" appends="YES" id="OEq-Yh-PAb"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Quiz" image="studentdesk" catalog="system" id="nYs-l4-BgA"/>
                     <navigationItem key="navigationItem" id="h8C-az-7oZ"/>
@@ -595,6 +599,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QHX-fj-hRG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="vOb-7Y-fRP">
+                    <connections>
+                        <action selector="swipeHandler:" destination="ZF5-Bs-cae" id="SoO-xP-8m0"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2380" y="818"/>
         </scene>
