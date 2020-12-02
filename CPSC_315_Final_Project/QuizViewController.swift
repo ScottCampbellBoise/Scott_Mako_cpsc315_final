@@ -6,11 +6,13 @@
 //
 
 import UIKit
+import CoreData
 
 // For now: Displays foreign word, user has to match its english word via a textfield
 //          Diplays the percentage of the user getting the word right
 //          by using values from timesCorrect and timesMissed
 //          Provides hints (max 3) and a reveal answer button
+//          Added swipe gestures so user can move on or come back to previous questions
 
 class QuizViewController: UIViewController {
     
@@ -32,24 +34,31 @@ class QuizViewController: UIViewController {
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
-    var foreignWord = "" {
-        didSet {
-            if let foreignWord = wordOptional?.foriegnWord {
-                foreignWordLabel.text = "\(foreignWord)"
-            }
-        }
-    }
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         print("Loaded Quiz View")
+    
+        flashcardSetOptional = loadWords()
+        if let flashcardSet = flashcardSetOptional {
+            currentIndexOptional = -1 // Set the starting index if there are words available
+        } else {
+            currentIndexOptional = nil
+        }
         
-        updateHintLabel()
-        updateCorrectLabel()
+        showQuiz()
+        
+        // Swipe gestures for left and right swipe
+        let leftRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(swipeHandler(_:)))
+        leftRecognizer.direction = .left
+        let rightRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(swipeHandler(_:)))
+        rightRecognizer.direction = .right
+        
+        self.view.addGestureRecognizer(leftRecognizer)
+        self.view.addGestureRecognizer(rightRecognizer)
         
         print("MOVE THE SPEECH SYNTH CODE TO EVENTUAL HOME SCREEN!")
         SpeechSynthesizer.languageCode = LanguageCode.germanDE
+        
     }
     
     @IBAction func speakerButtonPressed(_ sender: UIButton) {
@@ -58,44 +67,83 @@ class QuizViewController: UIViewController {
         }
     }
     
-    @IBAction func checkAnswer(_ sender: UIButton) {
+    @IBAction func checkAnswerButtonPressed(_ sender: UIButton) {
         if let userInputOp = englishTextField.text {
             let userInput = userInputOp.uppercased()
-            if let answer = wordOptional?.englishWord {
-                if answer.uppercased() == userInput {
-                    wordOptional?.timesCorrect += 1
+            if let answer = wordOptional{
+                if answer.englishWord.uppercased() == userInput {
+                    answer.timesCorrect += 1
                     
                     let correctMessage = "Correct! Keep it up!"
                     let alertController = UIAlertController(title: "Correct", message: correctMessage, preferredStyle: .alert)
                     
-                    alertController.addAction(UIAlertAction(title: "Okay", style: .default, handler: { (action) -> Void in
+                    alertController.addAction(UIAlertAction(title: "Next Question", style: .default, handler: { (action) -> Void in
                         print("User pressed okay")
+                        self.saveWord()
+                        
                         self.changeNumHints(reset: true)
-                        // TODO: Add method to move onto next word
+                        
+                        // move on to next question
+                        self.swipedLeft()
                             
                     }))
                     present(alertController, animated: true, completion: { () -> Void in
                         print("Presented Correct alert")
                     })
                 } else {
-                    wordOptional?.timesMissed += 1
+                    answer.timesMissed += 1
                     
-                    let incorrectMessage = "Your answer is incorrect. Try pressing the Hint or Reveal Answer button."
+                    let incorrectMessage = "Your answer is incorrect. Try pressing the Hint or Reveal Answer button or come back to this one later."
                     let alertController = UIAlertController(title: "Incorrect", message: incorrectMessage, preferredStyle: .alert)
                     
                     alertController.addAction(UIAlertAction(title: "Okay", style: .default, handler: { (action) -> Void in
                         print("User pressed okay")
+                        self.saveWord()
                             
                     }))
                     present(alertController, animated: true, completion: { () -> Void in
-                        print("Presented Incorrecr alert")
+                        print("Presented Incorrect alert")
                     })
                 }
-                
-                saveWord()
             }
         }
         invalidInputAlert()
+    }
+    
+    
+    @IBAction func swipeHandler(_ gestureRecognizer: UISwipeGestureRecognizer) {
+        if gestureRecognizer.state == .ended {
+            if gestureRecognizer.direction == .right {
+                print("Swiped right to previous question.")
+                swipedRight()
+            }
+            if gestureRecognizer.direction == .left {
+                print("Swiped left to next question.")
+                swipedLeft()
+            }
+        }
+    }
+    
+    
+    func swipedLeft() {
+        if let currentIndex = currentIndexOptional, let flashcardSet = flashcardSetOptional {
+            currentIndexOptional = (currentIndex + 1) % flashcardSet.count // Make sure that the index wraps
+            self.wordOptional = flashcardSet[currentIndexOptional!]
+        } else {
+            self.wordOptional = nil
+        }
+        updateQuiz(with: self.wordOptional)
+    }
+    
+    
+    func swipedRight() {
+        if let currentIndex = currentIndexOptional, let flashcardSet = flashcardSetOptional {
+            currentIndexOptional = (currentIndex - 1) % flashcardSet.count // Make sure that the index wraps
+            self.wordOptional = flashcardSet[currentIndexOptional!]
+        } else {
+            self.wordOptional = nil
+        }
+        updateQuiz(with: self.wordOptional)
     }
     
     
@@ -131,23 +179,24 @@ class QuizViewController: UIViewController {
     
     
     @IBAction func revealAnswerButtonPressed(_ sender: UIButton) {
-        if let answer = wordOptional?.englishWord {
-            let answerMessage = "Answer is \(answer).\nCorrect percentage will drop."
+        if let answer = wordOptional {
+            let answerMessage = "Answer is \(answer.englishWord).\nCorrect percentage will drop."
             let alertController = UIAlertController(title: "Answer", message: answerMessage, preferredStyle: .alert)
         
             alertController.addAction(UIAlertAction(title: "Okay", style: .default, handler: { (action) -> Void in
                 print("User pressed okay")
-                // self.numHints = 0
-                // self.updateHintLabel()
-                // TODO: Add method to move onto next word
+                answer.timesMissed += 1
+                self.saveWord()
                 
+                // move on to next question
+                self.swipedLeft()
+                
+                self.changeNumHints(reset: true)
+                self.updateHintLabel()
             }))
             present(alertController, animated: true, completion: { () -> Void in
                 print("Presented Answer alert")
             })
-            
-            wordOptional?.timesMissed += 1
-            saveWord()
         }
     }
     
@@ -184,14 +233,19 @@ class QuizViewController: UIViewController {
     
     
     func updateCorrectLabel() {
-        if let correct = wordOptional?.timesCorrect, let wrong = wordOptional?.timesMissed {
+        if let word = wordOptional {
+            let correct = word.timesCorrect
+            let wrong = word.timesMissed
+            
             if correct == 0 && wrong == 0 {
                 correctLabel.text = "Correct: %"
             }
             else {
-                let percentage = correct / (correct + wrong)
+                let percentage = 100 * correct / (correct + wrong)
                 correctLabel.text = "Correct: \(percentage)%"
             }
+        } else {
+            correctLabel.text = "Correct: %"
         }
     }
     
@@ -209,6 +263,29 @@ class QuizViewController: UIViewController {
     }
     
     
+    func showQuiz() {
+        if let flashcardSet = flashcardSetOptional, let currentIndex = currentIndexOptional {
+            currentIndexOptional = (currentIndex + 1) % flashcardSet.count
+            wordOptional = flashcardSet[currentIndexOptional!]
+        } else {
+            wordOptional = nil
+        }
+        
+        updateQuiz(with: wordOptional)
+    }
+    
+    
+    func updateQuiz(with wordOptional: Word?) {
+        if let word = wordOptional {
+            foreignWordLabel.text = word.foriegnWord
+            updateHintLabel()
+            updateCorrectLabel()
+        } else {
+            foreignWordLabel.text = ""
+        }
+    }
+    
+    
     func saveWord() {
         do {
             try context.save()
@@ -217,5 +294,23 @@ class QuizViewController: UIViewController {
             print("Error saving the changes in Words: \(error)")
         }
     }
+    
+    
+    func loadWords() -> [Word]? {
+        // we need to "request" the categories from the database (using the persistent container's context
+        // Need to fetch request from study set instead....
+        
+        let request: NSFetchRequest<Word> = Word.fetchRequest()
+        //let request: NSFetchRequest<StudySet> = StudySet.fetchRequest()
+        do {
+            let words = try context.fetch(request)
+            return words
+        }
+        catch {
+            print("Error loading words \(error)")
+            return nil
+        }
+    }
+    
 }
 
