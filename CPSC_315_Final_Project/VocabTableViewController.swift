@@ -29,7 +29,7 @@ class VocabTableViewController: UIViewController, UITableViewDataSource, UITable
         // Do any additional setup after loading the view.
         loadWords()
         
-        loadTestWords()
+        //loadTestWords()
         
         testCoreDataRelations()
         
