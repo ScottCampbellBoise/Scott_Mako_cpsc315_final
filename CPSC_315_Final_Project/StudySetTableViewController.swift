@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import CoreData
 
 class StudySetTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -15,10 +14,6 @@ class StudySetTableViewController: UIViewController, UITableViewDataSource, UITa
     // Define the data source for the Table View
     var studysets = [StudySet]()
     
-    // We need a reference to the context
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,7 +21,10 @@ class StudySetTableViewController: UIViewController, UITableViewDataSource, UITa
         print("Loaded Study Set View")
         
         // Do any additional setup after loading the view.
-        loadStudySets()
+        let studysetsOptional = DatabaseManager.loadStudySets()
+        if let unwrappedSets = studysetsOptional {
+            studysets = unwrappedSets
+        }
     }
 
     // MARK: TableView Delegate Methods
@@ -62,12 +60,12 @@ class StudySetTableViewController: UIViewController, UITableViewDataSource, UITa
             let text = alertTextField.text!
             // This is the CREATE in CRUD
             // Make a Category using Context
-            let newStudyset = StudySet(context: self.context)
+            let newStudyset = StudySet(context: DatabaseManager.context)
             // Add the rest of the fields!
             newStudyset.name = text
             
             self.studysets.append(newStudyset)
-            self.saveStudySets()
+            DatabaseManager.saveStudySets()
         }
         
         alert.addAction(action)
@@ -75,38 +73,5 @@ class StudySetTableViewController: UIViewController, UITableViewDataSource, UITa
         
         print("NEED TO ADD FUNCTIONALITY TO ADD WORDS TO STUDYSET!!")
     }
-    
-    // MARK: Core Data Methods
-    
-    func saveStudySets() {
-        // We need to save the context
-        do {
-            try context.save()
-        } catch {
-            print("Error saving the Study Sets: \(error)")
-        }
-        tableView.reloadData()
-    }
-    
-    // READ of CRUD
-    func loadStudySets(withPredicate predicate: NSPredicate? = nil) {
-        // we need to "request" the categories from the database (using the persistent container's context
-        let request: NSFetchRequest<StudySet> = StudySet.fetchRequest()
-        // Add some sort descriptors
- 
-        if let pred = predicate {
-            // need to make a compound predicate
-            request.predicate = pred
-        }
-        
-        do {
-            studysets = try context.fetch(request)
-        }
-        catch {
-            print("Error loading studysets \(error)")
-        }
-        tableView.reloadData()
-    }
-
     
 }

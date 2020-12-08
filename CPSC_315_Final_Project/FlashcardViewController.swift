@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import CoreData
 
 class FlashcardViewController: UIViewController {
 
@@ -22,9 +21,6 @@ class FlashcardViewController: UIViewController {
     
     var wordOptional: Word? = nil
     
-    // We need a reference to the context
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    
     // MARK: Lifecycle Methods
     
     override func viewDidLoad() {
@@ -33,10 +29,6 @@ class FlashcardViewController: UIViewController {
         print("Loaded Flashcard View")
         // Do any additional setup after loading the view.
         
-        // Load in the words from core data and set the current index
-        
-        // TO DO: Add a class that acts as the intermediary and sends in a specified array of words from the users selected study set
-        flashcardSetOptional = loadWords()
         if let flashcardSet = flashcardSetOptional {
             currentIndexOptional = -1 // Set the starting index if there are words available
         } else {
@@ -52,7 +44,7 @@ class FlashcardViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         print("Vocab Table View Controller will appear")
         
-        loadWords()
+        DatabaseManager.loadWords()
         refreshWords()
     }
     
@@ -136,7 +128,7 @@ class FlashcardViewController: UIViewController {
         }
         
         // Save the changes and refresh the datasource
-        saveWords()
+        DatabaseManager.saveWords()
         refreshWords()
     }
     
@@ -165,8 +157,8 @@ class FlashcardViewController: UIViewController {
                 if !textField.text!.isEmpty {
                     flashcardSet[currentIndex].mnemonic = textField.text!
                     // Save and refresh the changes
-                    self.saveWords()
-                    self.refreshWords()
+                    DatabaseManager.saveWords()
+                    refreshWords()
                 }
             }
          })
@@ -185,42 +177,16 @@ class FlashcardViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
-    
-    // MARK: Core Data Methods
-    
-    func loadWords() -> [Word]? {
-        // we need to "request" the categories from the database (using the persistent container's context
-        let request: NSFetchRequest<Word> = Word.fetchRequest()
-  
-        do {
-            let words = try context.fetch(request)
-            return words
-        }
-        catch {
-            print("Error loading words \(error)")
-            return nil
-        }
-    }
-    
-    func saveWords() {
-        // We need to save the context
-        do {
-            try context.save()
-        } catch {
-            print("Error saving the Words: \(error)")
-        }
-    }
-    
     // This reloads the words and recomputes the currentIndex
     func refreshWords() {
-        flashcardSetOptional = loadWords()
+        flashcardSetOptional = DatabaseManager.loadWords()
         if let flashcardSet = flashcardSetOptional, let currentIndex = currentIndexOptional {
             currentIndexOptional = currentIndex % flashcardSet.count // Make sure that the index wraps
         } else {
             currentIndexOptional = nil
         }
     }
-
+    
 }
 
 

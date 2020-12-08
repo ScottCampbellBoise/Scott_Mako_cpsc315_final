@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import CoreData
 
 class VocabTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
 
@@ -14,10 +13,6 @@ class VocabTableViewController: UIViewController, UITableViewDataSource, UITable
     
     // Define the data source for the Table View
     var words = [Word]()
-    
-    // We need a reference to the context
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    
     
     // MARK: - Lifecycle Methods
     
@@ -27,36 +22,40 @@ class VocabTableViewController: UIViewController, UITableViewDataSource, UITable
         print("Loaded Vocab View")
         
         // Do any additional setup after loading the view.
-        loadWords()
+        let wordsOptional = DatabaseManager.loadWords()
+        if let unwrappedWords = wordsOptional { words = unwrappedWords }
         
         //loadTestWords()
         
-        testCoreDataRelations()
+        DatabaseManager.testCoreDataRelations()
         
         print("MOVE THE SPEECH SYNTH CODE TO EVENTUAL HOME SCREEN!")
         SpeechSynthesizer.languageCode = LanguageCode.germanDE
         
         let documentsDirectoryURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
         print(documentsDirectoryURL)
+        
+        tableView.reloadData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         print("Vocab Table View Controller will appear")
         
-        loadWords()
+        let wordsOptional = DatabaseManager.loadWords()
+        if let unwrappedWords = wordsOptional { words = unwrappedWords }
         tableView.reloadData()
     }
     
     func loadTestWords() {
         // Define the master studyset
-        let masterSet = getMasterStudySet()
+        let masterSet: StudySet? = DatabaseManager.getMasterStudySet()
         
         if masterSet == nil {
             print("Could not find master set!!!")
             return
         }
         
-        var word1 = Word(context: self.context)
+        var word1 = Word(context: DatabaseManager.context)
         word1.englishWord = "Good Morning"
         word1.foriegnWord = "Guten Morgen"
         word1.markedForReview = false
@@ -66,7 +65,7 @@ class VocabTableViewController: UIViewController, UITableViewDataSource, UITable
         word1.addWordToStudySet(studyset: masterSet!)
         self.words.append(word1)
         
-        word1 = Word(context: self.context)
+        word1 = Word(context: DatabaseManager.context)
         word1.englishWord = "Good Afternoon"
         word1.foriegnWord = "Guten Tag"
         word1.markedForReview = false
@@ -76,7 +75,7 @@ class VocabTableViewController: UIViewController, UITableViewDataSource, UITable
         word1.addWordToStudySet(studyset: masterSet!)
         self.words.append(word1)
         
-        word1 = Word(context: self.context)
+        word1 = Word(context: DatabaseManager.context)
         word1.englishWord = "Good Evening"
         word1.foriegnWord = "Guten Abend"
         word1.markedForReview = false
@@ -86,7 +85,7 @@ class VocabTableViewController: UIViewController, UITableViewDataSource, UITable
         word1.addWordToStudySet(studyset: masterSet!)
         self.words.append(word1)
         
-        word1 = Word(context: self.context)
+        word1 = Word(context: DatabaseManager.context)
         word1.englishWord = "Good Night"
         word1.foriegnWord = "Gute Nacht"
         word1.markedForReview = false
@@ -96,7 +95,8 @@ class VocabTableViewController: UIViewController, UITableViewDataSource, UITable
         word1.addWordToStudySet(studyset: masterSet!)
         self.words.append(word1)
         
-        self.saveWords()
+        DatabaseManager.saveWords()
+        tableView.reloadData()
     }
     
     // MARK: TableView Delegate Methods
@@ -132,12 +132,13 @@ class VocabTableViewController: UIViewController, UITableViewDataSource, UITable
             let text = alertTextField.text!
             // This is the CREATE in CRUD
             // Make a Category using Context
-            let newWord = Word(context: self.context)
+            let newWord = Word(context: DatabaseManager.context)
             // Add the rest of the fields!
             newWord.englishWord = text
             
             self.words.append(newWord)
-            self.saveWords()
+            DatabaseManager.saveWords()
+            self.tableView.reloadData()
         }
         
         alert.addAction(action)
@@ -153,7 +154,10 @@ class VocabTableViewController: UIViewController, UITableViewDataSource, UITable
         } else {
             // Search bar is empty
             searchBar.resignFirstResponder()
-            loadWords()
+            
+            let wordsOptional = DatabaseManager.loadWords()
+            if let unwrappedWords = wordsOptional { words = unwrappedWords }
+            tableView.reloadData()
         }
     }
     
@@ -162,80 +166,10 @@ class VocabTableViewController: UIViewController, UITableViewDataSource, UITable
             // we need a predicate to filter items by text
             let predicate = NSPredicate(format: "englishWord CONTAINS[cd] %@ OR foriegnWord CONTAINS[cd] %@", text, text)
     
-            loadWords(withPredicate: predicate)
+            let wordsOptional = DatabaseManager.loadWords(withPredicate: predicate)
+            if let unwrappedWords = wordsOptional { words = unwrappedWords }
+            tableView.reloadData()
         }
     }
-    
-    // MARK: Core Data Methods
-    
-    func testCoreDataRelations() {
-        print("Testing Core Data Relations")
-        let request: NSFetchRequest<Word> = Word.fetchRequest()
-        let studysetPredicate = NSPredicate(format: "ANY studysets.name =[cd] %@", "Master")
-        request.predicate = studysetPredicate
-        
-        do {
-            let results: [Word] = try context.fetch(request)
-            print("Found \(results.count) Results!")
-            for word in results {
-                print("    \(word.foriegnWord) - \(word.englishWord)")
-            }
-        }
-        catch {
-            print("Relational Test Failed! \(error)")
-           
-        }
-    }
-    
-    func getMasterStudySet() -> StudySet? {
-        let request: NSFetchRequest<StudySet> = StudySet.fetchRequest()
-        let predicate = NSPredicate(format: "name CONTAINS[cd] %@", "Master")
-        request.predicate = predicate
-        
-        do {
-            let masterSets: [StudySet] = try context.fetch(request)
-            return masterSets[0]
-        }
-        catch {
-            print("Error loading words \(error)")
-            return nil
-        }
-    }
-    
-    
-    func saveWords() {
-        // We need to save the context
-        do {
-            try context.save()
-        } catch {
-            print("Error saving the Words: \(error)")
-        }
-        tableView.reloadData()
-    }
-    
-    // READ of CRUD
-    func loadWords(withPredicate predicate: NSPredicate? = nil) {
-        // we need to "request" the categories from the database (using the persistent container's context
-        let request: NSFetchRequest<Word> = Word.fetchRequest()
-        // Add some sort descriptors
-        
-        let englishSortDescriptor = NSSortDescriptor(keyPath: \Word.englishWord, ascending: true)
-        let foriegnSortDescriptor = NSSortDescriptor(keyPath: \Word.foriegnWord, ascending: true)
-        request.sortDescriptors = [foriegnSortDescriptor, englishSortDescriptor]
- 
-        if let pred = predicate {
-            // need to make a compound predicate
-            request.predicate = pred
-        }
-        
-        do {
-            words = try context.fetch(request)
-        }
-        catch {
-            print("Error loading words \(error)")
-        }
-        tableView.reloadData()
-    }
-
 }
 

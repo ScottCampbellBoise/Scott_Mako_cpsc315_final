@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import CoreData
 
 // For now: Displays foreign word, user has to match its english word via a textfield
 //          Diplays the percentage of the user getting the word right
@@ -23,6 +22,8 @@ class QuizViewController: UIViewController {
     @IBOutlet var englishTextField: UITextField!
     @IBOutlet var hintButtonLabel: UIButton!
     @IBOutlet var correctLabel: UILabel!
+    
+    @IBOutlet var tableView: UITableView!
 
     // TODO: Implement the connection for allowing the user to choose a study set
     // TODO: Figure out how to randomly select words from database and onto quiz view...
@@ -31,14 +32,12 @@ class QuizViewController: UIViewController {
     var currentIndexOptional: Int? = nil
     
     var wordOptional: Word? = nil
-    
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         print("Loaded Quiz View")
     
-        flashcardSetOptional = loadWords()
+        flashcardSetOptional = DatabaseManager.loadWords()
         if let flashcardSet = flashcardSetOptional {
             currentIndexOptional = -1 // Set the starting index if there are words available
         } else {
@@ -59,6 +58,7 @@ class QuizViewController: UIViewController {
         print("MOVE THE SPEECH SYNTH CODE TO EVENTUAL HOME SCREEN!")
         SpeechSynthesizer.languageCode = LanguageCode.germanDE
         
+        tableView.reloadData()
     }
     
     @IBAction func speakerButtonPressed(_ sender: UIButton) {
@@ -79,7 +79,8 @@ class QuizViewController: UIViewController {
                     
                     alertController.addAction(UIAlertAction(title: "Next Question", style: .default, handler: { (action) -> Void in
                         print("User pressed okay")
-                        self.saveWord()
+                        DatabaseManager.saveWords()
+                        self.tableView.reloadData()
                         
                         self.changeNumHints(reset: true)
                         
@@ -98,7 +99,8 @@ class QuizViewController: UIViewController {
                     
                     alertController.addAction(UIAlertAction(title: "Okay", style: .default, handler: { (action) -> Void in
                         print("User pressed okay")
-                        self.saveWord()
+                        DatabaseManager.saveWords()
+                        self.tableView.reloadData()
                             
                     }))
                     present(alertController, animated: true, completion: { () -> Void in
@@ -186,7 +188,8 @@ class QuizViewController: UIViewController {
             alertController.addAction(UIAlertAction(title: "Okay", style: .default, handler: { (action) -> Void in
                 print("User pressed okay")
                 answer.timesMissed += 1
-                self.saveWord()
+                DatabaseManager.saveWords()
+                self.tableView.reloadData()
                 
                 // move on to next question
                 self.swipedLeft()
@@ -282,33 +285,6 @@ class QuizViewController: UIViewController {
             updateCorrectLabel()
         } else {
             foreignWordLabel.text = ""
-        }
-    }
-    
-    
-    func saveWord() {
-        do {
-            try context.save()
-        }
-        catch {
-            print("Error saving the changes in Words: \(error)")
-        }
-    }
-    
-    
-    func loadWords() -> [Word]? {
-        // we need to "request" the categories from the database (using the persistent container's context
-        // Need to fetch request from study set instead....
-        
-        let request: NSFetchRequest<Word> = Word.fetchRequest()
-        //let request: NSFetchRequest<StudySet> = StudySet.fetchRequest()
-        do {
-            let words = try context.fetch(request)
-            return words
-        }
-        catch {
-            print("Error loading words \(error)")
-            return nil
         }
     }
     

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		236CF4572574B947009FEA97 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236CF4562574B947009FEA97 /* QuizViewController.swift */; };
+		BC5A1927257F2F8300DAC9AF /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5A1926257F2F8300DAC9AF /* DatabaseManager.swift */; };
 		BC6BCCE42577483E00C412DA /* StudySet+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6BCCE12577483E00C412DA /* StudySet+CoreDataProperties.swift */; };
 		BC6BCCE52577483E00C412DA /* Word+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6BCCE22577483E00C412DA /* Word+CoreDataClass.swift */; };
 		BC6BCCE62577483E00C412DA /* Word+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6BCCE32577483E00C412DA /* Word+CoreDataProperties.swift */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		236CF4562574B947009FEA97 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
+		BC5A1926257F2F8300DAC9AF /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		BC6BCCE12577483E00C412DA /* StudySet+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StudySet+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		BC6BCCE22577483E00C412DA /* Word+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Word+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		BC6BCCE32577483E00C412DA /* Word+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Word+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
@@ -99,6 +101,7 @@
 				BC6BCCF125774B5500C412DA /* StudySetTableViewController.swift */,
 				BCFC771A2571688F0016D7F7 /* Verb.swift */,
 				BCE9A1EB2575888D00646286 /* SpeechSynthesizer.swift */,
+				BC5A1926257F2F8300DAC9AF /* DatabaseManager.swift */,
 			);
 			path = CPSC_315_Final_Project;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC5A1927257F2F8300DAC9AF /* DatabaseManager.swift in Sources */,
 				BCFC771B2571688F0016D7F7 /* Verb.swift in Sources */,
 				BCFC771F25716E2E0016D7F7 /* VocabTableViewCell.swift in Sources */,
 				BC6BCCE9257748C200C412DA /* StudySet+CoreDataClass.swift in Sources */,

@@ -244,40 +244,102 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="iQB-Aj-KhL">
-                                <rect key="frame" x="16" y="104" width="382" height="138.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="iQB-Aj-KhL">
+                                <rect key="frame" x="16" y="104" width="382" height="693"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a Study Set" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BMA-vO-BQO">
-                                        <rect key="frame" x="77" y="0.0" width="228" height="30"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select the sets you want to practice!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BMA-vO-BQO">
+                                        <rect key="frame" x="20.5" y="0.0" width="341" height="24"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ss4-gx-5Rh">
-                                        <rect key="frame" x="144" y="59" width="94" height="30"/>
-                                        <state key="normal" title="Use all Words"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nUK-Qz-6CP">
+                                        <rect key="frame" x="0.0" y="32" width="382" height="41.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Use all Vocab Words"/>
                                         <connections>
-                                            <segue destination="fCm-8J-1IP" kind="show" identifier="FlashcardSegue" id="iWu-Lq-zzy"/>
+                                            <segue destination="fCm-8J-1IP" kind="show" identifier="AllWordsSegue" id="xTE-oM-ekm"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Custom Set Implementation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IWm-YR-Dd7">
-                                        <rect key="frame" x="68" y="118" width="246.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="POl-BD-UMB">
+                                        <rect key="frame" x="0.0" y="81.5" width="382" height="561.5"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FlashcardPrepCell" textLabel="3tL-wq-Sfq" detailTextLabel="ctK-Zu-LP7" style="IBUITableViewCellStyleSubtitle" id="u55-vm-l8B">
+                                                <rect key="frame" x="0.0" y="28" width="382" height="55.5"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="u55-vm-l8B" id="2Je-WS-MaC">
+                                                    <rect key="frame" x="0.0" y="0.0" width="382" height="55.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3tL-wq-Sfq">
+                                                            <rect key="frame" x="20" y="10" width="33" height="20.5"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ctK-Zu-LP7">
+                                                            <rect key="frame" x="20" y="31.5" width="44" height="14.5"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="pIe-g7-gxk" id="em3-El-hcX"/>
+                                            <outlet property="delegate" destination="pIe-g7-gxk" id="jF6-8z-4df"/>
+                                        </connections>
+                                    </tableView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kDx-XC-1Sb">
+                                        <rect key="frame" x="0.0" y="651" width="382" height="42"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="Go!"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="fCm-8J-1IP" kind="show" identifier="GoSegue" id="3z3-GV-ZHE"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="nUK-Qz-6CP" firstAttribute="leading" secondItem="iQB-Aj-KhL" secondAttribute="leading" id="2aC-Fg-EPA"/>
+                                    <constraint firstAttribute="trailing" secondItem="kDx-XC-1Sb" secondAttribute="trailing" id="4pa-e8-roP"/>
+                                    <constraint firstAttribute="trailing" secondItem="nUK-Qz-6CP" secondAttribute="trailing" id="ImV-89-4Do"/>
+                                    <constraint firstItem="POl-BD-UMB" firstAttribute="leading" secondItem="iQB-Aj-KhL" secondAttribute="leading" id="LBq-Wf-ssa"/>
+                                    <constraint firstAttribute="trailing" secondItem="POl-BD-UMB" secondAttribute="trailing" id="STu-7J-xT8"/>
+                                    <constraint firstItem="kDx-XC-1Sb" firstAttribute="leading" secondItem="iQB-Aj-KhL" secondAttribute="leading" id="brD-LL-24y"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="NAS-Qn-k9L"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="iQB-Aj-KhL" firstAttribute="top" secondItem="NAS-Qn-k9L" secondAttribute="top" constant="16" id="NIl-Pf-So5"/>
-                            <constraint firstItem="iQB-Aj-KhL" firstAttribute="leading" secondItem="NAS-Qn-k9L" secondAttribute="leading" constant="16" id="r53-u6-HVZ"/>
-                            <constraint firstAttribute="trailing" secondItem="iQB-Aj-KhL" secondAttribute="trailing" constant="16" id="tOd-kk-jce"/>
+                            <constraint firstItem="iQB-Aj-KhL" firstAttribute="top" secondItem="NAS-Qn-k9L" secondAttribute="top" constant="16" id="JcH-0e-sRu"/>
+                            <constraint firstItem="NAS-Qn-k9L" firstAttribute="bottom" secondItem="iQB-Aj-KhL" secondAttribute="bottom" constant="16" id="Ybg-x5-INT"/>
+                            <constraint firstItem="NAS-Qn-k9L" firstAttribute="trailing" secondItem="iQB-Aj-KhL" secondAttribute="trailing" constant="16" id="fe4-ro-dhi"/>
+                            <constraint firstItem="iQB-Aj-KhL" firstAttribute="leading" secondItem="NAS-Qn-k9L" secondAttribute="leading" constant="16" id="n8J-lg-Tai"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Select Study Set" id="w0Z-fN-D8s"/>
+                    <connections>
+                        <outlet property="goButton" destination="kDx-XC-1Sb" id="onD-34-Msl"/>
+                        <outlet property="tableView" destination="POl-BD-UMB" id="493-Aa-PJb"/>
+                        <outlet property="useAllWordsButton" destination="nUK-Qz-6CP" id="XuP-hT-iea"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jth-rP-iry" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -665,6 +727,9 @@
             <point key="canvasLocation" x="792.75362318840587" y="-1291.0714285714284"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="xTE-oM-ekm"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow.left" catalog="system" width="128" height="98"/>
         <image name="arrow.right" catalog="system" width="128" height="98"/>

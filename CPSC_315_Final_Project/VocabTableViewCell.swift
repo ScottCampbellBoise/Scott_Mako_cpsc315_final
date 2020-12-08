@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import CoreData
 
 class VocabTableViewCell: UITableViewCell {
 
@@ -17,9 +16,6 @@ class VocabTableViewCell: UITableViewCell {
     @IBOutlet var markedReviewButton: UIButton!
     
     var wordOptional: Word? = nil
-    
-    // We need a reference to the context
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -48,7 +44,7 @@ class VocabTableViewCell: UITableViewCell {
         
         // Save the changes to the context
         do {
-            try context.save()
+            try DatabaseManager.context.save()
         } catch {
             print("Error saving the changes in Words: \(error)")
         }
