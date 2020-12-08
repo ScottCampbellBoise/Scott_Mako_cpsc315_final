@@ -23,8 +23,6 @@ class QuizViewController: UIViewController {
     @IBOutlet var hintButtonLabel: UIButton!
     @IBOutlet var correctLabel: UILabel!
     
-    @IBOutlet var tableView: UITableView!
-
     // TODO: Implement the connection for allowing the user to choose a study set
     // TODO: Figure out how to randomly select words from database and onto quiz view...
     //      Might have to add another attribute like a unique id for each word...
@@ -57,8 +55,6 @@ class QuizViewController: UIViewController {
         
         print("MOVE THE SPEECH SYNTH CODE TO EVENTUAL HOME SCREEN!")
         SpeechSynthesizer.languageCode = LanguageCode.germanDE
-        
-        tableView.reloadData()
     }
     
     @IBAction func speakerButtonPressed(_ sender: UIButton) {
@@ -80,7 +76,6 @@ class QuizViewController: UIViewController {
                     alertController.addAction(UIAlertAction(title: "Next Question", style: .default, handler: { (action) -> Void in
                         print("User pressed okay")
                         DatabaseManager.saveWords()
-                        self.tableView.reloadData()
                         
                         self.changeNumHints(reset: true)
                         
@@ -100,8 +95,6 @@ class QuizViewController: UIViewController {
                     alertController.addAction(UIAlertAction(title: "Okay", style: .default, handler: { (action) -> Void in
                         print("User pressed okay")
                         DatabaseManager.saveWords()
-                        self.tableView.reloadData()
-                            
                     }))
                     present(alertController, animated: true, completion: { () -> Void in
                         print("Presented Incorrect alert")
@@ -189,7 +182,6 @@ class QuizViewController: UIViewController {
                 print("User pressed okay")
                 answer.timesMissed += 1
                 DatabaseManager.saveWords()
-                self.tableView.reloadData()
                 
                 // move on to next question
                 self.swipedLeft()
