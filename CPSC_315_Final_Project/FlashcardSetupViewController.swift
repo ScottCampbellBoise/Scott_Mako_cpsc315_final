@@ -73,7 +73,7 @@ class FlashcardSetupViewController: UIViewController, UITableViewDataSource, UIT
             if let flashcardVC = segue.destination as? FlashcardViewController {
                 if identifier == "GoSegue" {
                     // Find all the selected studysets and extract out the words
-                    
+                    print("IMPLEMENT THE FINDING OF WORDS FOR FLASHCARDS")
                 } else {
                     // Send all the words to the flashcard controller
                     flashcardVC.flashcardSetOptional = DatabaseManager.loadWords()
