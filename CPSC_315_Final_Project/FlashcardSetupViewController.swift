@@ -100,9 +100,13 @@ class FlashcardSetupViewController: UIViewController, UITableViewDataSource, UIT
     func getSelectedWords() -> [Word] {
         // First, get an array of all studysets cells that were selected
         var selectedSets = [StudySet]()
+        print("Selected sets to use for flashcards: ")
         for kk in 0..<studysetWasSelected.count {
-            print("    Studyset \(studysets[kk].name) selected? -> \(studysetWasSelected[kk])")
-            selectedSets.append(studysets[kk])
+            if studysetWasSelected[kk] {
+                selectedSets.append(studysets[kk])
+                print("    \(studysets[kk].name)")
+
+            }
         }
         
         if selectedSets.count < 1 {
