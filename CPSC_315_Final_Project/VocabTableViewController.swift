@@ -26,9 +26,7 @@ class VocabTableViewController: UIViewController, UITableViewDataSource, UITable
         if let unwrappedWords = wordsOptional { words = unwrappedWords }
         
         //loadTestWords()
-        
-        DatabaseManager.testCoreDataRelations()
-        
+                
         print("MOVE THE SPEECH SYNTH CODE TO EVENTUAL HOME SCREEN!")
         SpeechSynthesizer.languageCode = LanguageCode.germanDE
         

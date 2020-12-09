@@ -35,6 +35,14 @@ class DatabaseManager {
         }
     }
     
+    static func saveContext() {
+        do {
+            try DatabaseManager.context.save()
+        } catch {
+            print("Error saving the Context: \(error)")
+        }
+    }
+    
     // MARK: Load from Database
     
     static func loadWords(withPredicate predicate: NSPredicate? = nil) -> [Word]? {
@@ -70,27 +78,36 @@ class DatabaseManager {
         return studysets
     }
     
+    // MARK: Load words from Studysets
     
-    // MARK: Miscellaneous
-    
-    static func testCoreDataRelations() {
-        print("Testing Core Data Relations")
+    static func fetchWords(fromStudysets sets: [StudySet]) -> [Word]? {
         let request: NSFetchRequest<Word> = Word.fetchRequest()
-        let studysetPredicate = NSPredicate(format: "ANY studysets.name =[cd] %@", "Master")
-        request.predicate = studysetPredicate
-        
+        // Generate a string predicate to get all words in those sets
+        var pred = ""
+        var argumentArray = [String]()
+        for set in sets {
+            pred.append("ANY studysets.name =[cd] %@ OR ")
+            argumentArray.append(set.name)
+        }
+        // Remove the last OR from the predicate
+        pred = String(pred.dropLast(4))
+        // Create a predicate for the search
+        let studysetsPredicate = NSPredicate(format: pred, argumentArray: argumentArray)
+        // Attach the predicate to the request
+        request.predicate = studysetsPredicate
+        // Attempt the search
         do {
             let results: [Word] = try context.fetch(request)
-            print("Found \(results.count) Results!")
-            for word in results {
-                print("    \(word.foriegnWord) - \(word.englishWord)")
-            }
+            return results
         }
         catch {
-            print("Relational Test Failed! \(error)")
-           
+            print("Failed to find all words for the specified studysets! \(error)")
+            return nil
         }
     }
+    
+    
+    // MARK: Miscellaneous
     
     static func getMasterStudySet() -> StudySet? {
         let request: NSFetchRequest<StudySet> = StudySet.fetchRequest()
@@ -99,6 +116,7 @@ class DatabaseManager {
         
         do {
             let masterSets: [StudySet] = try DatabaseManager.context.fetch(request)
+            print("Successfully found the master study set!")
             return masterSets[0]
         }
         catch {

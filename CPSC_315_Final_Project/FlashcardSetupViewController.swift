@@ -16,10 +16,9 @@ class FlashcardSetupViewController: UIViewController, UITableViewDataSource, UIT
     
     // Define the data source for the Table View
     var studysets = [StudySet]()
+    var studysetWasSelected = [Bool]()
     
-    // We need a reference to the context
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    
+    // MARK: App Lifecycle Methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,9 +26,22 @@ class FlashcardSetupViewController: UIViewController, UITableViewDataSource, UIT
         // Do any additional setup after loading the view.
         print("Loaded Flashcard Prep View")
         
-        // Do any additional setup after loading the view.
         let studysetsOptional = DatabaseManager.loadStudySets()
-        if let unwrappedSets = studysetsOptional { studysets = unwrappedSets }
+        if let unwrappedSets = studysetsOptional { studysets = unwrappedSets
+            // Set the selected bool array to all false
+            studysetWasSelected = [Bool](repeating: false, count: studysets.count)
+        }
+        tableView.reloadData()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        print("Flashcard Prep View Controller will appear")
+        let studysetsOptional = DatabaseManager.loadStudySets()
+        if let unwrappedSets = studysetsOptional { studysets = unwrappedSets
+            // Set the selected bool array to all false
+            studysetWasSelected = [Bool](repeating: false, count: studysets.count)
+        }
+        tableView.reloadData()
     }
 
     // MARK: TableView Delegate Methods
@@ -59,8 +71,10 @@ class FlashcardSetupViewController: UIViewController, UITableViewDataSource, UIT
         if let cell = tableView.cellForRow(at: indexPath) {
             if cell.accessoryType == .checkmark {
                 cell.accessoryType = .none
+                studysetWasSelected[indexPath.row] = false
             } else {
                 cell.accessoryType = .checkmark
+                studysetWasSelected[indexPath.row] = true
             }
         }
     }
@@ -74,11 +88,36 @@ class FlashcardSetupViewController: UIViewController, UITableViewDataSource, UIT
                 if identifier == "GoSegue" {
                     // Find all the selected studysets and extract out the words
                     print("IMPLEMENT THE FINDING OF WORDS FOR FLASHCARDS")
+                    flashcardVC.flashcardSetOptional = getSelectedWords()
                 } else {
                     // Send all the words to the flashcard controller
                     flashcardVC.flashcardSetOptional = DatabaseManager.loadWords()
                 }
             }
+        }
+    }
+    
+    func getSelectedWords() -> [Word] {
+        // First, get an array of all studysets cells that were selected
+        var selectedSets = [StudySet]()
+        for kk in 0..<studysetWasSelected.count {
+            print("    Studyset \(studysets[kk].name) selected? -> \(studysetWasSelected[kk])")
+            selectedSets.append(studysets[kk])
+        }
+        
+        if selectedSets.count < 1 {
+            print("NO STUDY SETS SELECTED, USING ALL WORDS")
+            return DatabaseManager.loadWords() ?? [Word]()
+        }
+        
+        let resultsOptional = DatabaseManager.fetchWords(fromStudysets: selectedSets)
+        // Try to unwrap the results
+        if let results = resultsOptional {
+            print("Found \(results.count) Words to use in flashcards")
+            return results
+        } else {
+            print("Got no results back from the flashcard setup request")
+            return DatabaseManager.loadWords() ?? [Word]()
         }
     }
 

@@ -16,6 +16,7 @@ class FlashcardViewController: UIViewController {
     @IBOutlet var prevButton: UIButton!
     @IBOutlet var nextButton: UIButton!
         
+    
     var flashcardSetOptional: [Word]? = nil
     var currentIndexOptional: Int? = nil
     
@@ -29,7 +30,7 @@ class FlashcardViewController: UIViewController {
         print("Loaded Flashcard View")
         // Do any additional setup after loading the view.
         
-        if let flashcardSet = flashcardSetOptional {
+        if let _ = flashcardSetOptional {
             currentIndexOptional = -1 // Set the starting index if there are words available
         } else {
             currentIndexOptional = nil
@@ -43,8 +44,6 @@ class FlashcardViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         print("Vocab Table View Controller will appear")
-        
-        DatabaseManager.loadWords()
         refreshWords()
     }
     
@@ -179,7 +178,7 @@ class FlashcardViewController: UIViewController {
     
     // This reloads the words and recomputes the currentIndex
     func refreshWords() {
-        flashcardSetOptional = DatabaseManager.loadWords()
+        // flashcardSetOptional = DatabaseManager.loadWords()
         if let flashcardSet = flashcardSetOptional, let currentIndex = currentIndexOptional {
             currentIndexOptional = currentIndex % flashcardSet.count // Make sure that the index wraps
         } else {

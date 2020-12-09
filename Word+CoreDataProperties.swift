@@ -51,4 +51,9 @@ extension Word : Identifiable {
         studysets = set
     }
     
+    func removeWordFromStudySet(studyset: StudySet) {
+        let set = self.mutableSetValue(forKey: "studysets")
+        set.remove(studyset)
+        studysets = set
+    }
 }

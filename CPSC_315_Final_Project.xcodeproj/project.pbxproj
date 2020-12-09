@@ -15,6 +15,8 @@
 		BC6BCCE9257748C200C412DA /* StudySet+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6BCCE8257748C200C412DA /* StudySet+CoreDataClass.swift */; };
 		BC6BCCEE2577493300C412DA /* FlashcardSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6BCCED2577493300C412DA /* FlashcardSetupViewController.swift */; };
 		BC6BCCF225774B5500C412DA /* StudySetTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6BCCF125774B5500C412DA /* StudySetTableViewController.swift */; };
+		BCDC3614258167F200AF1C39 /* SelectableWordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDC3613258167F200AF1C39 /* SelectableWordCell.swift */; };
+		BCDC3618258168DC00AF1C39 /* StudysetDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDC3617258168DC00AF1C39 /* StudysetDetailTableViewController.swift */; };
 		BCE9A1EC2575888D00646286 /* SpeechSynthesizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE9A1EB2575888D00646286 /* SpeechSynthesizer.swift */; };
 		BCFC76FD257163930016D7F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFC76FC257163930016D7F7 /* AppDelegate.swift */; };
 		BCFC76FF257163930016D7F7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFC76FE257163930016D7F7 /* SceneDelegate.swift */; };
@@ -37,6 +39,8 @@
 		BC6BCCE8257748C200C412DA /* StudySet+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StudySet+CoreDataClass.swift"; sourceTree = "<group>"; };
 		BC6BCCED2577493300C412DA /* FlashcardSetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardSetupViewController.swift; sourceTree = "<group>"; };
 		BC6BCCF125774B5500C412DA /* StudySetTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudySetTableViewController.swift; sourceTree = "<group>"; };
+		BCDC3613258167F200AF1C39 /* SelectableWordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableWordCell.swift; sourceTree = "<group>"; };
+		BCDC3617258168DC00AF1C39 /* StudysetDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudysetDetailTableViewController.swift; sourceTree = "<group>"; };
 		BCE9A1EB2575888D00646286 /* SpeechSynthesizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechSynthesizer.swift; sourceTree = "<group>"; };
 		BCFC76F9257163930016D7F7 /* CPSC_315_Final_Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CPSC_315_Final_Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCFC76FC257163930016D7F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +103,8 @@
 				BCFC772A2573759D0016D7F7 /* FlashcardViewController.swift */,
 				236CF4562574B947009FEA97 /* QuizViewController.swift */,
 				BC6BCCF125774B5500C412DA /* StudySetTableViewController.swift */,
+				BCDC3617258168DC00AF1C39 /* StudysetDetailTableViewController.swift */,
+				BCDC3613258167F200AF1C39 /* SelectableWordCell.swift */,
 				BCFC771A2571688F0016D7F7 /* Verb.swift */,
 				BCE9A1EB2575888D00646286 /* SpeechSynthesizer.swift */,
 				BC5A1926257F2F8300DAC9AF /* DatabaseManager.swift */,
@@ -177,7 +183,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC5A1927257F2F8300DAC9AF /* DatabaseManager.swift in Sources */,
+				BCDC3614258167F200AF1C39 /* SelectableWordCell.swift in Sources */,
 				BCFC771B2571688F0016D7F7 /* Verb.swift in Sources */,
+				BCDC3618258168DC00AF1C39 /* StudysetDetailTableViewController.swift in Sources */,
 				BCFC771F25716E2E0016D7F7 /* VocabTableViewCell.swift in Sources */,
 				BC6BCCE9257748C200C412DA /* StudySet+CoreDataClass.swift in Sources */,
 				BCE9A1EC2575888D00646286 /* SpeechSynthesizer.swift in Sources */,

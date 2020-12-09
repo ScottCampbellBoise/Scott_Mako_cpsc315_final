@@ -70,8 +70,23 @@ class StudySetTableViewController: UIViewController, UITableViewDataSource, UITa
         
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
-        
-        print("NEED TO ADD FUNCTIONALITY TO ADD WORDS TO STUDYSET!!")
     }
+    
+    // MARK: - Navigation Methods
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let identifier = segue.identifier {
+            if identifier == "StudysetDetailSegue" {
+                if let detailVC = segue.destination as? StudysetDetailTableViewController {
+                    if let indexPath = tableView.indexPathForSelectedRow {
+                        let studyset = studysets[indexPath.row]
+                        detailVC.studysetOptional = studyset
+                    }
+                }
+            }
+        }
+    }
+    
+    
     
 }

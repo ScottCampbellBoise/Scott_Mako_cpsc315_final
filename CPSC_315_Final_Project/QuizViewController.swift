@@ -36,7 +36,7 @@ class QuizViewController: UIViewController {
         print("Loaded Quiz View")
     
         flashcardSetOptional = DatabaseManager.loadWords()
-        if let flashcardSet = flashcardSetOptional {
+        if let _ = flashcardSetOptional {
             currentIndexOptional = -1 // Set the starting index if there are words available
         } else {
             currentIndexOptional = nil
