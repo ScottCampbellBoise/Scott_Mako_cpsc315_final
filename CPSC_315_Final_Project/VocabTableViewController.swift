@@ -97,6 +97,22 @@ class VocabTableViewController: UIViewController, UITableViewDataSource, UITable
         tableView.reloadData()
     }
     
+    // MARK: Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let identifier = segue.identifier {
+            if identifier == "practiceSegue" {
+                print("preparing for segue to practice pronunciation")
+                if let practiceVC = segue.destination as? SpeechPracticeViewController {
+                    if let indexPath = tableView.indexPathForSelectedRow {
+                        let word = words[indexPath.row]
+                        practiceVC.wordOptional = word
+                    }
+                }
+            }
+        }
+    }
+    
     // MARK: TableView Delegate Methods
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

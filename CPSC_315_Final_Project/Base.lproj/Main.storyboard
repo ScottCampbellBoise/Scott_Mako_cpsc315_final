@@ -185,7 +185,7 @@
             </objects>
             <point key="canvasLocation" x="2441" y="-1291"/>
         </scene>
-        <!--Vocab-->
+        <!--Vocab Table View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="VocabTableViewController" customModule="CPSC_315_Final_Project" customModuleProvider="target" sceneMemberID="viewController">
@@ -194,7 +194,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aQV-8p-ozS">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <searchBar key="tableHeaderView" contentMode="redraw" id="Zry-BP-30M">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -205,18 +205,18 @@
                                     </connections>
                                 </searchBar>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="VocabCell" rowHeight="58" id="xW7-Ub-h0D" customClass="VocabTableViewCell" customModule="CPSC_315_Final_Project" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="VocabCell" rowHeight="58" id="xW7-Ub-h0D" customClass="VocabTableViewCell" customModule="CPSC_315_Final_Project" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="72" width="414" height="58"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xW7-Ub-h0D" id="E8U-Xl-T8W">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="58"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="58"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="l8v-tf-PBM">
-                                                    <rect key="frame" x="16" y="0.0" width="382" height="58"/>
+                                                    <rect key="frame" x="16" y="0.0" width="351" height="58"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="n4U-Ja-UEm">
-                                                            <rect key="frame" x="0.0" y="10" width="301.5" height="38"/>
+                                                            <rect key="frame" x="0.0" y="10" width="270.5" height="38"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="hpo-cM-eMQ">
                                                                     <rect key="frame" x="0.0" y="0.0" width="120.5" height="19.5"/>
@@ -264,7 +264,7 @@
                                                             </subviews>
                                                         </stackView>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g2Y-T5-qaX">
-                                                            <rect key="frame" x="309.5" y="11" width="33.5" height="36"/>
+                                                            <rect key="frame" x="278.5" y="11" width="33.5" height="36"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                             <state key="normal">
                                                                 <imageReference key="image" image="speaker.wave.3" catalog="system" symbolScale="large"/>
@@ -274,7 +274,7 @@
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="800" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YFp-7J-78W">
-                                                            <rect key="frame" x="351" y="5" width="31" height="48"/>
+                                                            <rect key="frame" x="320" y="5" width="31" height="48"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                             <state key="normal" title="☆"/>
                                                             <connections>
@@ -297,6 +297,7 @@
                                             <outlet property="markedReviewButton" destination="YFp-7J-78W" id="tnY-Lw-3bT"/>
                                             <outlet property="mneumonicLabel" destination="1ct-8u-7JH" id="3Kg-cz-8cB"/>
                                             <outlet property="statisticsLabel" destination="ohC-wB-Ltx" id="BTp-DI-j7p"/>
+                                            <segue destination="Zvu-vU-dlq" kind="show" identifier="practiceSegue" id="tGu-gt-lXS"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -315,14 +316,116 @@
                             <constraint firstItem="aQV-8p-ozS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mII-rQ-nvK"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Vocab" image="pencil" catalog="system" id="Fwy-aO-llS"/>
+                    <navigationItem key="navigationItem" id="NOI-ST-7b7"/>
                     <connections>
                         <outlet property="tableView" destination="aQV-8p-ozS" id="GJ6-v1-gCh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="793" y="-594"/>
+            <point key="canvasLocation" x="1616" y="-595"/>
+        </scene>
+        <!--Practice Pronunciation-->
+        <scene sceneID="A3O-4x-d8s">
+            <objects>
+                <viewController id="Zvu-vU-dlq" customClass="SpeechPracticeViewController" customModule="CPSC_315_Final_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uKd-Cp-wjS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="OAw-NT-Eos">
+                                <rect key="frame" x="16" y="104" width="382" height="693"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="vR4-Kh-HUF">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="522"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="faW-hP-ioc">
+                                                <rect key="frame" x="0.0" y="0.0" width="382" height="484"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tV8-7I-U4d">
+                                                        <rect key="frame" x="0.0" y="226.5" width="340.5" height="31.5"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="300" horizontalCompressionResistancePriority="700" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XF8-nf-cGy">
+                                                        <rect key="frame" x="348.5" y="230.5" width="33.5" height="23"/>
+                                                        <state key="normal">
+                                                            <imageReference key="image" image="speaker.wave.3" catalog="system" symbolScale="large"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="speakerButtonPressed:" destination="Zvu-vU-dlq" eventType="primaryActionTriggered" id="4BZ-Me-IOL"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="saB-dz-YyA">
+                                                <rect key="frame" x="0.0" y="492" width="382" height="30"/>
+                                                <state key="normal" title="Start Recording"/>
+                                                <connections>
+                                                    <action selector="startRecording:" destination="Zvu-vU-dlq" eventType="primaryActionTriggered" id="eiC-Ly-8lH"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="saB-dz-YyA" firstAttribute="leading" secondItem="vR4-Kh-HUF" secondAttribute="leading" id="0Zp-lq-EfF"/>
+                                            <constraint firstAttribute="trailing" secondItem="saB-dz-YyA" secondAttribute="trailing" id="B1h-lX-pf1"/>
+                                            <constraint firstItem="faW-hP-ioc" firstAttribute="leading" secondItem="vR4-Kh-HUF" secondAttribute="leading" id="dbp-oK-Wly"/>
+                                            <constraint firstAttribute="trailing" secondItem="faW-hP-ioc" secondAttribute="trailing" id="yhD-lQ-UMQ"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="tA4-Lw-ecz">
+                                        <rect key="frame" x="0.0" y="622" width="382" height="71"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transcribed Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jm5-le-51n">
+                                                <rect key="frame" x="0.0" y="0.0" width="382" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status/Result" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9a3-X0-L2R">
+                                                <rect key="frame" x="0.0" y="50.5" width="382" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="9a3-X0-L2R" secondAttribute="trailing" id="HMk-82-LwJ"/>
+                                            <constraint firstItem="9a3-X0-L2R" firstAttribute="leading" secondItem="tA4-Lw-ecz" secondAttribute="leading" id="ZBk-pz-6fB"/>
+                                            <constraint firstItem="Jm5-le-51n" firstAttribute="leading" secondItem="tA4-Lw-ecz" secondAttribute="leading" id="qME-WM-QZF"/>
+                                            <constraint firstAttribute="trailing" secondItem="Jm5-le-51n" secondAttribute="trailing" id="tOG-YE-ty3"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="tA4-Lw-ecz" secondAttribute="trailing" id="FXq-Bc-Egp"/>
+                                    <constraint firstItem="tA4-Lw-ecz" firstAttribute="leading" secondItem="OAw-NT-Eos" secondAttribute="leading" id="G1W-Kh-eZG"/>
+                                    <constraint firstItem="vR4-Kh-HUF" firstAttribute="leading" secondItem="OAw-NT-Eos" secondAttribute="leading" id="H0E-YN-f9p"/>
+                                    <constraint firstAttribute="trailing" secondItem="vR4-Kh-HUF" secondAttribute="trailing" id="mOf-fh-zjI"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="UQc-sJ-Wvp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="OAw-NT-Eos" firstAttribute="leading" secondItem="uKd-Cp-wjS" secondAttribute="leading" constant="16" id="4HI-Wl-EeC"/>
+                            <constraint firstItem="UQc-sJ-Wvp" firstAttribute="bottom" secondItem="OAw-NT-Eos" secondAttribute="bottom" constant="16" id="sxg-Wl-Amg"/>
+                            <constraint firstItem="UQc-sJ-Wvp" firstAttribute="trailing" secondItem="OAw-NT-Eos" secondAttribute="trailing" constant="16" id="sya-or-49Z"/>
+                            <constraint firstItem="OAw-NT-Eos" firstAttribute="top" secondItem="UQc-sJ-Wvp" secondAttribute="top" constant="16" id="zfc-Zy-wZi"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Practice Pronunciation" id="vIL-I2-KZm"/>
+                    <connections>
+                        <outlet property="recordButton" destination="saB-dz-YyA" id="7Jz-Kw-LDY"/>
+                        <outlet property="statusLabel" destination="9a3-X0-L2R" id="3PR-zL-aTg"/>
+                        <outlet property="transcribedLabel" destination="Jm5-le-51n" id="lzo-dL-CfS"/>
+                        <outlet property="wordLabel" destination="tV8-7I-U4d" id="fuH-rQ-aby"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rgK-b1-9CP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2441" y="-595"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="wjR-Qr-gp2">
@@ -335,7 +438,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="70J-Ld-TvN"/>
+                        <segue destination="Lvm-Z0-af6" kind="relationship" relationship="viewControllers" id="70J-Ld-TvN"/>
                         <segue destination="bFs-V9-vsX" kind="relationship" relationship="viewControllers" id="JG0-fi-cee"/>
                         <segue destination="GsN-TI-51B" kind="relationship" relationship="viewControllers" id="fmb-sW-LGK"/>
                         <segue destination="W56-Fg-FgL" kind="relationship" relationship="viewControllers" id="wJO-le-qvy"/>
@@ -834,6 +937,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ofv-vm-hW7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="792.75362318840587" y="-1291.0714285714284"/>
+        </scene>
+        <!--Vocab-->
+        <scene sceneID="8Q2-kI-hV4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Lvm-Z0-af6" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Vocab" image="pencil" catalog="system" id="Fwy-aO-llS"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QWO-AA-5dT">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="jWD-ev-dnf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gxs-zf-bqS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="792.75362318840587" y="-594.64285714285711"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

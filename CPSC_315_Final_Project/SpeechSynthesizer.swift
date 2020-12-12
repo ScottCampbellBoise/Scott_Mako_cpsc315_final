@@ -9,7 +9,7 @@ import Foundation
 import AVFoundation
 
 class SpeechSynthesizer: CustomStringConvertible {
-    static var languageCode = LanguageCode.englishUS
+    static var languageCode = LanguageCode.germanDE
     
     var description: String {
         return "Speech Synthesizer Langauge: \(SpeechSynthesizer.languageCode.rawValue)"
@@ -37,7 +37,6 @@ class SpeechSynthesizer: CustomStringConvertible {
         // Tell the synthesizer to speak the utterance.
         synthesizer.speak(utterance)
     }
-    
 }
 
 // Add other language codes here!

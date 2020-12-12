@@ -26,7 +26,6 @@ class SelectableWordCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
   
     @IBAction func markedForReviewPressed(_ sender: UIButton) {
         if markedReviewButton.titleLabel?.text == "☆" { markedReviewButton.setTitle("★", for: .normal)
