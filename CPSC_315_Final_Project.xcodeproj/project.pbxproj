@@ -17,6 +17,7 @@
 		BC6BCCF225774B5500C412DA /* StudySetTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6BCCF125774B5500C412DA /* StudySetTableViewController.swift */; };
 		BCBCB87C258532E700696BC8 /* SpeechPracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBCB87B258532E600696BC8 /* SpeechPracticeViewController.swift */; };
 		BCBCB87F2585333300696BC8 /* Transcriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBCB87E2585333300696BC8 /* Transcriber.swift */; };
+		BCBCB8852586A61100696BC8 /* QuizSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBCB8842586A61100696BC8 /* QuizSetupViewController.swift */; };
 		BCDC3614258167F200AF1C39 /* SelectableWordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDC3613258167F200AF1C39 /* SelectableWordCell.swift */; };
 		BCDC3618258168DC00AF1C39 /* StudysetDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDC3617258168DC00AF1C39 /* StudysetDetailTableViewController.swift */; };
 		BCE9A1EC2575888D00646286 /* SpeechSynthesizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE9A1EB2575888D00646286 /* SpeechSynthesizer.swift */; };
@@ -43,6 +44,7 @@
 		BC6BCCF125774B5500C412DA /* StudySetTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudySetTableViewController.swift; sourceTree = "<group>"; };
 		BCBCB87B258532E600696BC8 /* SpeechPracticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechPracticeViewController.swift; sourceTree = "<group>"; };
 		BCBCB87E2585333300696BC8 /* Transcriber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transcriber.swift; sourceTree = "<group>"; };
+		BCBCB8842586A61100696BC8 /* QuizSetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizSetupViewController.swift; sourceTree = "<group>"; };
 		BCDC3613258167F200AF1C39 /* SelectableWordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableWordCell.swift; sourceTree = "<group>"; };
 		BCDC3617258168DC00AF1C39 /* StudysetDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudysetDetailTableViewController.swift; sourceTree = "<group>"; };
 		BCE9A1EB2575888D00646286 /* SpeechSynthesizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechSynthesizer.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				BCBCB87B258532E600696BC8 /* SpeechPracticeViewController.swift */,
 				BC6BCCED2577493300C412DA /* FlashcardSetupViewController.swift */,
 				BCFC772A2573759D0016D7F7 /* FlashcardViewController.swift */,
+				BCBCB8842586A61100696BC8 /* QuizSetupViewController.swift */,
 				236CF4562574B947009FEA97 /* QuizViewController.swift */,
 				BC6BCCF125774B5500C412DA /* StudySetTableViewController.swift */,
 				BCDC3617258168DC00AF1C39 /* StudysetDetailTableViewController.swift */,
@@ -193,6 +196,7 @@
 				BCFC771B2571688F0016D7F7 /* Verb.swift in Sources */,
 				BCDC3618258168DC00AF1C39 /* StudysetDetailTableViewController.swift in Sources */,
 				BCFC771F25716E2E0016D7F7 /* VocabTableViewCell.swift in Sources */,
+				BCBCB8852586A61100696BC8 /* QuizSetupViewController.swift in Sources */,
 				BC6BCCE9257748C200C412DA /* StudySet+CoreDataClass.swift in Sources */,
 				BCE9A1EC2575888D00646286 /* SpeechSynthesizer.swift in Sources */,
 				BC6BCCE52577483E00C412DA /* Word+CoreDataClass.swift in Sources */,

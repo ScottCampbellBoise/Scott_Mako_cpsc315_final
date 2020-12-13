@@ -13,6 +13,9 @@ import Foundation
 //
 //  Created by Scott Campbell on 12/12/20.
 //
+// Acknowledgements:
+//   https://stackoverflow.com/questions/26472747/recording-audio-in-swift
+//
 
 import Foundation
 import Speech

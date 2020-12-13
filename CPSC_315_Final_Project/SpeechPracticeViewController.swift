@@ -20,6 +20,9 @@ class SpeechPracticeViewController: UIViewController, AVAudioRecorderDelegate {
     var isRecording = false
     
     var wordOptional: Word?
+    
+    let correctColor = UIColor(red: 0.626, green: 0.961, blue: 0.469, alpha: 1)
+    let wrongColor = UIColor(red: 0.953, green: 0.276, blue: 0.276, alpha: 1)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,11 +53,12 @@ class SpeechPracticeViewController: UIViewController, AVAudioRecorderDelegate {
     }
     
     @IBAction func startRecording(_ sender: UIButton) {
+        self.view.backgroundColor = .white
+
         if(isRecording) {
             finishAudioRecording(success: true)
             recordButton.setTitle("Start Recording", for: .normal)
             isRecording = false
-            
         }
         else {
             setupRecorder()
@@ -94,25 +98,8 @@ class SpeechPracticeViewController: UIViewController, AVAudioRecorderDelegate {
             displayAlert(msg_title: "Error", msg_desc: "Don't have access to use your microphone.", action_title: "OK")
         }
     }
-    
-    func displayAlert(msg_title : String , msg_desc : String ,action_title : String) {
-        let ac = UIAlertController(title: msg_title, message: msg_desc, preferredStyle: .alert)
-        ac.addAction(UIAlertAction(title: action_title, style: .default) {
-            (result : UIAlertAction) -> Void in
-        _ = self.navigationController?.popViewController(animated: true)
-        })
-        present(ac, animated: true)
-    }
-    
-    func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
-        print("Finished Recording")
-        if !flag {
-            finishAudioRecording(success: false)
-        }
-    }
 
     func finishAudioRecording(success: Bool) {
-        print("Finished Recording")
         if success {
             audioRecorder.stop()
             audioRecorder = nil
@@ -121,14 +108,25 @@ class SpeechPracticeViewController: UIViewController, AVAudioRecorderDelegate {
             print("Attempting to transcribe the audio...")
             Transcriber.transcribeAudio(url: Transcriber.getAudioFileUrl()) { (transOptional) in
                 if let trans = transOptional {
-                    self.transcribedLabel.text = trans
-                    print("TO DO: Update Status Label Accordingly")
-                    self.statusLabel.text = "UPDATE STATUS"
+                    self.transcribedLabel.text = "We think you're saying: \(trans)"
+                    if let word = self.wordOptional {
+                        if !trans.isEmpty {
+                            print("Transcription: \(trans)")
+                            print("Expected: \(word.foriegnWord)")
+                            if word.foriegnWord.lowercased() == trans.lowercased() {
+                                self.statusLabel.text = "Correct! Well Done!"
+                                self.view.backgroundColor = self.correctColor
+                            } else {
+                                self.statusLabel.text = "Not quite, try again."
+                                self.view.backgroundColor = self.wrongColor
+                            }
+                        }
+                    }
                 } else {
+                    self.transcribedLabel.text = "We couldn't transcribe what you said!"
                     self.displayAlert(msg_title: "Error", msg_desc: "Could not get a transcription of the recording", action_title: "")
                 }
             }
-            
         }
         else {
             displayAlert(msg_title: "Error", msg_desc: "Recording failed.", action_title: "OK")
@@ -155,6 +153,15 @@ class SpeechPracticeViewController: UIViewController, AVAudioRecorderDelegate {
             default:
                 break
         }
+    }
+    
+    func displayAlert(msg_title : String , msg_desc : String ,action_title : String) {
+        let ac = UIAlertController(title: msg_title, message: msg_desc, preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: action_title, style: .default) {
+            (result : UIAlertAction) -> Void in
+        _ = self.navigationController?.popViewController(animated: true)
+        })
+        present(ac, animated: true)
     }
     
 }

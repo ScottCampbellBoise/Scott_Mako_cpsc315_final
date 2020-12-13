@@ -339,17 +339,24 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="vR4-Kh-HUF">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="522"/>
                                         <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d8D-xW-hIN">
+                                                <rect key="frame" x="3.5" y="0.0" width="375.5" height="61"/>
+                                                <string key="text">Let's practice your pronunciation of this word! To get started, press the record button and say the word below. Then press stop to see how you did!</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="faW-hP-ioc">
-                                                <rect key="frame" x="0.0" y="0.0" width="382" height="484"/>
+                                                <rect key="frame" x="0.0" y="69" width="382" height="415"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tV8-7I-U4d">
-                                                        <rect key="frame" x="0.0" y="226.5" width="340.5" height="31.5"/>
+                                                        <rect key="frame" x="0.0" y="192" width="340.5" height="31.5"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="300" horizontalCompressionResistancePriority="700" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XF8-nf-cGy">
-                                                        <rect key="frame" x="348.5" y="230.5" width="33.5" height="23"/>
+                                                        <rect key="frame" x="348.5" y="196" width="33.5" height="23"/>
                                                         <state key="normal">
                                                             <imageReference key="image" image="speaker.wave.3" catalog="system" symbolScale="large"/>
                                                         </state>
@@ -377,7 +384,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="tA4-Lw-ecz">
                                         <rect key="frame" x="0.0" y="622" width="382" height="71"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transcribed Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jm5-le-51n">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transcribed Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jm5-le-51n">
                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -448,7 +455,7 @@
             </objects>
             <point key="canvasLocation" x="-97" y="-269"/>
         </scene>
-        <!--Select Study Set-->
+        <!--Flashcard Setup-->
         <scene sceneID="8Mo-pK-gF6">
             <objects>
                 <viewController id="pIe-g7-gxk" customClass="FlashcardSetupViewController" customModule="CPSC_315_Final_Project" customModuleProvider="target" sceneMemberID="viewController">
@@ -503,8 +510,8 @@
                                             </tableViewCell>
                                         </prototypes>
                                         <connections>
-                                            <outlet property="dataSource" destination="pIe-g7-gxk" id="em3-El-hcX"/>
-                                            <outlet property="delegate" destination="pIe-g7-gxk" id="jF6-8z-4df"/>
+                                            <outlet property="dataSource" destination="pIe-g7-gxk" id="s6w-o0-g2w"/>
+                                            <outlet property="delegate" destination="pIe-g7-gxk" id="Nii-g9-PrZ"/>
                                         </connections>
                                     </tableView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kDx-XC-1Sb">
@@ -546,10 +553,10 @@
                             <constraint firstItem="iQB-Aj-KhL" firstAttribute="leading" secondItem="NAS-Qn-k9L" secondAttribute="leading" constant="16" id="n8J-lg-Tai"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Select Study Set" id="w0Z-fN-D8s"/>
+                    <navigationItem key="navigationItem" title="Flashcard Setup" id="w0Z-fN-D8s"/>
                     <connections>
                         <outlet property="goButton" destination="kDx-XC-1Sb" id="onD-34-Msl"/>
-                        <outlet property="tableView" destination="POl-BD-UMB" id="493-Aa-PJb"/>
+                        <outlet property="tableView" destination="POl-BD-UMB" id="CgB-f3-2Dp"/>
                         <outlet property="useAllWordsButton" destination="nUK-Qz-6CP" id="XuP-hT-iea"/>
                     </connections>
                 </viewController>
@@ -717,48 +724,108 @@
             </objects>
             <point key="canvasLocation" x="2381" y="88"/>
         </scene>
-        <!--Select a Study Set-->
+        <!--Quiz Setup-->
         <scene sceneID="jnV-4j-6Kz">
             <objects>
-                <viewController id="1Ak-mz-Ibd" sceneMemberID="viewController">
+                <viewController id="1Ak-mz-Ibd" customClass="QuizSetupViewController" customModule="CPSC_315_Final_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LFX-Zx-riy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="QMu-aB-Is1">
-                                <rect key="frame" x="16" y="104" width="382" height="138.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="WiD-iC-cA8">
+                                <rect key="frame" x="16" y="104" width="382" height="693"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a Study Set" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pN0-R4-ljt">
-                                        <rect key="frame" x="77" y="0.0" width="228" height="30"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select the sets you want to practice!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a18-Fp-7ux">
+                                        <rect key="frame" x="20.5" y="0.0" width="341" height="24"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9NR-US-PFA">
-                                        <rect key="frame" x="144" y="59" width="94" height="30"/>
-                                        <state key="normal" title="Use all Words"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0qe-yq-OPX">
+                                        <rect key="frame" x="0.0" y="32" width="382" height="41.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Use all Vocab Words"/>
                                         <connections>
-                                            <segue destination="ZF5-Bs-cae" kind="show" id="Sj2-ce-S5m"/>
+                                            <segue destination="ZF5-Bs-cae" kind="show" id="T9Q-KG-YLv"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Custom Set Implementation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="84v-KU-sYf">
-                                        <rect key="frame" x="68" y="118" width="246.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3r0-Km-EUE">
+                                        <rect key="frame" x="0.0" y="81.5" width="382" height="561.5"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="QuizPrepCell" textLabel="BAj-I2-OHg" detailTextLabel="tIl-NO-ya1" style="IBUITableViewCellStyleSubtitle" id="2ii-X1-f0a">
+                                                <rect key="frame" x="0.0" y="28" width="382" height="55.5"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2ii-X1-f0a" id="s2r-pm-j5x">
+                                                    <rect key="frame" x="0.0" y="0.0" width="382" height="55.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BAj-I2-OHg">
+                                                            <rect key="frame" x="20" y="10" width="33" height="20.5"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tIl-NO-ya1">
+                                                            <rect key="frame" x="20" y="31.5" width="44" height="14.5"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="1Ak-mz-Ibd" id="wmz-KP-ASw"/>
+                                            <outlet property="delegate" destination="1Ak-mz-Ibd" id="D8n-aS-qeL"/>
+                                        </connections>
+                                    </tableView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8qL-nz-hpH">
+                                        <rect key="frame" x="0.0" y="651" width="382" height="42"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="Go!"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="ZF5-Bs-cae" kind="show" identifier="GoSegue" id="841-De-9ff"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="3r0-Km-EUE" secondAttribute="trailing" id="24i-Mm-uLi"/>
+                                    <constraint firstItem="3r0-Km-EUE" firstAttribute="leading" secondItem="WiD-iC-cA8" secondAttribute="leading" id="7X2-0F-Sjj"/>
+                                    <constraint firstItem="8qL-nz-hpH" firstAttribute="leading" secondItem="WiD-iC-cA8" secondAttribute="leading" id="Kie-fL-eGV"/>
+                                    <constraint firstItem="0qe-yq-OPX" firstAttribute="leading" secondItem="WiD-iC-cA8" secondAttribute="leading" id="r9z-4e-AUc"/>
+                                    <constraint firstAttribute="trailing" secondItem="8qL-nz-hpH" secondAttribute="trailing" id="sdr-3l-yig"/>
+                                    <constraint firstAttribute="trailing" secondItem="0qe-yq-OPX" secondAttribute="trailing" id="viT-BJ-Mvy"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5dg-bB-hjH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="5dg-bB-hjH" firstAttribute="trailing" secondItem="QMu-aB-Is1" secondAttribute="trailing" constant="16" id="24D-vA-rdv"/>
-                            <constraint firstItem="QMu-aB-Is1" firstAttribute="leading" secondItem="5dg-bB-hjH" secondAttribute="leading" constant="16" id="XCk-tE-Juu"/>
-                            <constraint firstItem="QMu-aB-Is1" firstAttribute="top" secondItem="5dg-bB-hjH" secondAttribute="top" constant="16" id="rQn-IB-wjY"/>
+                            <constraint firstItem="5dg-bB-hjH" firstAttribute="bottom" secondItem="WiD-iC-cA8" secondAttribute="bottom" constant="16" id="1e9-nr-qXk"/>
+                            <constraint firstItem="5dg-bB-hjH" firstAttribute="trailing" secondItem="WiD-iC-cA8" secondAttribute="trailing" constant="16" id="I9s-FR-YeK"/>
+                            <constraint firstItem="WiD-iC-cA8" firstAttribute="top" secondItem="5dg-bB-hjH" secondAttribute="top" constant="16" id="Olp-YY-BfF"/>
+                            <constraint firstItem="WiD-iC-cA8" firstAttribute="leading" secondItem="5dg-bB-hjH" secondAttribute="leading" constant="16" id="qN3-c3-32U"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Select a Study Set" id="tEt-GV-0Gs"/>
+                    <navigationItem key="navigationItem" title="Quiz Setup" id="tEt-GV-0Gs"/>
+                    <connections>
+                        <outlet property="tableView" destination="3r0-Km-EUE" id="pw9-Ov-7Ni"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lbf-jw-D94" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -959,7 +1026,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="xTE-oM-ekm"/>
+        <segue reference="841-De-9ff"/>
+        <segue reference="3z3-GV-ZHE"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow.left" catalog="system" width="128" height="98"/>
