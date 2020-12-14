@@ -29,7 +29,6 @@
 		BCFC7707257163940016D7F7 /* CPSC_315_Final_Project.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BCFC7705257163940016D7F7 /* CPSC_315_Final_Project.xcdatamodeld */; };
 		BCFC7709257163950016D7F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCFC7708257163950016D7F7 /* Assets.xcassets */; };
 		BCFC770C257163950016D7F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCFC770A257163950016D7F7 /* LaunchScreen.storyboard */; };
-		BCFC771B2571688F0016D7F7 /* Verb.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFC771A2571688F0016D7F7 /* Verb.swift */; };
 		BCFC771F25716E2E0016D7F7 /* VocabTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFC771E25716E2E0016D7F7 /* VocabTableViewCell.swift */; };
 		BCFC772B2573759D0016D7F7 /* FlashcardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFC772A2573759D0016D7F7 /* FlashcardViewController.swift */; };
 /* End PBXBuildFile section */
@@ -59,7 +58,6 @@
 		BCFC7708257163950016D7F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BCFC770B257163950016D7F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BCFC770D257163950016D7F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BCFC771A2571688F0016D7F7 /* Verb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verb.swift; sourceTree = "<group>"; };
 		BCFC771E25716E2E0016D7F7 /* VocabTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabTableViewCell.swift; sourceTree = "<group>"; };
 		BCFC772A2573759D0016D7F7 /* FlashcardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,7 +113,6 @@
 				BC6BCCF125774B5500C412DA /* StudySetTableViewController.swift */,
 				BCDC3617258168DC00AF1C39 /* StudysetDetailTableViewController.swift */,
 				BCDC3613258167F200AF1C39 /* SelectableWordCell.swift */,
-				BCFC771A2571688F0016D7F7 /* Verb.swift */,
 				BCE9A1EB2575888D00646286 /* SpeechSynthesizer.swift */,
 				BCBCB87E2585333300696BC8 /* Transcriber.swift */,
 				BC5A1926257F2F8300DAC9AF /* DatabaseManager.swift */,
@@ -197,7 +194,6 @@
 			files = (
 				BC5A1927257F2F8300DAC9AF /* DatabaseManager.swift in Sources */,
 				BCDC3614258167F200AF1C39 /* SelectableWordCell.swift in Sources */,
-				BCFC771B2571688F0016D7F7 /* Verb.swift in Sources */,
 				BCDC3618258168DC00AF1C39 /* StudysetDetailTableViewController.swift in Sources */,
 				BCFC771F25716E2E0016D7F7 /* VocabTableViewCell.swift in Sources */,
 				BCBCB8852586A61100696BC8 /* QuizSetupViewController.swift in Sources */,

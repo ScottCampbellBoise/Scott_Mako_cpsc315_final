@@ -85,7 +85,6 @@ class FlashcardSetupViewController: UIViewController, UITableViewDataSource, UIT
                 if identifier == "GoSegue" {
                     if !getSelectedWords().isEmpty {
                         // Find all the selected studysets and extract out the words
-                        print("IMPLEMENT THE FINDING OF WORDS FOR FLASHCARDS")
                         flashcardVC.flashcardSetOptional = getSelectedWords()
                     }
                     else {
@@ -109,24 +108,20 @@ class FlashcardSetupViewController: UIViewController, UITableViewDataSource, UIT
     func getSelectedWords() -> [Word] {
         // First, get an array of all studysets cells that were selected
         var selectedSets = [StudySet]()
-        print("Selected sets to use for flashcards: ")
         for kk in 0..<studysetWasSelected.count {
             if studysetWasSelected[kk] {
                 selectedSets.append(studysets[kk])
-                print("    \(studysets[kk].name)")
-
             }
         }
         
         if selectedSets.count < 1 {
-            print("NO STUDY SETS SELECTED, USING ALL WORDS")
+            print("No study sets selected, using all words...")
             return DatabaseManager.loadWords() ?? [Word]()
         }
         
         let resultsOptional = DatabaseManager.fetchWords(fromStudysets: selectedSets)
         // Try to unwrap the results
         if let results = resultsOptional {
-            print("Found \(results.count) Words to use in flashcards")
             return results
         } else {
             print("Got no results back from the flashcard setup request")

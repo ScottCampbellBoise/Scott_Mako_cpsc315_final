@@ -26,7 +26,7 @@ class Transcriber {
         SFSpeechRecognizer.requestAuthorization { authStatus in
             DispatchQueue.main.async {
                 if authStatus == .authorized {
-                    print("Good to go!")
+                    print("Transcription is good to go!")
                 } else {
                     print("Transcription permission was declined.")
                 }
@@ -43,7 +43,7 @@ class Transcriber {
         recognizer?.recognitionTask(with: request) { (result, error) in
             // abort if we didn't get any transcription back
             guard let result = result else {
-                print("There was an error: \(error!)")
+                print("There was an error in transcribing: \(error!)")
                 completion(nil)
                 return
             }

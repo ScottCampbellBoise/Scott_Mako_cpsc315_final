@@ -46,9 +46,6 @@ class FlashcardViewController: UIViewController {
         
         self.view.addGestureRecognizer(leftRecognizer)
         self.view.addGestureRecognizer(rightRecognizer)
-        
-        print("MOVE THE SPEECH SYNTH CODE TO EVENTUAL HOME SCREEN!")
-        SpeechSynthesizer.languageCode = LanguageCode.germanDE
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -62,7 +62,6 @@ class StudysetDetailTableViewController: UITableViewController, UISearchBarDeleg
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Length of words \(words.count)")
         // Toggle the checkmark on and off
         if let cell = tableView.cellForRow(at: indexPath) {
             if cell.accessoryType == .checkmark {

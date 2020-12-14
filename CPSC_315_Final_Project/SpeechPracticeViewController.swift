@@ -37,7 +37,6 @@ class SpeechPracticeViewController: UIViewController, AVAudioRecorderDelegate {
     func update(with wordOptional: Word?) {
         self.wordOptional = wordOptional
         if let word = wordOptional {
-            print("Practice for word: \(word)")
             wordLabel.text = word.foriegnWord
             transcribedLabel.text = "No transcription yet..."
             statusLabel.text = "No recording yet..."
@@ -103,16 +102,12 @@ class SpeechPracticeViewController: UIViewController, AVAudioRecorderDelegate {
         if success {
             audioRecorder.stop()
             audioRecorder = nil
-            print("recorded successfully.")
             
-            print("Attempting to transcribe the audio...")
             Transcriber.transcribeAudio(url: Transcriber.getAudioFileUrl()) { (transOptional) in
                 if let trans = transOptional {
                     self.transcribedLabel.text = "We think you're saying: \(trans)"
                     if let word = self.wordOptional {
                         if !trans.isEmpty {
-                            print("Transcription: \(trans)")
-                            print("Expected: \(word.foriegnWord)")
                             if word.foriegnWord.lowercased() == trans.lowercased() {
                                 self.statusLabel.text = "Correct! Well Done!"
                                 self.view.backgroundColor = self.correctColor

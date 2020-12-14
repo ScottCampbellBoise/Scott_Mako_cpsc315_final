@@ -215,13 +215,13 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="l8v-tf-PBM">
                                                     <rect key="frame" x="16" y="0.0" width="351" height="58"/>
                                                     <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="n4U-Ja-UEm">
+                                                        <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="300" horizontalCompressionResistancePriority="700" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="n4U-Ja-UEm">
                                                             <rect key="frame" x="0.0" y="10" width="270.5" height="38"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="hpo-cM-eMQ">
                                                                     <rect key="frame" x="0.0" y="0.0" width="120.5" height="19.5"/>
                                                                     <subviews>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Foriegn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u18-ll-H4r">
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="150" verticalHuggingPriority="251" horizontalCompressionResistancePriority="850" text="Foriegn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u18-ll-H4r">
                                                                             <rect key="frame" x="0.0" y="1" width="56" height="18"/>
                                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                                             <nil key="textColor"/>
@@ -263,8 +263,11 @@
                                                                 </stackView>
                                                             </subviews>
                                                         </stackView>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g2Y-T5-qaX">
+                                                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="200" horizontalCompressionResistancePriority="800" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g2Y-T5-qaX">
                                                             <rect key="frame" x="278.5" y="11" width="33.5" height="36"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="33.5" id="rYL-t5-2l7"/>
+                                                            </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                             <state key="normal">
                                                                 <imageReference key="image" image="speaker.wave.3" catalog="system" symbolScale="large"/>
@@ -273,8 +276,11 @@
                                                                 <action selector="speakerButtonPressed:" destination="xW7-Ub-h0D" eventType="primaryActionTriggered" id="N4I-2c-ywf"/>
                                                             </connections>
                                                         </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="800" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YFp-7J-78W">
+                                                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="200" horizontalCompressionResistancePriority="800" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YFp-7J-78W">
                                                             <rect key="frame" x="320" y="5" width="31" height="48"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="31" id="Q0S-Zb-u7f"/>
+                                                            </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                             <state key="normal" title="☆"/>
                                                             <connections>
