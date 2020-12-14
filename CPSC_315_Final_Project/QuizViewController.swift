@@ -69,6 +69,7 @@ class QuizViewController: UIViewController {
     
     func updateQuiz(with wordOptional: Word?) {
         if let word = wordOptional {
+            hint = nil
             foreignWordLabel.text = word.foriegnWord
             updateHintLabel()
             updateCorrectLabel()
