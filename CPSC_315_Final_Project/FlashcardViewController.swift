@@ -38,6 +38,15 @@ class FlashcardViewController: UIViewController {
         
         showNewFlashcard()
         
+        // Swipe gestures for left and right swipe
+        let leftRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(swipeHandler(_:)))
+        leftRecognizer.direction = .left
+        let rightRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(swipeHandler(_:)))
+        rightRecognizer.direction = .right
+        
+        self.view.addGestureRecognizer(leftRecognizer)
+        self.view.addGestureRecognizer(rightRecognizer)
+        
         print("MOVE THE SPEECH SYNTH CODE TO EVENTUAL HOME SCREEN!")
         SpeechSynthesizer.languageCode = LanguageCode.germanDE
     }
@@ -58,6 +67,17 @@ class FlashcardViewController: UIViewController {
         }
         
         updateFlashcard(with: wordOptional)
+    }
+    
+    func showPrevFlashcard() {
+        if let currentIndex = currentIndexOptional, let flashcardSet = flashcardSetOptional {
+            currentIndexOptional = (currentIndex - 1) % flashcardSet.count // Make sure that the index wraps
+            wordOptional = flashcardSet[currentIndexOptional!]
+        } else {
+            wordOptional = nil
+        }
+        
+        updateFlashcard(with: self.wordOptional)
     }
     
     func updateFlashcard(with wordOptional: Word?) {
@@ -82,9 +102,17 @@ class FlashcardViewController: UIViewController {
         }
     }
     
+    func swipedLeft() {
+        showNewFlashcard()
+    }
+    
+    func swipedRight() {
+        showPrevFlashcard()
+    }
+    
     // MARK: IBAction Methods
     
-    @IBAction func prevButtonPressed(_ sender: UIButton) {
+    /*@IBAction func prevButtonPressed(_ sender: UIButton) {
         if let currentIndex = currentIndexOptional, let flashcardSet = flashcardSetOptional {
             currentIndexOptional = (currentIndex - 1) % flashcardSet.count // Make sure that the index wraps
             self.wordOptional = flashcardSet[currentIndexOptional!]
@@ -102,8 +130,21 @@ class FlashcardViewController: UIViewController {
             self.wordOptional = nil
         }
         updateFlashcard(with: self.wordOptional)
-    }
+    }*/
     
+    @IBAction func swipeHandler(_ gestureRecognizer: UISwipeGestureRecognizer) {
+        if gestureRecognizer.state == .ended {
+            if gestureRecognizer.direction == .right {
+                print("Swiped right to previous question.")
+                swipedRight()
+            }
+            if gestureRecognizer.direction == .left {
+                print("Swiped left to next question.")
+                swipedLeft()
+            }
+        }
+    }
+
     @IBAction func flashcardButtonPressed(_ sender: UIButton) {
         if flashcardButton.title(for: .normal) == wordOptional?.foriegnWord {
             flashcardButton.setTitle(wordOptional?.englishWord, for: .normal)

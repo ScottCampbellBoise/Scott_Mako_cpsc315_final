@@ -56,7 +56,7 @@ class StudySetTableViewController: UIViewController, UITableViewDataSource, UITa
             alertTextField = studysetTextField
         }
         
-        let action = UIAlertAction(title: "Create", style: .default) { (alertAction) in
+        alert.addAction(UIAlertAction(title: "Create", style: .default) { (alertAction) in
             let text = alertTextField.text!
             // This is the CREATE in CRUD
             // Make a Category using Context
@@ -66,9 +66,14 @@ class StudySetTableViewController: UIViewController, UITableViewDataSource, UITa
             
             self.studysets.append(newStudyset)
             DatabaseManager.saveStudySets()
-        }
+            self.tableView.reloadData()
+        })
         
-        alert.addAction(action)
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel) { (alertAction) in
+            print("Pressed Cancel")
+        })
+        
+        //alert.addAction(action)
         present(alert, animated: true, completion: nil)
     }
     

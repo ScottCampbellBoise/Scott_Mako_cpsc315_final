@@ -16,7 +16,8 @@ import UIKit
 class QuizViewController: UIViewController {
     
     var numHints = 3
-    var hint: String?
+    var hint: [String]?
+    var englishWord: [String] = []
         
     @IBOutlet var foreignWordLabel: UILabel!
     @IBOutlet var englishTextField: UITextField!
@@ -35,7 +36,7 @@ class QuizViewController: UIViewController {
         super.viewDidLoad()
         print("Loaded Quiz View")
     
-        flashcardSetOptional = DatabaseManager.loadWords()
+        //flashcardSetOptional = DatabaseManager.loadWords()
         if let _ = flashcardSetOptional {
             currentIndexOptional = -1 // Set the starting index if there are words available
         } else {
@@ -56,6 +57,29 @@ class QuizViewController: UIViewController {
         print("MOVE THE SPEECH SYNTH CODE TO EVENTUAL HOME SCREEN!")
         SpeechSynthesizer.languageCode = LanguageCode.germanDE
     }
+    
+    func showQuiz() {
+        if let flashcardSet = flashcardSetOptional, let currentIndex = currentIndexOptional {
+            currentIndexOptional = (currentIndex + 1) % flashcardSet.count
+            wordOptional = flashcardSet[currentIndexOptional!]
+        } else {
+            wordOptional = nil
+        }
+        
+        updateQuiz(with: wordOptional)
+    }
+    
+    
+    func updateQuiz(with wordOptional: Word?) {
+        if let word = wordOptional {
+            foreignWordLabel.text = word.foriegnWord
+            updateHintLabel()
+            updateCorrectLabel()
+        } else {
+            foreignWordLabel.text = ""
+        }
+    }
+    
     
     @IBAction func speakerButtonPressed(_ sender: UIButton) {
         if let word = wordOptional {
@@ -204,21 +228,31 @@ class QuizViewController: UIViewController {
         }
     }
     
-    // TODO: Fix this...
-    func provideHint() -> String {
-        /*if let hintExists = hint {
-            let letter = Int.random(in: 0...hintExists.count - 1)
-            hintExists.index
-        }
-        else {
-            if let word = word?.englishWord {
-                hint = word
-            
-                let letter = Int.random(in: 0...hint!.count - 1)
-            
+    
+    func provideHint() {
+        if let hintExists = hint {
+            var letter = Int.random(in: 0...hintExists.count - 1)
+            while hintExists[letter] != "_" {
+                letter = Int.random(in: 0...hintExists.count - 1)
             }
-        }*/
-        return "Hint"
+            
+            hint![letter] = englishWord[letter]
+            hintAlert()
+        } else {
+            if let word = wordOptional?.englishWord {
+                englishWord = Array(arrayLiteral: word)
+                var englishHint = Array(repeating: "_", count: englishWord.count)
+                
+                var letter = Int.random(in: 0...englishHint.count - 1)
+                while englishHint[letter] != "_" {
+                    letter = Int.random(in: 0...englishHint.count - 1)
+                }
+                
+                englishHint[letter] = englishWord[letter]
+                hint = englishHint
+                hintAlert()
+            }
+        }
     }
     
     
@@ -257,28 +291,17 @@ class QuizViewController: UIViewController {
         })
     }
     
-    
-    func showQuiz() {
-        if let flashcardSet = flashcardSetOptional, let currentIndex = currentIndexOptional {
-            currentIndexOptional = (currentIndex + 1) % flashcardSet.count
-            wordOptional = flashcardSet[currentIndexOptional!]
-        } else {
-            wordOptional = nil
-        }
+    func hintAlert() {
+        let invalidMessage = "Hint:\n\(hint!.joined(separator: " "))"
+        let alertController = UIAlertController(title: "Hint", message: invalidMessage, preferredStyle: .alert)
         
-        updateQuiz(with: wordOptional)
+        alertController.addAction(UIAlertAction(title: "Okay", style: .default, handler: { (action) -> Void in
+            print("User pressed okay")
+        }))
+        present(alertController, animated: true, completion: { () -> Void in
+            print("Presented Hint alert")
+        })
     }
-    
-    
-    func updateQuiz(with wordOptional: Word?) {
-        if let word = wordOptional {
-            foreignWordLabel.text = word.foriegnWord
-            updateHintLabel()
-            updateCorrectLabel()
-        } else {
-            foreignWordLabel.text = ""
-        }
-    }
-    
 }
+
 

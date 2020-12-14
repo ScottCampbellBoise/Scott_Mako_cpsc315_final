@@ -86,12 +86,24 @@ class FlashcardSetupViewController: UIViewController, UITableViewDataSource, UIT
         if let identifier = segue.identifier {
             if let flashcardVC = segue.destination as? FlashcardViewController {
                 if identifier == "GoSegue" {
-                    // Find all the selected studysets and extract out the words
-                    print("IMPLEMENT THE FINDING OF WORDS FOR FLASHCARDS")
-                    flashcardVC.flashcardSetOptional = getSelectedWords()
+                    if !getSelectedWords().isEmpty {
+                        // Find all the selected studysets and extract out the words
+                        print("IMPLEMENT THE FINDING OF WORDS FOR FLASHCARDS")
+                        flashcardVC.flashcardSetOptional = getSelectedWords()
+                    }
+                    else {
+                        noWordsInStudySetAlert()
+                    }
                 } else {
-                    // Send all the words to the flashcard controller
-                    flashcardVC.flashcardSetOptional = DatabaseManager.loadWords()
+                    if let loadedWords = DatabaseManager.loadWords() {
+                        if !loadedWords.isEmpty {
+                            // Send all the words to the flashcard controller
+                            flashcardVC.flashcardSetOptional = loadedWords
+                        }
+                        else {
+                            noWordsInStudySetAlert()
+                        }
+                    }
                 }
             }
         }
@@ -125,4 +137,15 @@ class FlashcardSetupViewController: UIViewController, UITableViewDataSource, UIT
         }
     }
 
+    func noWordsInStudySetAlert() {
+        let invalidMessage = "There are no words in the study set you selected. Please select a study set with words or add words to an existing study set."
+        let alertController = UIAlertController(title: "No Words", message: invalidMessage, preferredStyle: .alert)
+        
+        alertController.addAction(UIAlertAction(title: "Okay", style: .default, handler: { (action) -> Void in
+            print("User pressed okay")
+        }))
+        present(alertController, animated: true, completion: { () -> Void in
+            print("Presented No Words alert")
+        })
+    }
 }

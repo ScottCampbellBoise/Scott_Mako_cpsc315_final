@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="F5D-oE-lJ6">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -603,7 +603,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="100" verticalHuggingPriority="1" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="cPz-QD-Ycb">
-                                        <rect key="frame" x="0.0" y="57" width="350" height="558"/>
+                                        <rect key="frame" x="0.0" y="57" width="350" height="596"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <state key="normal" title="Flashcard Button">
                                             <color key="titleColor" systemColor="labelColor"/>
@@ -624,7 +624,7 @@
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="500" verticalHuggingPriority="500" horizontalCompressionResistancePriority="650" verticalCompressionResistancePriority="650" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="3sU-hZ-B5N">
-                                        <rect key="frame" x="0.0" y="631" width="350" height="32"/>
+                                        <rect key="frame" x="0.0" y="669" width="350" height="32"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="300" verticalHuggingPriority="300" horizontalCompressionResistancePriority="700" verticalCompressionResistancePriority="700" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D7w-Hg-Ibd">
                                                 <rect key="frame" x="0.0" y="0.0" width="312" height="32"/>
@@ -644,55 +644,8 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lHw-gJ-WiI">
-                                        <rect key="frame" x="0.0" y="679" width="350" height="22"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZgS-Ve-7g9">
-                                                <rect key="frame" x="0.0" y="0.0" width="171" height="22"/>
-                                                <state key="normal">
-                                                    <imageReference key="image" image="arrow.left" catalog="system" symbolScale="large"/>
-                                                </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                        <real key="value" value="2"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="4"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" systemColor="systemGray4Color"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="prevButtonPressed:" destination="fCm-8J-1IP" eventType="primaryActionTriggered" id="sTi-wC-A9G"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qeI-i0-T5G">
-                                                <rect key="frame" x="179" y="0.0" width="171" height="22"/>
-                                                <state key="normal">
-                                                    <imageReference key="image" image="arrow.right" catalog="system" symbolScale="large"/>
-                                                </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                        <real key="value" value="2"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="4"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" systemColor="systemGray5Color"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="nextButtonPressed:" destination="fCm-8J-1IP" eventType="primaryActionTriggered" id="lZK-Xf-ieZ"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="lHw-gJ-WiI" secondAttribute="trailing" id="AaL-KC-Yjb"/>
-                                    <constraint firstItem="lHw-gJ-WiI" firstAttribute="leading" secondItem="sIz-Jp-ldB" secondAttribute="leading" id="Jnr-0Y-aHU"/>
                                     <constraint firstItem="Z60-xT-GPb" firstAttribute="leading" secondItem="sIz-Jp-ldB" secondAttribute="leading" id="WdE-vN-myX"/>
                                     <constraint firstAttribute="trailing" secondItem="3sU-hZ-B5N" secondAttribute="trailing" id="nvX-zf-Jyg"/>
                                     <constraint firstItem="3sU-hZ-B5N" firstAttribute="leading" secondItem="sIz-Jp-ldB" secondAttribute="leading" id="riL-yT-FeC"/>
@@ -702,27 +655,34 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Qug-D0-54Y"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="Qug-D0-54Y" firstAttribute="bottom" secondItem="sIz-Jp-ldB" secondAttribute="bottom" constant="8" id="D6D-iK-xoZ"/>
                             <constraint firstItem="sIz-Jp-ldB" firstAttribute="top" secondItem="Qug-D0-54Y" secondAttribute="top" constant="16" id="KH2-xr-7GB"/>
                             <constraint firstItem="sIz-Jp-ldB" firstAttribute="centerX" secondItem="4WX-Mk-cOf" secondAttribute="centerX" id="RDv-fq-O9c"/>
                             <constraint firstItem="sIz-Jp-ldB" firstAttribute="leading" secondItem="Qug-D0-54Y" secondAttribute="leading" constant="32" id="bCH-KB-ikX"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="4ab-Qa-gCv" appends="YES" id="mnw-xN-awD"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Flashcards" image="greetingcard" catalog="system" id="g6G-Vr-cZK"/>
                     <navigationItem key="navigationItem" id="c89-45-6DV"/>
                     <connections>
                         <outlet property="flashcardButton" destination="cPz-QD-Ycb" id="2iM-Pt-tcV"/>
                         <outlet property="markedReviewButton" destination="0Eb-L6-2l2" id="XNz-f2-R2Z"/>
-                        <outlet property="nextButton" destination="qeI-i0-T5G" id="R8N-qA-kFo"/>
-                        <outlet property="prevButton" destination="ZgS-Ve-7g9" id="xKg-Mn-aiz"/>
                         <outlet property="revealMnemonicButton" destination="D7w-Hg-Ibd" id="14Q-G8-kp4"/>
                         <outlet property="statisticsLabel" destination="da9-MT-RKn" id="h5R-hn-F7d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WUk-Au-u0A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="4ab-Qa-gCv">
+                    <connections>
+                        <action selector="swipeHandler:" destination="fCm-8J-1IP" id="kYx-PV-M19"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2381" y="88"/>
+            <point key="canvasLocation" x="2441" y="88"/>
         </scene>
         <!--Quiz Setup-->
         <scene sceneID="jnV-4j-6Kz">
@@ -746,7 +706,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <state key="normal" title="Use all Vocab Words"/>
                                         <connections>
-                                            <segue destination="ZF5-Bs-cae" kind="show" id="T9Q-KG-YLv"/>
+                                            <segue destination="ZF5-Bs-cae" kind="show" identifier="AllWordsSegue" id="ckj-bZ-TN3"/>
                                         </connections>
                                     </button>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3r0-Km-EUE">
@@ -840,7 +800,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="90" translatesAutoresizingMaskIntoConstraints="NO" id="DMR-ha-Qax">
-                                <rect key="frame" x="16" y="245" width="382" height="406"/>
+                                <rect key="frame" x="16" y="242" width="382" height="412"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cBv-Sn-VZ1">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="62"/>
@@ -877,10 +837,10 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="DEQ-Az-4r5">
-                                        <rect key="frame" x="0.0" y="276" width="382" height="130"/>
+                                        <rect key="frame" x="0.0" y="276" width="382" height="136"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="sF0-cb-Xui">
-                                                <rect key="frame" x="0.0" y="0.0" width="382" height="68"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="382" height="74"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kYF-GU-9ot">
                                                         <rect key="frame" x="0.0" y="0.0" width="382" height="30"/>
@@ -890,7 +850,8 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="1" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lw4-bt-iWk">
-                                                        <rect key="frame" x="0.0" y="38" width="382" height="30"/>
+                                                        <rect key="frame" x="0.0" y="38" width="382" height="36"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <state key="normal" title="Check"/>
                                                         <connections>
                                                             <action selector="checkAnswerButtonPressed:" destination="ZF5-Bs-cae" eventType="primaryActionTriggered" id="e2y-A9-1DV"/>
@@ -899,7 +860,7 @@
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O3K-tn-lpc">
-                                                <rect key="frame" x="0.0" y="100" width="382" height="30"/>
+                                                <rect key="frame" x="0.0" y="106" width="382" height="30"/>
                                                 <state key="normal" title="Reveal Answer"/>
                                                 <connections>
                                                     <action selector="revealAnswerButtonPressed:" destination="ZF5-Bs-cae" eventType="primaryActionTriggered" id="TBn-5W-gUV"/>
@@ -946,7 +907,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2380" y="818"/>
+            <point key="canvasLocation" x="2441" y="818"/>
         </scene>
         <!--Flashcards-->
         <scene sceneID="aCZ-7V-Eq3">
@@ -1026,12 +987,10 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="841-De-9ff"/>
+        <segue reference="ckj-bZ-TN3"/>
         <segue reference="3z3-GV-ZHE"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="arrow.left" catalog="system" width="128" height="98"/>
-        <image name="arrow.right" catalog="system" width="128" height="98"/>
         <image name="greetingcard" catalog="system" width="107" height="128"/>
         <image name="paperclip" catalog="system" width="121" height="128"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
@@ -1046,9 +1005,6 @@
         </systemColor>
         <systemColor name="systemGray4Color">
             <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGray5Color">
-            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

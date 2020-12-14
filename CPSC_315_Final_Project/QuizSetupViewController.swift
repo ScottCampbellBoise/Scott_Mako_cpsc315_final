@@ -88,11 +88,25 @@ class QuizSetupViewController: UIViewController, UITableViewDataSource, UITableV
         if let identifier = segue.identifier {
             if let quizVC = segue.destination as? QuizViewController {
                 if identifier == "GoSegue" {
-                    // Find all the selected studysets and extract out the words
-                    quizVC.flashcardSetOptional = getSelectedWords()
+                    if !getSelectedWords().isEmpty {
+                        // Find all the selected studysets and extract out the words
+                        quizVC.flashcardSetOptional = getSelectedWords()
+                    }
+                    else {
+                        noWordsInStudySetAlert()
+                    }
                 } else {
-                    // Send all the words to the flashcard controller
-                    quizVC.flashcardSetOptional = DatabaseManager.loadWords()
+                    print("YOLO")
+                    if let loadedWords = DatabaseManager.loadWords() {
+                        print("got some loaded words")
+                        if !loadedWords.isEmpty {
+                            // Send all the words to the flashcard controller
+                            quizVC.flashcardSetOptional = loadedWords
+                        }
+                        else {
+                            noWordsInStudySetAlert()
+                        }
+                    }
                 }
             }
         }
@@ -126,4 +140,15 @@ class QuizSetupViewController: UIViewController, UITableViewDataSource, UITableV
         }
     }
 
+    func noWordsInStudySetAlert() {
+        let invalidMessage = "There are no words in the study set you selected. Please select a study set with words or add words to an existing study set."
+        let alertController = UIAlertController(title: "No Words", message: invalidMessage, preferredStyle: .alert)
+            
+        alertController.addAction(UIAlertAction(title: "Okay", style: .default, handler: { (action) -> Void in
+            print("User pressed okay")
+        }))
+        present(alertController, animated: true, completion: { () -> Void in
+            print("Presented No Words alert")
+        })
+    }
 }
