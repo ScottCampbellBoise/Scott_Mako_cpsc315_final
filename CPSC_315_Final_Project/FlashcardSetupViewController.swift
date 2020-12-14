@@ -58,11 +58,8 @@ class FlashcardSetupViewController: UIViewController, UITableViewDataSource, UIT
         let cell = tableView.dequeueReusableCell(withIdentifier: "FlashcardPrepCell", for: indexPath)
         let studyset = studysets[indexPath.row]
         cell.textLabel?.text = studyset.name
-        cell.detailTextLabel?.text = "Add num of words in set!"
+        cell.detailTextLabel?.text = "\(studyset.getNumWords()) Words"
         cell.accessoryType = UITableViewCell.AccessoryType.none
-
-        // TODO: Add the number of elements as the subtitle!
-        
         return cell
     }
     

@@ -60,11 +60,8 @@ class QuizSetupViewController: UIViewController, UITableViewDataSource, UITableV
         let cell = tableView.dequeueReusableCell(withIdentifier: "QuizPrepCell", for: indexPath)
         let studyset = studysets[indexPath.row]
         cell.textLabel?.text = studyset.name
-        cell.detailTextLabel?.text = "Add num of words in set!"
-        cell.accessoryType = UITableViewCell.AccessoryType.none
-
-        // TODO: Add the number of elements as the subtitle!
-        
+        cell.detailTextLabel?.text = "\(studyset.getNumWords()) Words"
+        cell.accessoryType = UITableViewCell.AccessoryType.none        
         return cell
     }
     

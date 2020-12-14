@@ -26,6 +26,12 @@ class StudySetTableViewController: UIViewController, UITableViewDataSource, UITa
             studysets = unwrappedSets
         }
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        print("Study Set View Will Appear")
+        
+        tableView.reloadData()
+    }
 
     // MARK: TableView Delegate Methods
     
@@ -41,8 +47,7 @@ class StudySetTableViewController: UIViewController, UITableViewDataSource, UITa
         let cell = tableView.dequeueReusableCell(withIdentifier: "StudySetCell", for: indexPath)
         let studyset = studysets[indexPath.row]
         cell.textLabel?.text = studyset.name
-        cell.detailTextLabel?.text = "Add num of words in set!"
-        // TODO: Add the number of elements as the subtitle!
+        cell.detailTextLabel?.text = "\(studyset.getNumWords()) Words"
         
         return cell
     }

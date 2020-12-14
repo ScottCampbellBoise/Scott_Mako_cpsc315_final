@@ -14,7 +14,6 @@ class StudysetDetailTableViewController: UITableViewController, UISearchBarDeleg
         
     // Define the data source for the Table View
     var words = [Word]()
-    var wordWasSelected = [Bool]()
     var studysetOptional: StudySet? = nil
     
     override func viewDidLoad() {
@@ -23,23 +22,7 @@ class StudysetDetailTableViewController: UITableViewController, UISearchBarDeleg
         let wordsOptional = DatabaseManager.loadWords()
         if let unwrappedWords = wordsOptional {
             words = unwrappedWords
-            wordWasSelected = [Bool](repeating: false, count: words.count)
         }
-        
-        // Load in all the words already corresponding to this
-        if let studyset = studysetOptional {
-            let wordsOptional = DatabaseManager.fetchWords(fromStudysets: [studyset])
-            if let unwrappedWords = wordsOptional {
-                print("Found \(unwrappedWords.count) words in studyset \(studyset.name)")
-                // Now, find those words and pre-select them
-                let preselectedWords = DatabaseManager.fetchWords(fromStudysets: [studyset]) ?? [Word]()
-                // Go through the words and find its spot in the master array
-                for theWord in preselectedWords {
-                    let index = getIndexOfWord(fromWord: theWord)!
-                    wordWasSelected[index] = true
-                }
-            } else { print("Could not find any words for the studyset") }
-        } else { print("No studyset specified!") }
         
         tableView.reloadData()
     }
@@ -67,8 +50,9 @@ class StudysetDetailTableViewController: UITableViewController, UISearchBarDeleg
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "SelectWordCell", for: indexPath) as! SelectableWordCell
         let word = words[indexPath.row]
+        
         cell.update(with: word)
-        if wordWasSelected[indexPath.row] {
+        if word.isInStudySet(studyset: studysetOptional!) {
             cell.accessoryType = UITableViewCell.AccessoryType.checkmark
         } else {
             cell.accessoryType = UITableViewCell.AccessoryType.none
@@ -78,11 +62,11 @@ class StudysetDetailTableViewController: UITableViewController, UISearchBarDeleg
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("Length of words \(words.count)")
         // Toggle the checkmark on and off
         if let cell = tableView.cellForRow(at: indexPath) {
             if cell.accessoryType == .checkmark {
                 cell.accessoryType = .none
-                wordWasSelected[indexPath.row] = false
                 // Attempting to remove the word from the studyset
                 if let set = studysetOptional {
                     words[indexPath.row].removeWordFromStudySet(studyset: set)
@@ -90,7 +74,6 @@ class StudysetDetailTableViewController: UITableViewController, UISearchBarDeleg
                 }
             } else {
                 cell.accessoryType = .checkmark
-                wordWasSelected[indexPath.row] = true
                 // Attempting to add the word to the studyset
                 if let set = studysetOptional {
                     words[indexPath.row].addWordToStudySet(studyset: set)
@@ -98,6 +81,7 @@ class StudysetDetailTableViewController: UITableViewController, UISearchBarDeleg
                 }
             }
         }
+        tableView.reloadData()
     }
     
     // MARK: - Search Bar Methods

@@ -25,10 +25,16 @@ class VocabTableViewController: UIViewController, UITableViewDataSource, UITable
         let wordsOptional = DatabaseManager.loadWords()
         if let unwrappedWords = wordsOptional { words = unwrappedWords }
         
-        //loadTestWords()
-                
-        print("MOVE THE SPEECH SYNTH CODE TO EVENTUAL HOME SCREEN!")
-        SpeechSynthesizer.languageCode = LanguageCode.germanDE
+        /*
+        if let newWords = LoadInWords.loadWords() {
+            print("Added new words")
+            words.append(contentsOf: newWords)
+            DatabaseManager.saveWords()
+            tableView.reloadData()
+        } else {
+            print("Couldn't add new words")
+        }
+         */
         
         let documentsDirectoryURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
         print(documentsDirectoryURL)
@@ -41,59 +47,6 @@ class VocabTableViewController: UIViewController, UITableViewDataSource, UITable
         
         let wordsOptional = DatabaseManager.loadWords()
         if let unwrappedWords = wordsOptional { words = unwrappedWords }
-        tableView.reloadData()
-    }
-    
-    func loadTestWords() {
-        // Define the master studyset
-        let masterSet: StudySet? = DatabaseManager.getMasterStudySet()
-        
-        if masterSet == nil {
-            print("Could not find master set!!!")
-            return
-        }
-        
-        var word1 = Word(context: DatabaseManager.context)
-        word1.englishWord = "Good Morning"
-        word1.foriegnWord = "Guten Morgen"
-        word1.markedForReview = false
-        word1.mnemonic = nil
-        word1.timesMissed = 0
-        word1.timesCorrect = 0
-        word1.addWordToStudySet(studyset: masterSet!)
-        self.words.append(word1)
-        
-        word1 = Word(context: DatabaseManager.context)
-        word1.englishWord = "Good Afternoon"
-        word1.foriegnWord = "Guten Tag"
-        word1.markedForReview = false
-        word1.mnemonic = nil
-        word1.timesMissed = 0
-        word1.timesCorrect = 0
-        word1.addWordToStudySet(studyset: masterSet!)
-        self.words.append(word1)
-        
-        word1 = Word(context: DatabaseManager.context)
-        word1.englishWord = "Good Evening"
-        word1.foriegnWord = "Guten Abend"
-        word1.markedForReview = false
-        word1.mnemonic = nil
-        word1.timesMissed = 0
-        word1.timesCorrect = 0
-        word1.addWordToStudySet(studyset: masterSet!)
-        self.words.append(word1)
-        
-        word1 = Word(context: DatabaseManager.context)
-        word1.englishWord = "Good Night"
-        word1.foriegnWord = "Gute Nacht"
-        word1.markedForReview = false
-        word1.mnemonic = nil
-        word1.timesMissed = 0
-        word1.timesCorrect = 0
-        word1.addWordToStudySet(studyset: masterSet!)
-        self.words.append(word1)
-        
-        DatabaseManager.saveWords()
         tableView.reloadData()
     }
     

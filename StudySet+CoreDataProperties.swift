@@ -40,4 +40,9 @@ extension StudySet {
 
 extension StudySet : Identifiable {
 
+    func getNumWords() -> Int {
+        let set = self.mutableSetValue(forKey: "words")
+        return set.count
+    }
+    
 }

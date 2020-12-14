@@ -106,23 +106,45 @@ class DatabaseManager {
         }
     }
     
+}
+
+
+
+class LoadInWords {
     
-    // MARK: Miscellaneous
-    
-    static func getMasterStudySet() -> StudySet? {
-        let request: NSFetchRequest<StudySet> = StudySet.fetchRequest()
-        let predicate = NSPredicate(format: "name CONTAINS[cd] %@", "Master")
-        request.predicate = predicate
-        
-        do {
-            let masterSets: [StudySet] = try DatabaseManager.context.fetch(request)
-            print("Successfully found the master study set!")
-            return masterSets[0]
+    static func loadWords() -> [Word]? {
+        let file = "words"
+        if let path = Bundle.main.path(forResource: file, ofType: "txt"){
+            do {
+                let data = try String(contentsOfFile: path, encoding: .utf8)
+                var myStrings = data.components(separatedBy: .newlines)
+                
+                myStrings = myStrings.filter { $0 != "" }
+                            
+                var words = [Word]()
+                // Go through the first kk words
+                for kk in 0..<1372 {
+                    let foriegn = myStrings[kk*2]
+                    let english = myStrings[kk*2 + 1]
+                    
+                    let word = Word(context: DatabaseManager.context)
+                    word.foriegnWord = foriegn
+                    word.englishWord = english
+                    word.markedForReview = false
+                    word.mnemonic = nil
+                    word.timesMissed = 0
+                    word.timesCorrect = 0
+                    words.append(word)
+                }
+                
+                return words
+            } catch {
+                print(error)
+            }
+        } else {
+            print("Couldn't find the txt file")
         }
-        catch {
-            print("Error loading words \(error)")
-            return nil
-        }
+        return nil
     }
     
 }

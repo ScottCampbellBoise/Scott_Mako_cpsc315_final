@@ -1,0 +1,2746 @@
+Vier
+four (Numeral)
+um
+about (Preposition)
+Milch
+Milk (Noun)
+morgen
+tomorrow (Adverb)
+bald
+soon (Adverb)
+ihr
+their (Pronoun)
+er
+he (Pronoun)
+sechs
+six (Numeral)
+ich
+I (Pronoun)
+die
+the (Determiner)
+bis
+to (Preposition)
+du
+you (Pronoun)
+wir
+we (Pronoun)
+es
+it (Pronoun)
+wenn
+if (Conjunction)
+uns
+us (Pronoun)
+den
+the (Determiner)
+heute
+today (Adverb)
+Buch
+Book (Noun)
+der
+of the (Determiner)
+das
+that (Determiner)
+wann
+when (Adverb)
+sie
+they (Pronoun)
+kostenlos
+free (Adjective)
+Diesel
+Diesel (Noun)
+Methode
+Method (Noun)
+ist
+is (Verb)
+Achtung
+Danger (Noun)
+Gas
+Gas (Noun)
+Nachweis
+Proof (Noun)
+nein
+no (Adverb)
+Motor
+Engine (Noun)
+mir
+me (Pronoun)
+ohne
+without (Preposition)
+Biologie
+Biology (Noun)
+Studien
+Studies (Noun)
+Statistik
+Statistics (Noun)
+Philosophie
+Philosophy (Noun)
+Maschine
+Machine (Noun)
+mein
+my (Pronoun)
+nicht
+not (Adverb)
+mit
+With (Preposition)
+besser
+better (Adjective)
+im
+in the (Preposition)
+eine
+a (Determiner)
+wie
+as (Conjunction)
+Wissen
+Know (Noun)
+das
+that (Pronoun)
+Maschinen
+Machinery (Noun)
+meine
+mine (Pronoun)
+ein
+on (Determiner)
+Technik
+Technology (Noun)
+Studie
+Study (Noun)
+wesentlich
+essential (Adjective)
+sind
+are (Verb)
+wo
+Where (Adverb)
+Grad
+Degree (Noun)
+Praktikum
+Internship (Noun)
+Kunststoff
+Plastic (Noun)
+ja
+Yes (Adverb)
+Theorie
+Theory (Noun)
+Analyse
+Analysis (Noun)
+Mathematik
+Mathematics (Noun)
+dein
+your (Pronoun)
+Wissenschaft
+Science (Noun)
+und
+and (Conjunction)
+praktisch
+practical (Adjective)
+Definition
+Definition (Noun)
+Kenntnis
+Knowledge (Noun)
+Landwirtschaft
+Agriculture (Noun)
+Physik
+Physics (Noun)
+Kenntnisse
+Knowledge (Noun)
+keine
+no (Determiner)
+oder
+or (Conjunction)
+hilfreich
+helpful (Adjective)
+Erfindung
+Invention (Noun)
+hier
+here (Adverb)
+Energie
+Power (Noun)
+Temperatur
+Temperature (Noun)
+mehr
+more (Adverb)
+richtig
+correct (Adjective)
+lange
+long (Adjective)
+Kindergarten
+Kindergarten (Noun)
+Prüfung
+Examination (Noun)
+Weiterbildung
+Further education (Noun)
+Uni
+Uni (Noun)
+Fachbereich
+Faculty (Noun)
+für
+For (Preposition)
+privat
+privately (Adjective)
+überlege
+think about (Verb)
+das
+that ()
+neu
+new (Adjective)
+einen
+a (Determiner)
+manchmal
+sometimes (Adverb)
+zu
+to (Preposition)
+Erziehung
+Education (Noun)
+interessant
+interesting (Adjective)
+habe
+have (Verb)
+alt
+old (Adjective)
+Unterricht
+Lessons (Noun)
+sofort
+immediately (Adverb)
+Hochschulen
+Colleges (Noun)
+Ausbildung
+Education (Noun)
+Training
+Training (Noun)
+dem
+the (Determiner)
+Institut
+Institute (Noun)
+Lehre
+Teaching (Noun)
+kein
+no (Determiner)
+Hochschule
+College (Noun)
+sinnvoll
+useful (Adjective)
+sieben
+seven (Numeral)
+Akademie
+Academy (Noun)
+Bibliothek
+Library (Noun)
+nützlich
+helpful (Adjective)
+sehr
+very (Adverb)
+Studium
+Study (Noun)
+mehr
+more (Determiner)
+Seminare
+Seminars (Noun)
+Seminar
+Seminar (Noun)
+deine
+your (Pronoun)
+Tests
+Tests (Noun)
+fünf
+five (Numeral)
+Schule
+School (Noun)
+Forschung
+Research (Noun)
+hat
+has (Verb)
+Klasse
+Class (Noun)
+neue
+new (Adjective)
+zur
+to (Preposition)
+nach
+according to (Preposition)
+langsam
+slowly (Adjective)
+Klassen
+Classes (Noun)
+eindeutig
+clearly (Adjective)
+Universität
+University (Noun)
+Leser
+Reader (Noun)
+Stiften
+Donate (Noun)
+Übung
+Exercise (Noun)
+Stift
+Pen (Noun)
+Bildung
+Education (Noun)
+haben
+have (Verb)
+warum
+why (Adverb)
+Übungen
+Exercises (Noun)
+regional
+regional (Adjective)
+Grundschule
+Elementary School (Noun)
+übrigen
+other (Adjective)
+offen
+open (Adjective)
+Noten
+Sheet (Noun)
+international
+international (Adjective)
+dich
+thee (Pronoun)
+zwei
+two (Numeral)
+meinem
+my (Pronoun)
+jetzt
+now (Adverb)
+gegen
+against (Preposition)
+ihm
+him (Pronoun)
+zehn
+ten (Numeral)
+ihn
+him (Pronoun)
+dann
+then (Adverb)
+natürlich
+Naturally (Adverb)
+dir
+you (Pronoun)
+aus
+out (Preposition)
+euch
+you (Pronoun)
+jedenfalls
+in any case (Adverb)
+niemals
+never (Adverb)
+lange
+long (Adverb)
+drei
+three (Numeral)
+überhaupt
+at all (Adverb)
+mich
+me (Pronoun)
+gut
+Good (Adjective)
+dort
+there (Adverb)
+nie
+never (Adverb)
+wirklich
+for real (Adjective)
+wohin
+where (Adverb)
+neun
+nine (Numeral)
+bei
+at (Preposition)
+nächsten
+next (Adjective)
+immer
+always (Adverb)
+Anmeldungen
+Registrations (Noun)
+Handy
+Mobile (Noun)
+Anmeldung
+Registration (Noun)
+fernsehen
+TV (Verb)
+Rechner
+Calculator (Noun)
+Postkarte
+Postcard (Noun)
+hast
+have (Verb)
+Postkarten
+Postcards (Noun)
+notwendig
+necessary (Adjective)
+noch
+still (Adverb)
+Post
+Post (Noun)
+Einladung
+Invitation (Noun)
+Datenbank
+Database (Noun)
+Grüße
+Greetings (Noun)
+Meldungen
+Releases (Noun)
+paar
+couple (Determiner)
+Briefmarken
+Stamps (Noun)
+Kontakt
+Contact (Noun)
+Postleitzahl
+Postal code (Noun)
+Kontakte
+Contacts (Noun)
+Presse
+Press (Noun)
+Begründung
+Grounds (Noun)
+eher
+rather (Adverb)
+Telefonbuch
+Telephone directory (Noun)
+gelb
+yellow (Adjective)
+Postfach
+Post office box (Noun)
+Taschenbuch
+Paperback (Noun)
+Gespräch
+Interview (Noun)
+Interview
+Interview (Noun)
+Merkzettel
+Wish list (Noun)
+Thema
+Theme (Noun)
+Themen
+Themes (Noun)
+jede
+every (Determiner)
+dieses
+this (Pronoun)
+deinen
+your (Pronoun)
+sein
+be (Pronoun)
+habt
+have (Verb)
+diese
+these (Pronoun)
+isst
+eating (Verb)
+trinkt
+drinking (Verb)
+viele
+many (Determiner)
+euren
+your (Pronoun)
+Sender
+Transmitter (Noun)
+Papier
+Paper (Noun)
+kaputt
+broken (Adjective)
+Mitteilungen
+Releases (Noun)
+richtige
+right (Adjective)
+Kabel
+Cable (Noun)
+Anrede
+Salutation (Noun)
+weiß
+know (Adjective)
+Mitteilung
+Notification (Noun)
+nur
+just (Adverb)
+Lautsprecher
+Speaker (Noun)
+Vorwahl
+Area code (Noun)
+Diskussion
+Discussion (Noun)
+Auskunft
+Information (Noun)
+groß
+great (Adjective)
+kurz
+short (Adjective)
+Dialog
+Dialogue (Noun)
+Medien
+Media (Noun)
+Medium
+Medium (Noun)
+Diskussionen
+Discussions (Noun)
+echt
+real (Adjective)
+Kommentar
+Comment (Noun)
+Information
+Information (Noun)
+danke
+thank you (Interjection)
+Anhang
+Appendix (Noun)
+Suchmaschine
+Search Engine (Noun)
+soziale
+social (Adjective)
+Tastatur
+Keyboard (Noun)
+aktiv
+active (Adjective)
+Netzwerk
+Network (Noun)
+Netz
+Network (Noun)
+Sendung
+Broadcast (Noun)
+Rede
+Speech (Noun)
+komplett
+complete (Adjective)
+Monitor
+Monitor (Noun)
+Taste
+Button (Noun)
+falsch
+FALSE (Adjective)
+Kennwort
+Password (Noun)
+da
+there (Adverb)
+voll
+fully (Adjective)
+Internetseiten
+Web pages (Noun)
+Internetseite
+Website (Noun)
+auch
+also (Adverb)
+Profil
+Profile (Noun)
+Festplatten
+Hard drives (Noun)
+verfügbar
+available (Adjective)
+Festplatte
+Hard drive (Noun)
+Suche
+Search (Noun)
+leicht
+easily (Adjective)
+meiner
+mine (Pronoun)
+Kommunikation
+Communication (Noun)
+Bestätigung
+Confirmation (Noun)
+Internet
+Internet (Noun)
+Computer
+Computer (Noun)
+Adresse
+Street address (Noun)
+Radio
+Radio (Noun)
+Telefon
+Phone (Noun)
+klar
+clear (Adjective)
+am
+at the (Preposition)
+Zeitschrift
+Magazine (Noun)
+Brief
+Letter (Noun)
+Nachricht
+Message (Noun)
+Fernsehen
+TV (Noun)
+Notiz
+Note (Noun)
+Zeitung
+Newspaper (Noun)
+Nachrichten
+Messages (Noun)
+Zeitschriften
+Magazines (Noun)
+Fernseher
+TV (Noun)
+Zeitungen
+Newspapers (Noun)
+klein
+small (Adjective)
+Partnerschaft
+Partnership (Noun)
+Mutter
+Mother (Noun)
+Geschwister
+Brothers and sisters (Noun)
+hallo
+Hello (Interjection)
+bin
+am (Verb)
+Partner
+Partner (Noun)
+Schwester
+Sister (Noun)
+Großvater
+Grandfather (Noun)
+schön
+beautiful (Adjective)
+trinken
+drink (Verb)
+Beziehungen
+Relationships (Noun)
+schlecht
+poorly (Adjective)
+Hochzeit
+Wedding (Noun)
+Beziehung
+Relationship (Noun)
+normal
+normal (Adjective)
+Tochter
+Daughter (Noun)
+eure
+your (Pronoun)
+essen
+eat (Verb)
+süß
+cute (Adjective)
+beide
+both (Determiner)
+bitte
+Please (Adverb)
+jemand
+someone (Determiner)
+seine
+his (Pronoun)
+man
+one (Determiner)
+beiden
+both (Determiner)
+manche
+some (Determiner)
+Tasche
+Pocket (Noun)
+Knopf
+Button (Noun)
+Schuh
+Shoe (Noun)
+Leder
+Leather (Noun)
+Hemd
+Shirt (Noun)
+Taschen
+Bags (Noun)
+Knöpfe
+Buttons (Noun)
+Hosen
+Trousers (Noun)
+Schmuck
+Jewelry (Noun)
+Hüte
+Hats (Noun)
+fertig
+ready (Adjective)
+Kleid
+Dress (Noun)
+Schuhe
+Shoes (Noun)
+perfekt
+perfectly (Adjective)
+bringe
+bring (Verb)
+verpassen
+miss (Verb)
+waschen
+wash (Verb)
+Mädchen
+Girl (Noun)
+spreche
+speak (Verb)
+mögen
+like (Verb)
+spricht
+speaks (Verb)
+sehen
+see (Verb)
+schreibt
+writes (Verb)
+magst
+like (Verb)
+reicht
+enough (Verb)
+schreibst
+writing (Verb)
+bringt
+brings (Verb)
+Tomaten
+Tomatoes (Noun)
+Äpfel
+Apples (Noun)
+Bücher
+Books (Noun)
+Katzen
+Cats (Noun)
+Tiere
+Animals (Noun)
+Fische
+Fish (Noun)
+Orangen
+Oranges (Noun)
+Katze
+Cat (Noun)
+Biene
+Bee (Noun)
+Bär
+Bear (Noun)
+Kuh
+Cow (Noun)
+Tier
+Animal (Noun)
+Ente
+Duck (Noun)
+Hund
+Dog (Noun)
+Vogel
+Bird (Noun)
+Tee
+Tea (Noun)
+Wein
+Wine (Noun)
+Zitrone
+Lemon (Noun)
+trinke
+drink (Verb)
+Kaffee
+Coffee (Noun)
+Vegetarier
+Vegetarian (Noun)
+Mittagessen
+Having lunch (Noun)
+trinkst
+drinking (Verb)
+Menü
+Menu (Noun)
+Orangensaft
+Orange juice (Noun)
+sauer
+sour (Adjective)
+bist
+are (Verb)
+esst
+eat (Verb)
+seid
+are (Verb)
+lesen
+read (Verb)
+Jungen
+Boys (Noun)
+liest
+reads (Verb)
+lese
+harvest (Verb)
+Boden
+Ground (Noun)
+Geschenke
+Gifts (Noun)
+Stück
+Piece (Noun)
+Zubehör
+Accessories (Noun)
+Paket
+Package (Noun)
+selbst
+even (Adverb)
+Sachen
+Things (Noun)
+wichtige
+important (Adjective)
+Schere
+Scissors (Noun)
+Produkten
+Products (Noun)
+Produkt
+Product (Noun)
+Katalog
+Catalog (Noun)
+Sache
+Thing (Noun)
+Scheren
+Shave (Noun)
+frei
+free (Adjective)
+Bank
+Bank (Noun)
+Plan
+Plan (Noun)
+Stelle
+Location (Noun)
+niemand
+no one (Determiner)
+schon
+beautiful (Adverb)
+einem
+a (Determiner)
+keinen
+no (Determiner)
+Durst
+Thirst (Noun)
+etwas
+some (Pronoun)
+gestern
+yesterday (Adverb)
+eigene
+own (Adjective)
+selber
+himself (Adverb)
+Hunger
+Hunger (Noun)
+plötzlich
+suddenly (Adjective)
+zum
+for (Preposition)
+kalt
+cold (Adjective)
+seit
+since (Preposition)
+bereits
+already (Adverb)
+zufrieden
+satisfied (Adjective)
+bisschen
+bit (Determiner)
+tatsächlich
+actually (Adjective)
+musste
+had (Verb)
+verlor
+lost (Verb)
+schloss
+castle (Verb)
+ins
+in the (Preposition)
+wären
+would (Verb)
+spazierten
+strolled (Verb)
+als
+as (Conjunction)
+spazierte
+walking (Verb)
+so
+so (Adverb)
+könnten
+could (Verb)
+gemeinsam
+together (Adjective)
+gerne
+with pleasure (Adverb)
+las
+read (Verb)
+dass
+that (Conjunction)
+sah
+saw (Verb)
+konnte
+could (Verb)
+nahm
+took (Verb)
+hätten
+would (Verb)
+stellte
+presented (Verb)
+brennen
+burn (Verb)
+ob
+if (Conjunction)
+führe
+lead (Verb)
+kosten
+costs (Verb)
+blieb
+remained (Verb)
+schrieb
+wrote (Verb)
+internationalen
+international (Adjective)
+fand
+found (Verb)
+führen
+lead (Verb)
+ließ
+let (Verb)
+würde
+would (Verb)
+fanden
+found (Verb)
+von
+from (Preposition)
+erhielt
+received (Verb)
+bevor
+before (Conjunction)
+schwammen
+swam (Verb)
+gab
+gave (Verb)
+machte
+made (Verb)
+führte
+led (Verb)
+neues
+new (Adjective)
+schwamm
+dry rot (Verb)
+dachte
+thought (Verb)
+durch
+by (Preposition)
+automatisch
+automatically (Adjective)
+Brot
+Bread (Noun)
+oft
+often (Adverb)
+davon
+thereof (Adverb)
+sagtest
+told (Verb)
+zeigte
+showed (Verb)
+aßt
+Asst (Verb)
+lag
+was (Verb)
+aß
+ate (Verb)
+vorher
+before (Adverb)
+zuvor
+before (Adverb)
+krank
+sick (Adjective)
+wurden
+were (Verb)
+unbekannt
+unknown (Adjective)
+aßen
+ate (Verb)
+ganzen
+all (Adjective)
+sagte
+said (Verb)
+sprachst
+spoke (Verb)
+hatten
+had (Verb)
+trank
+drank (Verb)
+ging
+went (Verb)
+unterwegs
+on the way (Adverb)
+vom
+from (Preposition)
+war
+was (Verb)
+kamen
+arrived (Verb)
+begann
+started (Verb)
+waren
+were (Verb)
+gingen
+went (Verb)
+sichtbar
+visible (Adjective)
+hatte
+would have (Verb)
+kaum
+barely (Adverb)
+sprach
+said (Verb)
+zurück
+back (Adverb)
+kam
+came (Verb)
+außen
+outside (Adverb)
+voraus
+ahead (Adverb)
+drin
+in it (Adverb)
+innen
+Inside (Adverb)
+bisher
+so far (Adverb)
+hinzu
+in addition (Adverb)
+dadurch
+thereby (Adverb)
+zugleich
+at the same time (Adverb)
+mal
+times (Adverb)
+hierher
+here (Adverb)
+darauf
+thereon (Adverb)
+her
+here (Adverb)
+raus
+out (Adverb)
+gesund
+healthy (Adjective)
+mittlerweile
+meanwhile (Adverb)
+alleine
+alone (Adverb)
+dran
+tuned (Adverb)
+daran
+because (Adverb)
+deshalb
+that's why (Adverb)
+weiterhin
+furthermore (Adverb)
+soeben
+just (Adverb)
+anders
+otherwise (Adverb)
+allein
+alone (Adverb)
+ebenfalls
+also (Adverb)
+nochmals
+again (Adverb)
+derzeit
+at present (Adverb)
+zumindest
+at least (Adverb)
+wenigstens
+at least (Adverb)
+bereit
+ready (Adjective)
+hierzu
+this (Adverb)
+unten
+down (Adverb)
+überall
+all over (Adverb)
+zusammen
+together (Adverb)
+hinaus
+out (Adverb)
+vorne
+ahead (Adverb)
+damals
+then (Adverb)
+deswegen
+therefore (Adverb)
+darum
+therefore (Adverb)
+witzig
+witty (Adjective)
+irgendwie
+somehow (Adverb)
+sogar
+even (Adverb)
+allerdings
+though (Adverb)
+hiermit
+herewith (Adverb)
+insbesondere
+especially (Adverb)
+früh
+early (Adjective)
+entweder
+either (Conjunction)
+sowie
+as well as (Conjunction)
+sobald
+whenever (Conjunction)
+da
+there (Conjunction)
+sofern
+provided (Conjunction)
+aber
+but (Conjunction)
+nachdem
+after (Conjunction)
+willkommen
+welcome (Adjective)
+müde
+weary (Adjective)
+also
+so (Adverb)
+soweit
+so far (Adverb)
+wohl
+well (Adverb)
+inzwischen
+meanwhile (Adverb)
+jederzeit
+any time (Adverb)
+endlich
+Finally (Adverb)
+trotzdem
+nevertheless (Adverb)
+übrigens
+by the way (Adverb)
+vielleicht
+maybe (Adverb)
+vorbei
+past (Adverb)
+doch
+yet (Conjunction)
+möglichst
+preferably (Adverb)
+eigentlich
+actually (Adverb)
+schließlich
+after all (Adverb)
+stark
+strongly (Adjective)
+ziemlich
+pretty (Adverb)
+ganz
+all (Adverb)
+bessere
+better (Adjective)
+super
+great (Adjective)
+gute
+good (Adjective)
+beste
+best (Adjective)
+besten
+best (Adjective)
+blau
+blue (Adjective)
+hinten
+behind (Adverb)
+gratis
+free (Adverb)
+denn
+because (Adverb)
+dafür
+for this (Adverb)
+ansonsten
+otherwise (Adverb)
+sozialen
+social (Adjective)
+gleichen
+equal (Adjective)
+ähnlichen
+similar (Adjective)
+interessante
+interesting (Adjective)
+zusätzlichen
+additional (Adjective)
+einfachen
+easy (Adjective)
+nächste
+next (Adjective)
+jungen
+young (Adjective)
+günstige
+Cheap (Adjective)
+persönliche
+personal (Adjective)
+öffentliches
+Public (Adjective)
+neuesten
+latest (Adjective)
+einfache
+easy (Adjective)
+ehemalige
+former (Adjective)
+soziales
+social (Adjective)
+individuelle
+individual (Adjective)
+schöner
+beautiful (Adjective)
+schönen
+beautiful (Adjective)
+aktive
+active (Adjective)
+eigenes
+own (Adjective)
+schöne
+beautiful (Adjective)
+rund
+round (Adjective)
+Rock
+Rock (Noun)
+Mantel
+Coat (Noun)
+Röcke
+Skirts (Noun)
+Kleidung
+Clothing (Noun)
+politischen
+political (Adjective)
+möglichen
+possible (Adjective)
+offene
+open (Adjective)
+letzten
+last (Adjective)
+gelber
+yellow (Adjective)
+freien
+free (Adjective)
+rot
+red (Adjective)
+starken
+strong (Adjective)
+zusätzliche
+additional (Adjective)
+externe
+external (Adjective)
+starke
+strong (Adjective)
+höchste
+highest (Adjective)
+unterschiedliche
+different (Adjective)
+Club
+Club (Noun)
+Clubs
+Clubs (Noun)
+Gebäude
+Building (Noun)
+Park
+Park (Noun)
+Halle
+Hall (Noun)
+Brücke
+Bridge (Noun)
+Pension
+Guesthouse (Noun)
+Dorf
+Village (Noun)
+Unterkunft
+Accommodation (Noun)
+Insel
+Island (Noun)
+Standort
+Location (Noun)
+Bundesland
+Federal state (Noun)
+Landkreis
+County (Noun)
+Region
+Region (Noun)
+Süden
+South (Noun)
+Hof
+Courtyard (Noun)
+Umgebung
+Surroundings (Noun)
+Station
+Station (Noun)
+Fläche
+Area (Noun)
+Innere
+Interior (Noun)
+Zentrum
+Center (Noun)
+Grundstück
+Property (Noun)
+Bahnhof
+Railway station (Noun)
+Bar
+Bar (Noun)
+City
+City (Noun)
+entlang
+along ()
+Westen
+West (Noun)
+Ferienhäuser
+Holiday Homes (Noun)
+Bezirk
+County (Noun)
+Zentrale
+Headquarters (Noun)
+Platz
+Place (Noun)
+Ort
+Place (Noun)
+Heimat
+Home (Noun)
+Ring
+Ring (Noun)
+Bereich
+Area (Noun)
+Gründe
+Reasons (Noun)
+Restaurants
+Restaurants (Noun)
+Norden
+North (Noun)
+Zimmer
+Room (Noun)
+europa
+Europe (Proper noun)
+Ausland
+Foreign countries (Noun)
+links
+left (Adverb)
+rechts
+right (Adverb)
+Osten
+East (Noun)
+Hotel
+Hotel (Noun)
+Schloss
+Castle (Noun)
+Straße
+Road (Noun)
+Flughafen
+Airport (Noun)
+Land
+Country (Noun)
+Stadt
+City (Noun)
+dies
+this (Pronoun)
+persönlichen
+personal (Adjective)
+eigenen
+own (Adjective)
+meinen
+believe (Pronoun)
+vergangenen
+past (Adjective)
+privaten
+Private (Adjective)
+heutigen
+today (Adjective)
+deutschen
+German (Adjective)
+zweiten
+second (Adjective)
+neuem
+new (Adjective)
+bekannten
+known (Adjective)
+gesamten
+throughout (Adjective)
+alten
+old (Adjective)
+einer
+one (Determiner)
+normalen
+normal (Adjective)
+kostenlose
+free (Adjective)
+gleiche
+same (Adjective)
+ehemaligen
+former (Adjective)
+hohe
+high (Adjective)
+zweite
+second (Adjective)
+einzige
+only one (Adjective)
+weitere
+more (Adjective)
+alte
+old (Adjective)
+modernen
+modern (Adjective)
+gemeinsame
+common (Adjective)
+technischen
+technical (Adjective)
+weiteres
+Another (Adjective)
+offenen
+open (Adjective)
+höhere
+higher (Adjective)
+wieder
+again (Adverb)
+komplette
+complete (Adjective)
+verschiedene
+various (Adjective)
+zuständigen
+competent (Adjective)
+verfügbaren
+available (Adjective)
+verschiedenen
+different (Adjective)
+neuen
+new (Adjective)
+nahe
+near (Adjective)
+langen
+long (Adjective)
+gern
+gladly (Adverb)
+wesentlichen
+essentially (Adjective)
+detaillierte
+detailed (Adjective)
+voller
+full of (Adjective)
+individuellen
+individual (Adjective)
+passenden
+matching (Adjective)
+weiterer
+Another (Adjective)
+besonderen
+special (Adjective)
+passende
+matching (Adjective)
+wichtigen
+important (Adjective)
+europäischen
+European (Adjective)
+jugendlichen
+youthful (Adjective)
+externer
+external (Adjective)
+zufälliger
+random (Adjective)
+private
+private (Adjective)
+wichtigsten
+main (Adjective)
+linken
+left (Adjective)
+nächster
+Next (Adjective)
+hoher
+High (Adjective)
+notwendigen
+necessary (Adjective)
+öffentlichen
+Public (Adjective)
+jugendliche
+youth (Adjective)
+einzelnen
+single (Adjective)
+internationale
+international (Adjective)
+schwarz
+black (Adjective)
+aktuelle
+current (Adjective)
+gesamte
+entire (Adjective)
+toll
+great (Adjective)
+kostenlosen
+free (Adjective)
+höheren
+higher (Adjective)
+eigener
+own (Adjective)
+hohen
+high (Adjective)
+brauche
+need (Verb)
+mag
+like (Verb)
+gehe
+Go (Verb)
+laufe
+Over (Verb)
+läuft
+runs (Verb)
+geht
+goes (Verb)
+genauso
+equally (Adverb)
+etwa
+about (Adverb)
+Möbel
+Furniture (Noun)
+Licht
+Light (Noun)
+Fenster
+Window (Noun)
+Toilette
+Toilet (Noun)
+Batterie
+Battery (Noun)
+Spielzeug
+Toys (Noun)
+Teller
+Plate (Noun)
+zahlreiche
+numerous (Adjective)
+häufig
+frequently (Adjective)
+sondern
+but (Conjunction)
+weniger
+fewer (Adverb)
+Mal
+Time (Noun)
+letzter
+Recently (Adjective)
+größten
+greatest (Adjective)
+größte
+greatest (Adjective)
+öffentliche
+public (Adjective)
+speziellen
+special (Adjective)
+ihres
+their (Pronoun)
+des
+of (Determiner)
+dessen
+whose ()
+schnell
+fast (Adjective)
+deren
+their ()
+während
+while (Preposition)
+seiner
+his (Pronoun)
+dieser
+this (Pronoun)
+deiner
+yours (Pronoun)
+Fragen
+Ask (Noun)
+worüber
+about what (Adverb)
+Antwort
+Reply (Noun)
+was
+what (Pronoun)
+wofür
+for what (Adverb)
+Antworten
+Answer (Noun)
+wieso
+how so (Adverb)
+wieviel
+how much (Adverb)
+Stahl
+Steel (Noun)
+Erde
+Earth (Noun)
+Umwelt
+Environment (Noun)
+Atmosphäre
+Atmosphere (Noun)
+rhein
+Rhine (Proper noun)
+Gold
+Gold (Noun)
+Wind
+Wind (Noun)
+Stein
+Stone (Noun)
+Holz
+Wood (Noun)
+Chemie
+Chemistry (Noun)
+Pflanzen
+Plants (Noun)
+Klima
+Climate (Noun)
+Strom
+Current (Noun)
+Wetter
+Weather (Noun)
+Luft
+Air (Noun)
+Stern
+Star (Noun)
+All
+Space (Noun)
+Mond
+Moon (Noun)
+Wald
+Forest (Noun)
+Gras
+Grass (Noun)
+See
+Lake (Noun)
+Feuer
+Fire (Noun)
+Natur
+Nature (Noun)
+grün
+green (Adjective)
+Gläser
+Glasses (Noun)
+Öl
+Oil (Noun)
+Dach
+Roof (Noun)
+Schüssel
+Bowl (Noun)
+Glas
+Glass (Noun)
+Löffel
+Spoon (Noun)
+Heizung
+Heater (Noun)
+teuer
+expensive (Adjective)
+Reinigung
+Cleaning (Noun)
+Tisch
+Table (Noun)
+Bau
+Building (Noun)
+Balkon
+Balcony (Noun)
+Treppe
+Stairs (Noun)
+Berg
+Mountain (Noun)
+Himmel
+Heaven (Noun)
+Welt
+World (Noun)
+Bäume
+Trees (Noun)
+Sonne
+Sun (Noun)
+Baum
+Tree (Noun)
+Tierwelt
+Wildlife (Noun)
+Metall
+Metal (Noun)
+esse
+esse (Verb)
+Rezept
+Recipe (Noun)
+schmeckt
+tastes (Verb)
+Tomate
+Tomato (Noun)
+Obst
+Fruit (Noun)
+Fleisch
+Meat (Noun)
+Zucker
+Sugar (Noun)
+Regen
+Rain (Noun)
+Wiese
+Meadow (Noun)
+Wasser
+Water (Noun)
+Garten
+Garden (Noun)
+Strand
+Beach (Noun)
+Meer
+Sea (Noun)
+Blumen
+Flowers (Noun)
+Flasche
+Bottle (Noun)
+Sofa
+Couch (Noun)
+Schlüssel
+Key (Noun)
+hoch
+high (Adjective)
+Stuhl
+Chair (Noun)
+Haus
+House (Noun)
+Umzug
+Move (Noun)
+Bad
+Bathroom (Noun)
+Bett
+Bed (Noun)
+nun
+now (Adverb)
+solange
+while (Conjunction)
+daher
+therefore (Adverb)
+seinen
+his (Pronoun)
+jedes
+every (Determiner)
+anderes
+other (Determiner)
+welchen
+What (Determiner)
+Großmutter
+Grandmother (Noun)
+Sohn
+Son (Noun)
+Söhne
+Sons (Noun)
+Großeltern
+Grandparents (Noun)
+Eltern
+Parents (Noun)
+Insekt
+Insect (Noun)
+Fliege
+Fly (Noun)
+Haustier
+Pet (Noun)
+zuerst
+first (Adverb)
+größer
+greater (Adjective)
+sowohl
+both (Conjunction)
+größeres
+Size (Adjective)
+extrem
+extreme (Adjective)
+selten
+rarely (Adjective)
+jedoch
+however (Adverb)
+keinerlei
+no (Determiner)
+meist
+mostly (Adverb)
+wenige
+few (Determiner)
+eins
+one (Numeral)
+spätestens
+no later than (Adverb)
+möglich
+possible (Adjective)
+acht
+eight (Numeral)
+oben
+top (Adverb)
+fit
+fit (Adjective)
+fast
+almost (Adverb)
+dennoch
+yet (Adverb)
+je
+ever (Adverb)
+meistens
+mostly (Adverb)
+sonst
+otherwise (Adverb)
+durchaus
+definitely (Adverb)
+außerdem
+also (Adverb)
+danach
+thereafter (Adverb)
+einmal
+once (Adverb)
+mindestens
+at least (Adverb)
+salzig
+salty (Adjective)
+besonders
+especially (Adverb)
+darüber
+about that (Adverb)
+dazu
+to (Adverb)
+dabei
+there (Adverb)
+hingegen
+however (Adverb)
+somit
+thus (Adverb)
+damit
+in order to (Adverb)
+zuletzt
+last (Adverb)
+weg
+away (Adverb)
+unabhängig
+independently (Adjective)
+dritte
+third (Adjective)
+Paar
+Pair (Noun)
+weder
+neither (Conjunction)
+Jacke
+Jacket (Noun)
+Kosmetik
+Cosmetics (Noun)
+Kartoffeln
+Potatoes (Noun)
+Eier
+Eggs (Noun)
+Hunde
+Dogs (Noun)
+Menschen
+People (Noun)
+Glück
+Happiness (Noun)
+Ruhe
+Quiet (Noun)
+Witz
+Joke (Noun)
+Gedanken
+Thoughts (Noun)
+Humor
+Humor (Noun)
+Ernst
+Serious (Noun)
+Spaß
+Fun (Noun)
+Angst
+Anxiety (Noun)
+Verständnis
+Understanding (Noun)
+Eindruck
+Impression (Noun)
+unheimlich
+creepy (Adjective)
+Traum
+Dream (Noun)
+Freude
+Pleasure (Noun)
+Not
+Distress (Noun)
+Lust
+Pleasure (Noun)
+Liebe
+Love (Noun)
+träumt
+dreams (Verb)
+Wunsch
+Desire (Noun)
+Abendessen
+Dinner (Noun)
+Reis
+Rice (Noun)
+Ei
+Egg (Noun)
+Orange
+Orange (Noun)
+Erdbeere
+Strawberry (Noun)
+Zeitraum
+Period (Noun)
+letzte
+last (Adjective)
+Alltag
+Everyday life (Noun)
+Dauer
+Time (Noun)
+Datum
+Date (Noun)
+Wochenende
+Weekend (Noun)
+Herbst
+Autumn (Noun)
+wichtig
+important (Adjective)
+Alter
+Age (Noun)
+Schluss
+Closing (Noun)
+Geburtstag
+Birthday (Noun)
+Quartal
+Quarter (Noun)
+Ende
+End (Noun)
+Termin
+Meeting (Noun)
+Phase
+Phase (Noun)
+Uhrzeit
+Time of day (Noun)
+Sommer
+Summer (Noun)
+Vergangenheit
+Past (Noun)
+Zeitpunkt
+Time (Noun)
+Zukunft
+Future (Noun)
+Moment
+Moment (Noun)
+Jahrhundert
+Century (Noun)
+Dezember
+December (Noun)
+Urlaub
+Vacation (Noun)
+Weihnachten
+Christmas (Noun)
+persönlich
+personally (Adjective)
+Werktagen
+Working days (Noun)
+Mai
+May (Noun)
+Juni
+June (Noun)
+jährlich
+annually (Adjective)
+Oktober
+October (Noun)
+August
+August (Noun)
+November
+November (Noun)
+Juli
+July (Noun)
+September
+September (Noun)
+Januar
+January (Noun)
+Saison
+Season (Noun)
+Abend
+Evening (Noun)
+April
+April (Noun)
+Februar
+February (Noun)
+Nacht
+Night (Noun)
+jung
+young (Adjective)
+März
+March (Noun)
+Sonntag
+Sunday (Noun)
+zwölf
+twelve (Numeral)
+Woche
+Week (Noun)
+Monaten
+Months (Noun)
+Kalender
+Calendar (Noun)
+Sekunden
+Seconds (Noun)
+Wochen
+Weeks (Noun)
+Samstag
+Saturday (Noun)
+Montag
+Monday (Noun)
+Freitag
+Friday (Noun)
+Tag
+Day (Noun)
+Donnerstag
+Thursday (Noun)
+Mittag
+Noon (Noun)
+Dienstag
+Tuesday (Noun)
+Mittwoch
+Wednesday (Noun)
+Uhr
+Clock (Noun)
+Stunde
+Hour (Noun)
+Zeit
+Time (Noun)
+Jahr
+Year (Noun)
+Morgen
+Tomorrow (Noun)
+Minute
+Minute (Noun)
+gehen
+go (Verb)
+schwimmen
+swim (Verb)
+Ernährung
+Nutrition (Noun)
+Alkohol
+Alcohol (Noun)
+Kopf
+Head (Noun)
+Pflege
+Care (Noun)
+Klinik
+Clinic (Noun)
+Apotheke
+Pharmacy (Noun)
+Diät
+Diet (Noun)
+Notfall
+Emergency (Noun)
+Krankenwagen
+Ambulance (Noun)
+Untersuchung
+Check up (Noun)
+Sucht
+Addiction (Noun)
+Finger
+Finger (Noun)
+Gesicht
+Face (Noun)
+Formular
+Form (Noun)
+Haut
+Skin (Noun)
+Geburt
+Birth (Noun)
+Opfer
+Victim (Noun)
+Hals
+Throat (Noun)
+Krankenhaus
+Hospital (Noun)
+Medizin
+Medicine (Noun)
+Blut
+Blood (Noun)
+Haare
+Hair (Noun)
+Unfall
+Accident (Noun)
+Augen
+Eyes (Noun)
+Praxis
+Practice (Noun)
+Krankenversicherung
+Health insurance (Noun)
+Therapie
+Therapy (Noun)
+Medikamente
+Medication (Noun)
+Herz
+Heart (Noun)
+Gesundheit
+Health (Noun)
+Füße
+Feet (Noun)
+Bein
+Leg (Noun)
+Krankheit
+Disease (Noun)
+Körper
+Body (Noun)
+Patienten
+Patient (Noun)
+schwer
+difficult (Adjective)
+Hände
+Hands (Noun)
+Hand
+Hand (Noun)
+gegenüber
+to (Preposition)
+beim
+at the (Preposition)
+extra
+extra ()
+aufs
+on (Preposition)
+einschließlich
+including (Preposition)
+wegen
+because (Preposition)
+unter
+under (Preposition)
+hinter
+behind (Preposition)
+ums
+around (Preposition)
+trotz
+despite (Preposition)
+ab
+from (Preposition)
+außer
+except (Preposition)
+neben
+next (Preposition)
+vor
+before (Preposition)
+zwischen
+between (Preposition)
+auf
+on (Preposition)
+über
+above (Preposition)
+in
+in (Preposition)
+an
+at (Preposition)
+deutlich
+clear (Adjective)
+egal
+no matter (Adjective)
+ähnlich
+similar (Adjective)
+ausgezeichnet
+excellent (Adjective)
+wert
+worth (Adjective)
+länger
+longer (Adjective)
+kleiner
+smaller (Adjective)
+zuständig
+responsible (Adjective)
+verantwortlich
+responsible (Adjective)
+individuell
+individually (Adjective)
+höher
+higher (Adjective)
+allgemein
+general (Adjective)
+knapp
+barely (Adjective)
+stärker
+stronger (Adjective)
+wichtiger
+important (Adjective)
+keiner
+none (Determiner)
+abhängig
+dependent (Adjective)
+selbstverständlich
+of course (Adjective)
+völlig
+completely (Adjective)
+original
+original (Adjective)
+verpflichtet
+committed (Adjective)
+beliebt
+popular (Adjective)
+begeistert
+enthusiastic (Adjective)
+täglich
+Daily (Adjective)
+ruhig
+quiet (Adjective)
+kürzlich
+recently (Adjective)
+leichter
+lighter (Adjective)
+obwohl
+although (Conjunction)
+langsamer
+slowly (Adjective)
+relativ
+relatively (Adjective)
+herzlich
+cordially (Adjective)
+erneut
+again (Adjective)
+großen
+great (Adjective)
+große
+great (Adjective)
+Größe
+Size (Noun)
+kleines
+little (Adjective)
+kleinen
+little (Adjective)
+großes
+great (Adjective)
+kleine
+little (Adjective)
+größere
+greater (Adjective)
+gewöhnlich
+usually (Adjective)
+guten
+good (Adjective)
+guter
+good (Adjective)
+Entwickler
+Developer (Noun)
+Weber
+Weaver (Noun)
+Koch
+Cook (Noun)
+Reiseführer
+Travel Guides (Noun)
+Spezialität
+Specialty (Noun)
+Bedienung
+Operation (Noun)
+Handwerk
+Craft (Noun)
+Empfänger
+Receiver (Noun)
+Werkstatt
+Workshop (Noun)
+Verfasser
+Author (Noun)
+Arbeitnehmer
+Employee (Noun)
+Betreiber
+Operator (Noun)
+Teilnehmer
+Participant (Noun)
+Experten
+Expert (Noun)
+Feuerwehr
+Fire Department (Noun)
+Rechtsanwalt
+Lawyer (Noun)
+Fahrer
+Driver (Noun)
+Verkäufer
+Seller (Noun)
+Beruf
+Profession (Noun)
+Mitarbeiterin
+Associate (Noun)
+Mitarbeiter
+Employee (Noun)
+Architekt
+Architect (Noun)
+Bauer
+Farmer (Noun)
+Hersteller
+Manufacturer (Noun)
+Architekten
+Architects (Noun)
+Schneider
+Cutter (Noun)
+Bürgermeister
+Mayor (Noun)
+Leiter
+Ladder (Noun)
+Professorin
+Professor (Noun)
+Arbeitgeber
+Employer (Noun)
+Geschäftsführer
+CEO (Noun)
+Leiterin
+Leader (Noun)
+Arbeitgeberinnen
+Employers (Noun)
+Arbeitgeberin
+Employer (Noun)
+Professor
+Professor (Noun)
+Studentin
+Student (Noun)
+Trainer
+Trainer (Noun)
+Student
+Student (Noun)
+Senior
+Senior (Noun)
+Meister
+Champion (Noun)
+Händler
+Dealer (Noun)
+Autor
+Author (Noun)
+Pferd
+Horse (Noun)
+Maus
+Mouse (Noun)
+ersten
+first (Adjective)
+Lehrer
+Teacher (Noun)
+Schülerin
+Schoolgirl (Noun)
+Ärztin
+Doctor (Noun)
+Schüler
+Student (Noun)
+Lehrerin
+Teacher (Noun)
+Richter
+Judge (Noun)
+Arzt
+Doctor (Noun)
+rote
+Red (Adjective)
+grüne
+green (Adjective)
+Rot
+Red (Noun)
+schwarze
+black (Adjective)
+weißes
+know it (Adjective)
+weiße
+white (Adjective)
+grünen
+green (Adjective)
+schwarzes
+black (Adjective)
+Farben
+Colors (Noun)
+rotes
+red (Adjective)
+blauen
+blue (Adjective)
+roter
+red (Adjective)
+Vater
+Father (Noun)
+Schweden
+Sweden (Noun)
+Ratgeber
+Counselor (Noun)
+Bushaltestelle
+Bus stop (Noun)
+Besuch
+Visit (Noun)
+Ferien
+Vacation (Noun)
+Tour
+Tour (Noun)
+Transport
+Transport (Noun)
+Schweizer
+Swiss (Noun)
+italien
+Italy (Proper noun)
+Bahn
+Train (Noun)
+Verkehr
+Traffic (Noun)
+Fahrt
+Ride (Noun)
+schweiz
+Switzerland (Proper noun)
+Mietwagen
+Rental car (Noun)
+spanien
+Spain (Proper noun)
+Strecke
+Route (Noun)
+Abenteuer
+Adventure (Noun)
+frankreich
+France (Proper noun)
+Tourismus
+Tourism (Noun)
+großbritannien
+Great Britain (Proper noun)
+Flug
+Flight (Noun)
+Motorrad
+Motorcycle (Noun)
+Weg
+Way (Noun)
+Stadtplan
+Map (Noun)
+Sehenswürdigkeiten
+Attractions (Noun)
+Fahrzeug
+Vehicle (Noun)
+afrika
+Africa (Proper noun)
+bayern
+Bavaria (Proper noun)
+Reise
+Travel (Noun)
+Boot
+Boat (Noun)
+hamburg
+Hamburg (Proper noun)
+österreich
+Austria (Proper noun)
+Busse
+Buses (Noun)
+Auto
+Car (Noun)
+deutschland
+Germany (Proper noun)
+Pass
+Passport (Noun)
+Zug
+Train (Noun)
+wien
+Vienna (Proper noun)
+Verbraucher
+Consumer (Noun)
+englische
+English (Adjective)
+Erwachsene
+Adult (Noun)
+Fans
+Fans (Noun)
+Nutzer
+User (Noun)
+Einwohner
+Population (Noun)
+Mitgliedschaft
+Membership (Noun)
+Geschlecht
+Sex (Noun)
+Integration
+Integration (Noun)
+Käufer
+Buyer (Noun)
+deutscher
+German (Adjective)
+Besucher
+Visitor (Noun)
+Öffentlichkeit
+Public (Noun)
+Englisch
+English (Noun)
+Gast
+Guest (Noun)
+deutsches
+German (Adjective)
+Gemeinde
+Community (Noun)
+Anfänger
+Beginner (Noun)
+Personal
+Staff (Noun)
+Vorname
+First name (Noun)
+Publikum
+Audience (Noun)
+Verhältnis
+Ratio (Noun)
+Gruppe
+Group (Noun)
+Bevölkerung
+Population (Noun)
+Name
+Name (Noun)
+Mannschaft
+Team (Noun)
+Bürger
+Citizens (Noun)
+Damen
+Ladies (Noun)
+Leute
+People (Noun)
+Mann
+Man (Noun)
+Männer
+Men (Noun)
+Heimwerker
+Yourselfer (Noun)
+Gegner
+Adversary (Noun)
+Frau
+Mrs (Noun)
+Mitglieder
+Members (Noun)
+Verbindungen
+Compounds (Noun)
+Frauen
+Women (Noun)
+Mitglied
+Member (Noun)
+Französisch
+French (Noun)
+Person
+Person (Noun)
+Verein
+Club (Noun)
+Herr
+Mr. (Noun)
+Babys
+Babies (Noun)
+Freundin
+Friend (Noun)
+Kinder
+Children (Noun)
+Kind
+Child (Noun)
+Junge
+Boy (Noun)
+Deutsch
+German (Noun)
+Freund
+Friend (Noun)
+unsere
+our (Pronoun)
+welches
+which (Determiner)
+welche
+Which (Determiner)
+ihre
+their (Pronoun)
+jeder
+everyone (Determiner)
+trägst
+wearing (Verb)
+fest
+fixed (Adjective)
+Mäntel
+Coats (Noun)
+Jacken
+Jackets (Noun)
+schläft
+Sleeps (Verb)
+spielt
+plays (Verb)
+lernt
+learns (Verb)
+beginnen
+begin (Verb)
+renne
+renne (Verb)
+rennst
+runnin (Verb)
+schlafen
+sleep (Verb)
+bezahlen
+pay (Verb)
+lernst
+learn (Verb)
+nichts
+nothing (Determiner)
+folge
+episode (Verb)
+unseren
+our (Pronoun)
+diesem
+this (Pronoun)
+vielen
+a lot of (Determiner)
+welcher
+which (Determiner)
+folgen
+consequences (Verb)
+folgt
+follows (Verb)
+ihren
+their (Pronoun)
+seinem
+his (Pronoun)
+unserer
+our (Pronoun)
+deinem
+your (Pronoun)
+ihrer
+of her (Pronoun)
+helfen
+help (Verb)
+hilft
+help (Verb)
+ihnen
+you (Pronoun)
+danke
+thank you (Verb)
+gehörst
+belong (Verb)
+gehören
+belong (Verb)
+schreiben
+write (Verb)
+schwimmt
+floats (Verb)
+laufen
+run (Verb)
+schreibe
+writing (Verb)
+sehe
+see (Verb)
+schwimmst
+swim (Verb)
+siehst
+viewing (Verb)
+wahrscheinlich
+probably (Adjective)
+genau
+I agree (Adjective)
+positiv
+positively (Adjective)
+einfach
+easy (Adjective)
+Essen
+Eat (Noun)
+Käse
+Cheese (Noun)
+Apfelsaft
+Apple juice (Noun)
+Schokolade
+Chocolate (Noun)
+Nudeln
+Noodles (Noun)
+Fisch
+Fish (Noun)
+Familie
+Family (Noun)
+Töchter
+Daughters (Noun)
+Brüder
+Brothers (Noun)
+erstes
+First (Adjective)
+Meter
+Meter (Noun)
+Maße
+Dimensions (Noun)
+Zahlen
+Numbers (Noun)
+Hälfte
+Half (Noun)
+Million
+Million (Noun)
+erste
+first (Adjective)
+Prozent
+Percent (Noun)
+Zahl
+Number (Noun)
+Liter
+Liter (Noun)
+Telefonnummer
+Telephone number (Noun)
+Summe
+Sum (Noun)
+Milliarden
+Billion (Noun)
+Nummer
+Number (Noun)
+Speisekarte
+Menu (Noun)
+Kartoffel
+Potato (Noun)
+Saft
+Juice (Noun)
+Suppe
+Soup (Noun)
+Getränk
+Beverage (Noun)
+Hähnchen
+Chicken (Noun)
+Gemüse
+Vegetable (Noun)
+Frühstück
+Breakfast (Noun)
+wer
+Who (Pronoun)
+wessen
+whose (Pronoun)
+Frage
+Question (Noun)
+Zahnbürste
+Toothbrush (Noun)
+Regenschirm
+Umbrella (Noun)
+Seife
+Soap (Noun)
+Bettbezug
+Duvet cover (Noun)
+Zahnpasta
+Toothpaste (Noun)
+Rasierer
+Razor (Noun)
+Tasse
+Cup (Noun)
+Tassen
+Cups (Noun)
+Bier
+Beer (Noun)
+Salz
+Salt (Noun)
+Entschuldigung
+Sorry (Noun)
+tschüss
+bye (Interjection)
+Küche
+Kitchen (Noun)
+Haushaltsgeräte
+Appliances (Noun)
+Wohnort
+Residence (Noun)
+Spiegel
+Mirror (Noun)
+Schlaf
+Sleep (Noun)
+Haushalt
+Budget (Noun)
+Raum
+Space (Noun)
+Wand
+Wall (Noun)
+Tor
+Gate (Noun)
+Schlafzimmer
+Bedroom (Noun)
+Gerät
+Equipment (Noun)
+Werkzeug
+Tool (Noun)
+Keller
+Cellar (Noun)
+Tür
+Door (Noun)
+Wohnung
+Apartment (Noun)
+Lampe
+Lamp (Noun)
+Häuser
+Houses (Noun)
+alle
+all (Determiner)
+unser
+our (Pronoun)
+Schwestern
+Sisters (Noun)
+Bruder
+Brothers (Noun)
+alles
+all (Determiner)
+Hut
+Hat (Noun)
+Kleider
+Dresses (Noun)
+trägt
+wearing (Verb)
+gehst
+going (Verb)
+kenne
+know (Verb)
+rennt
+runs (Verb)
+beginnt
+begins (Verb)
+sprichst
+speak (Verb)
+schwimme
+swim (Verb)
+bezahle
+pay (Verb)
+bezahlt
+paid (Verb)
+spiele
+games (Verb)
+sieht
+sees (Verb)
+läufst
+Do you run (Verb)
+lest
+read (Verb)
+schläfst
+sleeping (Verb)
+seht
+see (Verb)
+spielst
+playing (Verb)
+Apfel
+Apple (Noun)

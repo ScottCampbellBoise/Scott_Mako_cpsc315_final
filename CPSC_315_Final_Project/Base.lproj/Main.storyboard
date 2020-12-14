@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="F5D-oE-lJ6">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -784,7 +784,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="Quiz Setup" id="tEt-GV-0Gs"/>
                     <connections>
+                        <outlet property="goButton" destination="8qL-nz-hpH" id="KDa-m7-1q6"/>
                         <outlet property="tableView" destination="3r0-Km-EUE" id="pw9-Ov-7Ni"/>
+                        <outlet property="useAllWordsButton" destination="0qe-yq-OPX" id="eqD-8I-QE5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lbf-jw-D94" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

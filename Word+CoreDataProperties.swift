@@ -45,6 +45,18 @@ extension Word {
 
 extension Word : Identifiable {
     
+    func isInStudySet(studyset: StudySet) -> Bool {
+        let sets = self.mutableSetValue(forKey: "studysets")
+        for element in sets {
+            if let study = element as? StudySet {
+                if study.name == studyset.name {
+                    return true
+                }
+            }
+        }
+        return false
+    }
+    
     func addWordToStudySet(studyset: StudySet) {
         let set = self.mutableSetValue(forKey: "studysets")
         set.add(studyset)
