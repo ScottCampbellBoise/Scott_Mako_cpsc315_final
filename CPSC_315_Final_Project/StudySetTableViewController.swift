@@ -58,7 +58,15 @@ class StudySetTableViewController: UIViewController, UITableViewDataSource, UITa
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
+            
             // Delete study set and vocabs within it...
+            let wordsInSetOptional = DatabaseManager.fetchWords(fromStudysets: [studysets[indexPath.row]])
+            if let wordsInSet = wordsInSetOptional {
+                for word in wordsInSet {
+                    word.removeFromStudysets(studysets[indexPath.row])
+                }
+            }
+            // Remove the study set itself from the database
             DatabaseManager.context.delete(studysets[indexPath.row])
             studysets.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
