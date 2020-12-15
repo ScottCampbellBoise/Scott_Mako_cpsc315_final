@@ -25,16 +25,16 @@ class VocabTableViewController: UIViewController, UITableViewDataSource, UITable
         let wordsOptional = DatabaseManager.loadWords()
         if let unwrappedWords = wordsOptional { words = unwrappedWords }
         
-        /*
-        if let newWords = LoadInWords.loadWords() {
+        
+        /*if let newWords = LoadInWords.loadWords() {
             print("Added new words")
             words.append(contentsOf: newWords)
             DatabaseManager.saveWords()
             tableView.reloadData()
         } else {
             print("Couldn't add new words")
-        }
-         */
+        }*/
+        
         
         let documentsDirectoryURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
         print(documentsDirectoryURL)

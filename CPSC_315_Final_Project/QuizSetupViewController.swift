@@ -93,7 +93,6 @@ class QuizSetupViewController: UIViewController, UITableViewDataSource, UITableV
                         noWordsInStudySetAlert()
                     }
                 } else {
-                    print("YOLO")
                     if let loadedWords = DatabaseManager.loadWords() {
                         print("got some loaded words")
                         if !loadedWords.isEmpty {

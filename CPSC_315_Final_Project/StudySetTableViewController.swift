@@ -52,6 +52,28 @@ class StudySetTableViewController: UIViewController, UITableViewDataSource, UITa
         return cell
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            // MARK: lab #15
+            // PSEUDOCODE SOLUTION
+            // fetch all of the items that have this
+            // category as their parent
+            // delete those items
+            // then delete the category
+            // write your code here to do this
+            
+            // we want to delete the Category add indexPath.row
+            // from the context first... then later we want to
+            // save the context so the delete persists
+            DatabaseManager.context.delete(studysets[indexPath.row])
+            studysets.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            
+            // persist the deletion by saving the context
+            DatabaseManager.saveContext()
+        }
+    }
+    
     @IBAction func addBarButtonPressed(_ sender: UIBarButtonItem) {
         var alertTextField = UITextField()
         let alert = UIAlertController(title: "Add a new study set", message: "", preferredStyle: .alert)

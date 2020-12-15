@@ -109,26 +109,6 @@ class FlashcardViewController: UIViewController {
     
     // MARK: IBAction Methods
     
-    /*@IBAction func prevButtonPressed(_ sender: UIButton) {
-        if let currentIndex = currentIndexOptional, let flashcardSet = flashcardSetOptional {
-            currentIndexOptional = (currentIndex - 1) % flashcardSet.count // Make sure that the index wraps
-            self.wordOptional = flashcardSet[currentIndexOptional!]
-        } else {
-            self.wordOptional = nil
-        }
-        updateFlashcard(with: self.wordOptional)
-    }
-    
-    @IBAction func nextButtonPressed(_ sender: UIButton) {
-        if let currentIndex = currentIndexOptional, let flashcardSet = flashcardSetOptional {
-            currentIndexOptional = (currentIndex + 1) % flashcardSet.count // Make sure that the index wraps
-            self.wordOptional = flashcardSet[currentIndexOptional!]
-        } else {
-            self.wordOptional = nil
-        }
-        updateFlashcard(with: self.wordOptional)
-    }*/
-    
     @IBAction func swipeHandler(_ gestureRecognizer: UISwipeGestureRecognizer) {
         if gestureRecognizer.state == .ended {
             if gestureRecognizer.direction == .right {
