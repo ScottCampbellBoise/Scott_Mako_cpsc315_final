@@ -50,7 +50,7 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="AGz-fU-yp1" id="nJU-Bl-Sz8"/>
+                                    <outlet property="dataSource" destination="AGz-fU-yp1" id="2sg-QO-vKw"/>
                                     <outlet property="delegate" destination="AGz-fU-yp1" id="sxi-bR-pal"/>
                                 </connections>
                             </tableView>
@@ -72,7 +72,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="tableView" destination="Eah-aV-lB3" id="agD-GT-Uaz"/>
+                        <outlet property="tableView" destination="Eah-aV-lB3" id="leU-Ie-Nyl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eVq-PG-Njq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
