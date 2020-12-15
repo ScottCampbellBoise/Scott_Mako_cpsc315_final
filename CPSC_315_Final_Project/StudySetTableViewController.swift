@@ -57,7 +57,7 @@ class StudySetTableViewController: UIViewController, UITableViewDataSource, UITa
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {ç
+        if editingStyle == .delete {
 
             DatabaseManager.context.delete(studysets[indexPath.row])
             studysets.remove(at: indexPath.row)
