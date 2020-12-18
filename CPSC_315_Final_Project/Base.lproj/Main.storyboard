@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="F5D-oE-lJ6">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -852,9 +852,9 @@
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kYF-GU-9ot">
                                                         <rect key="frame" x="0.0" y="0.0" width="382" height="30"/>
-                                                        <state key="normal" title="Request Hint"/>
+                                                        <state key="normal" title="Request Mnemonic"/>
                                                         <connections>
-                                                            <action selector="hintButtonPressed:" destination="ZF5-Bs-cae" eventType="primaryActionTriggered" id="Oom-LA-e3L"/>
+                                                            <action selector="mnemonicButtonPressed:" destination="ZF5-Bs-cae" eventType="touchUpInside" id="T11-pt-QWh"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="1" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lw4-bt-iWk">
@@ -905,7 +905,6 @@
                         <outlet property="correctLabel" destination="dK9-wS-2Hh" id="Ych-hW-Tjf"/>
                         <outlet property="englishTextField" destination="NRO-lu-UHC" id="dSL-ee-i09"/>
                         <outlet property="foreignWordLabel" destination="Q1d-Yv-t96" id="VUY-Cq-2mu"/>
-                        <outlet property="hintButtonLabel" destination="kYF-GU-9ot" id="nnR-pQ-cc5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QHX-fj-hRG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

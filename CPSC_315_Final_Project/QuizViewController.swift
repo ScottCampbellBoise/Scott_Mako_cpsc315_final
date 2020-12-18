@@ -21,15 +21,10 @@ class QuizViewController: UIViewController {
         
     @IBOutlet var foreignWordLabel: UILabel!
     @IBOutlet var englishTextField: UITextField!
-    @IBOutlet var hintButtonLabel: UIButton!
     @IBOutlet var correctLabel: UILabel!
     
-    // TODO: Implement the connection for allowing the user to choose a study set
-    // TODO: Figure out how to randomly select words from database and onto quiz view...
-    //      Might have to add another attribute like a unique id for each word...
     var flashcardSetOptional: [Word]? = nil
     var currentIndexOptional: Int? = nil
-    
     var wordOptional: Word? = nil
 
     override func viewDidLoad() {
@@ -66,12 +61,11 @@ class QuizViewController: UIViewController {
         updateQuiz(with: wordOptional)
     }
     
-    
     func updateQuiz(with wordOptional: Word?) {
         if let word = wordOptional {
             hint = nil
             foreignWordLabel.text = word.foriegnWord
-            updateHintLabel()
+            englishTextField.text = ""
             updateCorrectLabel()
         } else {
             foreignWordLabel.text = ""
@@ -98,8 +92,6 @@ class QuizViewController: UIViewController {
                     alertController.addAction(UIAlertAction(title: "Next Question", style: .default, handler: { (action) -> Void in
                         print("User pressed okay")
                         DatabaseManager.saveWords()
-                        
-                        self.changeNumHints(reset: true)
                         
                         // move on to next question
                         self.swipedLeft()
@@ -164,33 +156,31 @@ class QuizViewController: UIViewController {
     }
     
     
-    @IBAction func hintButtonPressed(_ sender: UIButton) {
-        if numHints == 0 {
-            let hintMessage = "No more hints remaining..."
-            let alertController = UIAlertController(title: "Hint", message: hintMessage, preferredStyle: .alert)
+    @IBAction func mnemonicButtonPressed(_ sender: UIButton) {
+        if let word = wordOptional {
+            if let mnemonic = word.mnemonic {
+                let mnemonicMessage = "Mnemonic: \(mnemonic)"
+                let alertController = UIAlertController(title: "Mnemonic", message: mnemonicMessage, preferredStyle: .alert)
             
-            alertController.addAction(UIAlertAction(title: "Okay", style: .default, handler: { (action) -> Void in
+                alertController.addAction(UIAlertAction(title: "Okay", style: .default, handler: { (action) -> Void in
                 print("User pressed okay")
                     
-            }))
-            present(alertController, animated: true, completion: { () -> Void in
-                print("Presented Hint alert")
-            })
-        } else {
-            let hint = provideHint()
-            
-            let hintMessage = "\(hint)\nNumber of hints remaining: \(numHints - 1)."
-            let alertController = UIAlertController(title: "Hint", message: hintMessage, preferredStyle: .alert)
-            
-            alertController.addAction(UIAlertAction(title: "Okay", style: .default, handler: { (action) -> Void in
-                print("User pressed okay")
-                self.changeNumHints(reset: false)
-                self.updateHintLabel()
-                    
-            }))
-            present(alertController, animated: true, completion: { () -> Void in
-                print("Presented Hint alert")
-            })
+                }))
+                present(alertController, animated: true, completion: { () -> Void in
+                print("Presented Mnuemonic alert")
+                })
+            } else {
+                let mnemonicMessage = "A mnenomic has not been set for this word."
+                let alertController = UIAlertController(title: "Mnemonic", message: mnemonicMessage, preferredStyle: .alert)
+        
+                alertController.addAction(UIAlertAction(title: "Okay", style: .default, handler: { (action) -> Void in
+                    print("User pressed okay")
+                
+                }))
+                present(alertController, animated: true, completion: { () -> Void in
+                    print("Presented Mnuemonic alert")
+                })
+            }
         }
     }
     
@@ -208,54 +198,11 @@ class QuizViewController: UIViewController {
                 // move on to next question
                 self.swipedLeft()
                 
-                self.changeNumHints(reset: true)
-                self.updateHintLabel()
             }))
             present(alertController, animated: true, completion: { () -> Void in
                 print("Presented Answer alert")
             })
         }
-    }
-    
-    func changeNumHints(reset: Bool) {
-        if reset == true {
-            numHints = 3
-        }
-        else {
-            numHints -= 1
-        }
-    }
-    
-    
-    func provideHint() {
-        if let hintExists = hint {
-            var letter = Int.random(in: 0...hintExists.count - 1)
-            while hintExists[letter] != "_" {
-                letter = Int.random(in: 0...hintExists.count - 1)
-            }
-            
-            hint![letter] = englishWord[letter]
-            hintAlert()
-        } else {
-            if let word = wordOptional?.englishWord {
-                englishWord = Array(arrayLiteral: word)
-                var englishHint = Array(repeating: "_", count: englishWord.count)
-                
-                var letter = Int.random(in: 0...englishHint.count - 1)
-                while englishHint[letter] != "_" {
-                    letter = Int.random(in: 0...englishHint.count - 1)
-                }
-                
-                englishHint[letter] = englishWord[letter]
-                hint = englishHint
-                hintAlert()
-            }
-        }
-    }
-    
-    
-    func updateHintLabel() {
-        hintButtonLabel.setTitle("Hints: \(numHints)", for: .normal)
     }
     
     
